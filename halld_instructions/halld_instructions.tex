@@ -1,0 +1,388 @@
+\documentclass{article}
+%\usepackage[utf8]{inputenc}
+\usepackage[margin=0.5in]{geometry}
+\RequirePackage{fix-cm}
+\usepackage{parskip}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx,subfigure,float}
+\usepackage[dvipsnames,table,xcdraw]{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{etoolbox}
+\usepackage{url}
+\usepackage[colorlinks=true, urlcolor=blue]{hyperref}
+
+\usepackage{lstlisting}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily \scriptsize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false, % show spaces adding particular underscores
+    showtabs=false,    
+    columns=fullflexible,% otherwise when copy paste text, empty spaces are inserted, also DONT use: footnotesize  
+    extendedchars=true,
+    literate={-}{-}1,
+    tabsize=2
+}
+\lstset{style=mystyle}
+
+\title{Hall D software environment setup on JLab CUE and GlueX analysis steps \\ (Quick start guide)}
+\author{Abdennacer HAMDI}
+\date{%
+GSI Helmholtzzentrum f\"ur Schwerionenforschung GmbH,\\%
+Planckstraße 1,\\%
+64291 Darmstadt \\%
+\today}
+
+\begin{document}
+\fontsize{11}{11}
+\selectfont
+\maketitle
+
+\section{Introduction}
+This Document shows the steps I followed, to setup and run the hall D software, and as an example I will analyse the process: 
+
+\begin{center}
+\tcbox[on line]{${\gamma}p{\rightarrow}{Y}(2175)p{\rightarrow}{\phi}(1020)f_0(980)p{\rightarrow}K^+K^-{\pi}^+{\pi}^-p$}
+\end{center}
+
+~\par First, I start by setting the software environment using the Hall D Package Manager (\texttt{HDPM}), then generate the process and its backround with \texttt{genr8}, next step will be conveying the generated process through the GlueX detector with \texttt{hdgeant} software and introducing the detector resolution at the hit level with \texttt{mcsmear} software. At this point a REST file (\texttt{.hddm}) will be produced and ready to be used by \texttt{JANA} for the analysis %(figure \ref{fig:1}).
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=\textwidth]{sketch_GlueX_Analysis.pdf}
+  \caption{Sketch of the different steps of GlueX analysis framework.}
+  \label{fig:1}
+\end{figure}
+
+\section{Hall D Package Manager (HDPM)}
+
+First, login into the jlab farm with your username and password.\\
+I was recommended to install \texttt{hdpm} on the work disk instead of others, due to the limit on disk space availablity.
+In The first time of login to the farm you will need to:
+
+\begin{lstlisting}[language=bash]
+  ssh -XY username@login.jlab.org
+  ssh ifarm65
+\end{lstlisting} 
+
+Then, you will need to get the latest hdpm version on your machine,
+\begin{lstlisting}[language=bash]
+  tcsh 
+  cp -p /group/halld/Software/hdpm/0.3.2/bin/hdpm /u/home/username/bin/  # only first time to update hdpm
+  exit
+  tcsh
+  cd /work/halld/home/username/
+  mkdir -p halld_my
+  mkdir -p offline
+  cd offline
+  touch env.csh  # fill it with :
+                      setenv GLUEX_TOP /work/halld/home/username/offline
+                      setenv HALLD_MY /work/halld/home/username/halld_my
+\end{lstlisting}
+
+Build the software on your path for development.
+
+\begin{lstlisting}[language=bash]
+  hdpm select --xml jlab-dev
+  source env.csh    
+  hdpm build sim-recon
+  hdpm build gluex_root_analysis
+  source env-setup/master.csh   # set all the environment variables
+\end{lstlisting}
+
+From now on, once connected to the farm, you only need to,
+\begin{lstlisting}[language=bash]
+  tcsh
+  source env-setup/master.csh
+\end{lstlisting}
+
+To update any package, e.g: sim-recon
+\begin{lstlisting}[language=bash]
+  hdpm update sim-recon
+  hdpm clean sim-recon
+  hdpm build sim-recon
+\end{lstlisting}
+
+\section{Event Generation, Simulation and smearing}
+
+First, create a new directory, outside hdpm directory.
+\newline In this step, we need one file as input where you define the physical process, and for this you will need to make the right modifications to this file.
+
+\lstinputlisting[language=fortran]{sim/pK+K-Pi+Pi-.input}
+
+~\par And after that, we will need to execute a run.csh file (after some modifications) containing the following series of commands, in the purpose of conveying the particles defined in the above file throught the detector (transport, interaction with the material, production of secondaries, smearing).
+
+\lstinputlisting[language=bash]{sim/run.csh}
+
+~\par At this point, a lot files are produced, but the main ones are \texttt{hdgeant\_smeared.hddm} and \texttt{dana\_rest.hddm}.\\
+\texttt{hdgeant\_smeared.hddm} is the smeared simulated data file.\\
+The generated tracks and photons have been propagated through the detectors but not reconstructed". It is useful to separate the recontruction stage (of charged tracks, photon cluster, etc.) from analysis stage, and only save the essential information.\\
+The danarest plugin saves the reconstructed data objects to disk in a lighter-weight REST file \texttt{dana\_rest.hddm}.
+The REST files are then used as input for analysis. We can also use our analysis plugin directly on the larger unreconstructed data files, which can still be useful some times.
+\newline After each modification to the input and run files, and before runinng the generator program, we need to clean all the extra files.
+
+\begin{lstlisting}[language=bash]
+foreach file ( `dir` )
+  if ( \$file == pK+K-Pi+Pi-.input || \$file == run.csh || \$file == clean.csh ) then
+  continue
+  endif
+rm -f \$file                                                                                                                                              
+end
+\end{lstlisting} 
+ 
+\section{Analyses with JANA}
+
+First, create a new directory, outside hdpm directory.
+\newline Now, we can use the REST file \texttt{dana\_rest.hddm} to do our analysis.\\
+But first, we will need to produce our plugin containing all our analysis, and where we will have the opportunity to uncomment the line which writes all the events surviving the selection to a \texttt{ROOT} TTree.
+So for that we do:
+
+\begin{lstlisting}[language=bash]
+  MakeReactionPlugin.pl Y2175      # Create the plugin with a name "Y2175"
+\end{lstlisting}
+
+In the \texttt{DReaction\_factory\_Y2175.cc} file, we specify the channel and decay chain to study:
+
+\begin{lstlisting}[language=bash]
+  // g, p -> phi(1020), Pi+, Pi-, (p)
+  locReactionStep = new DReactionStep();
+  locReactionStep->Set_InitialParticleID(Gamma);
+  locReactionStep->Set_TargetParticleID(Proton);
+  locReactionStep->Add_FinalParticleID(phiMeson); //Phi(1020)
+  locReactionStep->Add_FinalParticleID(PiPlus);
+  locReactionStep->Add_FinalParticleID(PiMinus);                                                                                                       
+  locReactionStep->Add_FinalParticleID(Proton, true); //true: proton missing
+  locReaction->Add_ReactionStep(locReactionStep);
+  dReactionStepPool.push_back(locReactionStep); // register so will be deleted later
+                                                // prevent memory leak
+  
+  // phi(1020) -> k+, k-
+  locReactionStep = new DReactionStep();
+  locReactionStep->Set_InitialParticleID(phiMeson);
+  locReactionStep->Add_FinalParticleID(KPlus);
+  locReactionStep->Add_FinalParticleID(KMinus);
+  locReaction->Add_ReactionStep(locReactionStep);
+  dReactionStepPool.push_back(locReactionStep);
+\end{lstlisting}
+
+And uncomment these lines:
+
+\begin{lstlisting}[language=bash]
+locReaction->Enable_TTreeOutput("tree_Y2175.root");
+\end{lstlisting}
+ 
+To be able to visualze more information about the final state particles in the ROOT TTree, we can also uncomment this line:
+
+\begin{lstlisting}[language=c++]
+locReaction->Set_KinFitType(d_P4AndVertexFit); // four-momentum conservation 
+                                               // and common-vertex constraints
+\end{lstlisting}
+
+Now we uncomment some lines in \texttt{DEventProcessor\_Y2175.cc} file:
+
+\begin{lstlisting}[language=bash]
+  const DEventWriterROOT* locEventWriterROOT = NULL;             
+  locEventLoop->GetSingle(locEventWriterROOT);
+  locEventWriterROOT->Fill_DataTrees(locEventLoop, "Y2175");
+\end{lstlisting}
+
+The last step is to compile and run the plugin to produce our \texttt{ROOT} TTree:
+
+\begin{lstlisting}[language=bash]
+scons install    # compile
+hd_root path_to/dana_rest.hddm -PPLUGINS=monitoring_hists,Y2175 -PEVENTS_TO_KEEP=10000
+  
+  # Running the plugin over REST file with 2 plugins 
+  # (also the same plugin can be run over many REST files).
+  # monitoring_hists: defalt plugin, it creates a directory a.k.a <Independant> 
+  # in the output ROOT file.
+\end{lstlisting}
+
+For more information see: \url{https://halldweb.jlab.org/wiki/index.php/Analysis_DReaction}
+\newline To make an advanced analysis of the \texttt{ROOT} TTree, we use the \texttt{DSelector} tool, by following this steps:
+
+\begin{lstlisting}[language=bash]
+mkdir dselector
+cd dselector
+cp /path_to_tree/tree_Y2175.root .
+root -l tree_Y2175.root    # Open the ROOT TTree.
+.ls                          # Figure out the name of TTree in the ROOT file.
+.q                           # quit ROOT.
+MakeDSelector tree_Y2175.root Y2175_Tree Y2175 # Make DSelector
+root -l -b tree_Y2175.root             
+.x \$ROOT_ANALYSIS_HOME/scripts/Load_DSelector.C    # loading libraries and environment
+                                                    # for DSelector into ROOT
+Y2175_Tree->Process("DSelector_Y2175.C+");    // use this command or the one below.
+DPROOFLiteManager::Process_Tree("tree_Y2175.root", "Y2175_Tree",
+                              "DSelector_Y2175.C+", "my_outfile.root", 2); //2 threads
+            # allows for parallel processing of events even in the case of one TTree.
+            # It should speed things up assuming your computer has multiple cores.
+.q
+\end{lstlisting}
+
+
+The final tree "\texttt{tree\_Y2175.root}" is ready to be analyzed, it contains all the events and combos that passed the selection of the plugin, one tree entry per event Contains:
+
+\begin{itemize}
+\item Event info (Run \#, event \#, etc.) \& metadata (your channel).
+\item Thrown beam \& products.
+\item Beam particles: Only those that appear in combos.
+\item Charged hypotheses: All.
+\item Neutral hypotheses: All.
+\item Particle combos.
+\end{itemize}
+
+Most of the data are stored in arrays (figure ~\ref{fig:2}).
+\newline For more information see \url{https://halldweb.jlab.org/wiki/index.php/Analysis_TTreeFormat}, \url{https://halldweb.jlab.org/wiki/index.php/DSelector}
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=\textwidth]{Plugin_and_DSelector_Ouput_tree.png}
+  \caption{Plugin and DSelector Ouput tree}
+  \label{fig:2}
+\end{figure}
+\newpage
+\section{submitting jobs on the scientific computing farm}
+
+\subsection{Real Data}
+
+~\par Real data are stored on tape (directory named: \texttt{/mss/}), organized in runs, directory with 7 digits name, every run contains many files, e.g: dana\_rest\_010906\_0001.hddm.
+To work with these data, we use SWIF, Scientific Workflow Indefatigable Factotum, a system that aims to simplify the use of Jefferson Lab's batch system.
+
+\texttt{Note}:
+\begin{itemize}
+\item Golden period: runs from 11366 to 11555, ver01 dataset usually used for paper publication. \url{https://halldweb.jlab.org/wiki-private/index.php/Spring_2016_Dataset_Summary}
+\item Usually, all the runs are on the \texttt{/cache/} directory, but sometimes some are still on the tape (\texttt{/mss/}), to use them one needs to cache those runs before. In our case, no need to do that, because we will use an executable that handles this condition.
+  \begin{lstlisting}[language=bash]
+    ls /mss/halld/RunPeriod.../recon/ver.../REST/...hddm  # find the path
+    jcache get /path_to_hddm/   # possiblity to cache many files separated by space
+  \end{lstlisting}
+\end{itemize}
+
+
+\begin{enumerate}
+\item Check if your channel is already produced, see if the plugins are suitable to your study on: \url{https://halldweb.jlab.org/wiki-private/index.php/GlueX_Physics_Analyses}, and the related root files and trees are stored in: \texttt{/cache/halld/RunPeriod-2016-02/analysis/}. A new plugin containing a loose preselection was provided, which selected 40 different exclusive reactions. In combination with 40 individual plugins, almost 100 reactions were selected and written to trees by this analysis launch. The names of the trees should be self-explanatory, the trees and histograms are stored in the cache disk: \texttt{/cache/halld/RunPeriod-2016-02/analysis/ver05/}.
+\newline If your channel is not there, send your pluging to \url{https://halldsvn.jlab.org/repos/trunk/home/}, using \textbf{svn}, to be submitted by the analysis launch Coordinator, for the requirements see: \url{https://halldweb.jlab.org/wiki/index.php/Analysis_Launch_Plugin_Requirements}, the new analysis launch dates will be announced by email.
+  \newline \texttt{Note}: To merge the trees, do:
+  \begin{lstlisting}[language=bash]
+    hadd output_tree_name.root input_tree_name_1.root input_tree_name_2.root ...
+  \end{lstlisting}
+\item  submit jobs by yourself, First, the raw/rest data are stored in \texttt{/cache/halld/RunPeriod.../...hddm\_or\_evio},start by runing you plugin over the rest/raw data, this will Merge all the files for every run and produce the trees and hd\_root.root files, at the end you'll have 1 tree/run. Then create a DSelector to study those trees.
+\end{enumerate}
+
+In the following, I will explain to use SWIF effeciently.
+\newline First, you'll need to preapare some files,
+\begin{lstlisting}[language=bash]
+  cp -p /home/username/bin/sw /u/home/username/bin/ # executable file written with go language, to submit jobs in good conditions
+  mkdir -p jobs
+  cd jobs
+  mkdir -p rest
+  cd rest
+  cp ../offline/env-setup/master.sh .  # need as input for sw, where all the environment variables are defined.
+\end{lstlisting} 
+
+Create 3 files, containing the following:
+\begin{enumerate}
+  
+\item file name: \textbf{parms.config}
+  \lstinputlisting[language=bash]{jobs/rest/parms.config}
+  \begin{itemize}
+  \item line 1: select the name of your plugin
+  \end{itemize}
+  
+\item file name: \textbf{script.sh}
+  \lstinputlisting[language=sh]{jobs/rest/script.sh}
+
+\item file name: \textbf{config.json}
+  \lstinputlisting[language=C++]{jobs/rest/config.json}
+  \begin{itemize}
+  \item line 1: true: run job/run, false: run job/file.
+  \item line 2: select the input path for the data.
+  \item line 3 \& 4: select the prefix (e.g: dana\_rest\_) and sufix (e.g: .hddm/.evio/.root) name for the input data file.
+  \item lines 7 \& 8: choose the range of runs, choose the appropriate runs to compare to your simulation, use this link to see data conditions: \url{https://halldweb.jlab.org/rcdb/}
+  \item Lines 9 \& 10: select the range of files inside the run.
+  \item Line 11: choose a name for the workflow.
+  \item Lines 23: the path will be created to this directory, but be careful this directory, \texttt{/volatile/}, is cleaned periodically, so move the important files to your work directory.
+  \item Lines 21 \& 29: modify the username in the path to yours. The ouput paths will be created.
+  \end{itemize}
+\end{enumerate}
+
+Every time you run a new job, print it before to see if everything is consistent, check the path and estimate the size of the data before submitting the jobs, and this is done by putting the \texttt{-d} flag, and remember to test for a short range of runs.
+
+\begin{lstlisting}[language=bash]
+  du -sh /cache/halld/RunPeriod.../...hddm     # estimate the average size of data files you want to submit.
+  ls /cache/halld/RunPeriod.../ | wc           # estimate the number of files inside the run directory.
+  sw add -c config.json -d                     # print the configuration file.
+\end{lstlisting}
+
+Once consistancy is confirmed, submit the job by setting the flag \texttt{-s}.
+
+\begin{lstlisting}[language=bash]
+  sw add -c config.json -s                     # submit the job.
+\end{lstlisting}
+
+To see real time processing of your job, see: \url{http://scicomp.jlab.org/scicomp/#/auger/jobs}
+Sometimes jobs fail, so one needs to check their status by:
+
+\begin{lstlisting}[language=bash]
+  swif list             # use it multiple times to see the evolution of your jobs
+  swif status -workflow workflow_name -problems problem_name   # if problems appear, check their source.
+      # the problems are printed also to /volatile/halld/home/username/ana/Y2175/log/...
+      # also printed to ~/.farm_out/...
+\end{lstlisting}
+
+Once you jobs are finished, your username from the website disapears and/or \texttt{swif list} shows the total number of succeded jobs, remember to delete your workflows at the end.
+
+\begin{lstlisting}[language=bash]
+  swif cancel -workflow workflow_name -delete
+\end{lstlisting}
+
+You should now, for the succeeded jobs, find the output ROOT files and trees in the specified ouput path.
+Many trees will be produced, 1 tree/file, be careful with the size, the idea is to merge these trees to one tree/run.
+For that we will need to submit another job, using some the same files before, but with some modifications:
+
+\begin{lstlisting}[language=bash]
+  cd jobs
+  mkdir -p hadd
+  cd hadd
+  cp ../offline/env-setup/master.sh .
+\end{lstlisting}
+
+\begin{enumerate}
+\item \textbf{script.sh}
+  \lstinputlisting[language=sh]{jobs/hadd/script.sh}
+\item \textbf{config.json}
+  \lstinputlisting[language=C++]{jobs/hadd/config.json}
+\end{enumerate}
+
+Now, If the jobs are succeded, you will get 1 tree/run, ready to be analyzed with the DSelector 
+
+\subsection{Inclusive Background}
+In the Section 3, we generated only signal events, to be able to compare to real data we need to add most of the photoproduction backround processes. The inclusive background is generated by the GlueX group using the \texttt{bggen} software, for more details check: \url{https://userweb.jlab.org/~gen/gluex/bg_sim.html} and \url{https://github.com/JeffersonLab/sim-recon/tree/master/src/programs/Simulation/bggen}.
+\newline Inside the link: \url{https://halldweb.jlab.org/wiki/index.php/Simulations}, you will find information about the conditions and the path to the generated background.
+\bigbreak
+\textbf{Important:}
+\begin{enumerate}
+\item When generating the signal events by \texttt{genr8}, you should make sure that you are using the same version of the code (same version of sim-recon and the same CCDB constants) as was used to generate the background.
+\item Using the output path of the backround rest files, and following the same steps before to submit jobs on the farm: first run the pluging over these rest files, then merge them to produce one tree/run of hadronic background. At the end use \texttt{hadd} to merge the two trees: signal + background.
+\item Now, by having the simulated sample, you will be able to compare it to the only corresponding data set, which means, the same real data set used to generate the background in the first place. 
+\end{enumerate}
+
+1. Get rcdb:  git clone https://github.com/JeffersonLab/rcdb.git
+2. Modify Database.h file: comment and include
+3. scons inside ccp directory
+
+\end{document}
