@@ -1,0 +1,165 @@
+\section{Mean Energy Loss in the Central Drift Chamber}
+\label{p3}
+
+\subsection{Central Drift Chamber}
+
+Un des processus les plus importants qui appara\^it \`a partir de l'\'energie de collision dans le centre de masse de $500GeV$ est le processus $e^{+}e^{-}{\rightarrow}t\bar{t}H$. Le quark $top$, \'etant le fermion le plus massif du Mod\`ele Standard, a le plus important couplage au boson du Higgs, sa mesure est cruciale pour la compr\'ehension du m\'ecanisme de g\'en\'eration de la masse des fermions.
+~\par La signature qui retient particuli\`erement notre attention dans cette \'etude est celle d'une production de paire de quark top ($t$),anti-top ($\bar{t}$) accompagnée d'une radiation de boson de higgs ($H$) \`a partir d'une collision d'electron ($e^{-}$) et de positron ($e^{+}$) représenté dans le diagramme de feynman (figure :~\ref{figure:3.1}).
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.4\columnwidth,keepaspectratio=true]{Plots/ee-ttH.jpg}
+\caption{diagramme de feynman de premier ordre pour le proccessus $e^{+}e^{-}{\rightarrow}t\bar{t}H$.}
+\label{figure:3.1}
+\end{figure}
+
+Le quark $t(\bar{t})$ se d\'esint\`egre principalement en quark $b(\bar{b})$ et boson $W^+(W^-)$, le boson du Higgs lui se d\'esint\`egre principalement en paire de boson $b\bar{b}$, $W^+W^-$ et $\tau^{+} \tau^{-}$~\cite{1}. Le boson $W^+(W^-)$ ce d\'esint\`egre \`a son tour soit de mani\`ere hadronique en une paire de quark $q\bar{q}$, o\`u $q(\bar{q})=u(\bar{d}),c(\bar{s})$ dans $45.7\%$ des cas, soit de mani\`ere leptonique en lepton et neutrino ($l^+(l^-)\nu(\bar{\nu})$ o\`u $l^+(l^-)=e^{\pm},\mu^{\pm},\tau^{\pm}$ dans $10.5\%$ des cas, soit de mani\`ere semi-leptonique en $q\bar{q}l^+\nu$ ($q\bar{q}l^-\bar{\nu}$), dans $43.8\%$ des cas. Les configurations principales obtenues dans l'\'etat finale sont list\'ee dans le tableau~\ref{table:3.1}.
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}{|c|c|c|}
+    \hline Etat final & Configuration & Taux de branchement(\%) \\
+    \hline 
+    \multirow{3}{*}{$2\gamma$} & $b\bar{b}l^{+}{\nu}l^{-}\bar{\nu}\gamma\gamma$ & 0.025  \rule[-7pt]{0pt}{20pt}\\
+      & $b\bar{b}l^{+}{\nu}q\bar{q}\gamma\gamma$ & 0.112  \rule[-7pt]{0pt}{20pt}\\
+     $H\rightarrow\gamma\gamma$  & $b\bar{b}q\bar{q}q\bar{q}\gamma\gamma$ & 0.125  \rule[-7pt]{0pt}{20pt}\\
+    \hline
+    \multirow{3}{*}{$4b$} &  $b\bar{b}l^{+}{\nu}l^{-}\bar{\nu}b\bar{b}$ & 5.193  \rule[-7pt]{0pt}{20pt}\\
+      & $b\bar{b}l^{+}{\nu}q\bar{q}b\bar{b}$ & 23.195  \rule[-7pt]{0pt}{20pt}\\
+     $H\rightarrow b\bar{b}$  & $b\bar{b}q\bar{q}q\bar{q}b\bar{b}$ & 25.901  \rule[-7pt]{0pt}{20pt}\\
+    \hline
+    \multirow{5}{*}{$multileptons$} &  $b\bar{b}l^{+}{\nu}q\bar{q}l^{+}{\nu}q\bar{q}$ & 5.27  \rule[-7pt]{0pt}{20pt}\\
+      & $b\bar{b}l^{+}{\nu}l^{-}\bar{\nu}l^{+}{\nu}q\bar{q}$ & 0.777  \rule[-7pt]{0pt}{20pt}\\
+      & $b\bar{b}l^{+}{\nu}l^{-}\bar{\nu}l^{+}{\nu}\bar{\nu}q\bar{q}$ & 0.058  \rule[-7pt]{0pt}{20pt}\\
+    $H\rightarrow WW, ZZ, \tau\tau$ & $b\bar{b}l^{+}{\nu}l^{-}\bar{\nu}l^{+}{\nu}\bar{\nu}l^{-}\bar{\nu}{\nu}$ & 0.147  \rule[-7pt]{0pt}{20pt}\\
+      & $b\bar{b}q\bar{q}q\bar{q}l^{+}l^{-}l^{+}l^{-}$ & 11.945  \rule[-7pt]{0pt}{20pt}\\
+    \hline    
+  \end{tabular}
+  \caption{Les principales signatures de l'\'etat final $t\bar{t}H$.}
+  \label{table:3.1}
+\end{table}
+
+\subsection{Energy Loss Calibration}
+
+La s\'election permet de distinguer le signal recherch\'e des bruits de fond. On distingue Trois catégories de signatures:
+\begin{itemize}
+\item[$\bullet$] 2$\gamma$+X:  Le $Higgs$ se désintègre en deux photons. Le taux de branchement est faible mais la signature est singulière (2 $photons$ avec resonance a la masse du $Higgs$, 2 quarks $b$). Cette signature est utilisée sur collisionneur hadronique pour son pouvoir discriminant afin de mettre en evidence l'existence du signal. Néanmoins, le faible taux de branchement la défavorise pour une mesure de section efficace.\\
+
+\item[$\bullet$] 4$b$: Le $Higgs$ se desintègre en 2 quark $b$. Le fort taux de branchement de cette signature en fait le canal le plus etudié à la fois sur collisionneur hadronique et leptonique. Neanmoins, le bruit de fond principal est le $t\bar{t}$ avec radiation de $gluon$ et conversion en $b\bar{b}$ ($t\bar{t}b\bar{b}$). La modelisation de ce processus necessitera des refinements afin de pouvoir realiser une mesure de couplage.\\
+
+\item[$\bullet$] Signatures leptoniques: 3 leptons, 4 leptons, 2 leptons de même charge,  etc, o\`u le lepton (not\'e $l$ par la suite) est un \'el\'ectron ou muon. Les signatures leptoniques permettent de s'affranchir de nombreux de bruits de fond. Dans ce chapitre nous nous interessons aux 2 leptons de même charge afin d'estimer la precision qu'on peut attendre d'une telle signature.
+Deux leptons de même charge sont obtenus lorsque le Higgs se désintègre en paire de bosons $W$, produisant 1 leptons, un neutrinos et deux quark, et lorsque la paire de quark $top$ produit un lepton un neutrino, deux quarks legers et deux quarks $b$. L'etat final est donc constitué de deux leptons pouvant être de même signe, deux neutrinos, 2 quark $b$ et 4 quarks legers.
+\end{itemize}
+
+\subsection{Mean Energy Loss Estimation}
+
+~\par Les principaux bruits de fond associés \`a cette signature sont:
+\begin{itemize}
+\item[$\bullet$] $\ e^+e^-{\rightarrow}t\bar{t}$
+\item[$\bullet$] $\ e^+e^-{\rightarrow}t\bar{t}Z$
+\item[$\bullet$] $\ e^+e^-{\rightarrow}HZ$   
+\end{itemize}
+
+Ces processus ne peuvent pas produire de paires de leptons de m\^emes signes au premier ordre. \\
+Trois mecanismes instrumentaux sont a l'origine d'une signature $l^{\pm}l^{\pm}$ du bruit de fond:
+
+\begin{itemize}
+ \item[$\bullet$] {\bf Acceptance sur les leptons:} \`a cause de l'acceptance instrumentale ainsi que celle des algorithmes de reconstruction, une fraction des leptons ne sera pas selectionnée. Un état final à 3 leptons ($l^{\pm}l^{\mp}l^{\pm}$) peut \^etre vu comme un \'etat final $l^{\pm}l^{\pm}$. Cette fraction, $\epsilon_{rec}$, est de l'ordre de quelques pourcents.
+Le principal processus produisant un \'etat final a 3 leptons (et quarks b) est le ttZ.\\
+
+ \item[$\bullet$] {\bf Efficacit\'e de reconstruction de la charge des \'el\'ectrons:} La charge de l\'el\'ectron est reconstruite dans le d\'etecteur gr\`ace \`a son rayon de courbure. Cette charge peut \^etre erron\'ee si l'impulsion de l'\'electron est trop \'elev\'ee ou en cas de radiation de photon avec conversion. La fraction typique d'\'electron dont la charge est mal reconstruite, $\epsilon_{charge}$, est de l'ordre de $0,5\%$ dans une exp\'erience telle que ATLAS. Cet effet est n\'egligeable pour les muons qui b\'enificent des mesures d'un spectrom\`etre d\'edi\'e.
+Ce m\'echanisme concerne principalement les \'ev\'enements $t\bar{t}$ avec d\'esint\'egration en $e^{\pm}e^{\pm}$ et $e^{\pm}\mu^{\pm}$. \\
+\item {\bf Les leptons secondaires:} Les leptons reconstruits dans le d\'etecteurs et qui forment la signature $l^{\pm}l^{\pm}$ sont des leptons dits primaires ({\it prompts}), provenant de la d\'esint\'egration d'un boson W ou Z, par opposition aux leptons secondaires ({\it non-prompts}) provenant de particules \`a temps de vie long et principalement produite dans les jets de quarks $b$.\\ 
+ Un \'ev\'enement ayant pour signature un lepton prompt et des quarks $b$ peut \^etre vu comme un \'ev\'enement $l^{\pm}l^{\pm}$ si au lepton prompt s'ajoute un lepton secondaire passant les crit\`eres de s\'election. La fraction de leptons secondaires passant la s\'election prompt est faible (de l'ordre du pour mille) et d\'epend fortement de la r\'esolution sur le param\`etre d'impact, ainsi que des performances de la reconstruction des particules voisines (isolation vis-\`a-vis des jets). Ce m\'echanisme concerne principalement les \'ev\'enements $t\bar{t}$ avec d\'esint\'egration en un lepton. \\
+\end{itemize}
+Une fraction plus petite de ces processus peut produire des paires r\'e\'elles de leptons de m\^eme signe via des d\'esint\'egrations de leptons $\tau$ (Par exemple : $ttZ \rightarrow l \nu bbqq \tau \tau$ avec $\tau \rightarrow l\nu\nu$ et un $\tau$ hadronique).
+
+\subsection{Conclusions}
+
+~\par Le nombre d'\'ev\`enements dans les \'etats finaux $t\bar{t}Z$ ($N_{t\bar{t}Z}$) et $t\bar{t}$ ($N_{t\bar{t}}$) sont exprim\'es en fonction de l'efficacit\'e de reconstruction ($\epsilon_{rec}$) et d'identification de charge ($\epsilon_{charge}$) des leptons dans le
+d\'etecteur par les relations~\eqref{eq:3.1} et~\eqref{eq:3.2} respectivement. Ces relations sont repr\'esent\'es dans les figure~\ref{figure:3.2}.(a) et (b) respectivements.
+
+\begin{equation}
+  \label{eq:3.1}
+  N_{t\bar{t}Z}=(1-\epsilon_{rec}){\times}\epsilon_{rec}^2{\times}BR_{(t\bar{t}Z{\rightarrow}l^+{\nu}\bar{b}q\bar{q}bl^+l^-)}{\times}\sigma_{t\bar{t}Z}{\times}\mathcal{L}  
+\end{equation}
+
+\begin{equation}
+  \label{eq:3.2}
+  N_{t\bar{t}}=2{\times}(1-\epsilon_{charge}){\times}\epsilon_{charge}{\times}BR_{(t\bar{t}{\rightarrow}l^+{\nu}\bar{b}l^-\bar{\nu}\bar{b})}{\times}\sigma_{t\bar{t}}{\times}\mathcal{L}  
+\end{equation}
+
+~\par o\`u nous avons consid\'er\'e une luminosit\'e int\'egr\'ee $\mathcal{L}=1000\ \rm{fb^{-1}}$, les sections efficaces
+$\sigma_{t\bar{t}Z}=4.04$ fb, $\sigma_{t\bar{t}}=1633$ fb et les taux de branchements $BR_{(t\bar{t}Z{\rightarrow}l^+{\nu}\bar{b}q\bar{q}bl^+l^-)}=4\%$ et $BR_{(t\bar{t}{\rightarrow}l^+{\nu}\bar{b}l^-\bar{\nu}\bar{b})} \simeq 3\%$.
+
+\begin{figure}[H]
+  \centering
+  \subfigure[]{
+    \includegraphics[width=0.45\columnwidth,keepaspectratio=true]{Plots/eff_ttbarZ_reco.pdf}
+  }
+  \quad
+  \subfigure[]{
+    \includegraphics[width=0.45\columnwidth,keepaspectratio=true]{Plots/eff_ttbar_charge.pdf}
+  }
+  \caption{(a)- Nombre d'\'ev\`enements $t\bar{t}Z$ ($N_{t\bar{t}Z}$) en fonction de l'efficacit\'e de reconstruction ($\epsilon_{rec}$) et (b)- Nombre d'\'ev\`enements $t\bar{t}$ ($N_{t\bar{t}}$) en fonction de l'efficacit\'e d'identification de charge ($\epsilon_{charge}$) des leptons dans le d\'etecteur.}
+  \label{figure:3.2}
+\end{figure}
+
+
+~\par Les configurations finales du signal et des bruits de fond contiennent : 6 jets dans $t\bar{t}H$, 4 jets dans $t\bar{t}Z$ et 2 ou 4 jets dans $t\bar{t}$. Avec un bruit de fond plus important qui provient d'identification de charge et les leptons secondaires dans $t\bar{t}$.\\
+
+ Le tableau~\ref{table:3.2}  r\'esume les sections efficaces ($\sigma$), le nombre d'\'ev\`enements du signal et des bruits de fonds, ainsi que le type des bruits de fond pour une \'energie de collision dans le centre de masse de 500 GeV, est une sélection $l^{\pm}l^{\pm}$.
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|} \hline
+  signal et bruits de fond & $\sigma$(fb) & Nombre d'\'ev\`enements ($\times 1000 $ fb$^{-1}$)  &  Type de Bruit de fond\\ \hline
+  $e^+e^-{\rightarrow}t\bar{t}H$ & 1.07 & 149.8 &  \\ \hline
+  \multirow{2}{*}{$e^+e^-{\rightarrow}t\bar{t}Z$} & \multirow{2}{*}{4.04} & \multirow{-1}{*}{2} & \multirow{-1}{*}{irréductible} \\ \cline{3-4}
+  &  & 4.90 & Acceptance de lepton \\ \hline
+  \multirow{3}{*}{$e^+e^-{\rightarrow}t\bar{t}$} & \multirow{3}{*}{1633} & \multirow{-1}{*}{$\approx$ 0} &  \multirow{-1}{*}{irréductible} \\ \cline{3-4}
+  &  & 210.39 & mal identification de charge  \\ \cline{3-4}
+  &  & 163 & Lepton secondaire  \\ \hline
+  $e^+e^-{\rightarrow}HZ$ & 24.8 & 4.14 & mal identification de charge \\\hline
+\end{tabular}
+\caption{les sections efficaces et le nombre d'\'ev\`enements du signal et des
+  bruits de fonds, sans coupure sur le nombre de jets, ainsi que le type des bruits de fond pour une \'energie de collision dans le centre de masse de 500 GeV.}
+\label{table:3.2} 
+\end{table}
+
+L'utilisation de la signature leptonique a permis de r\'ealiser une premi\`ere s\'election, enrichie en signal. Le bruit de fond dominant est le bruit de fond $t\bar{t}$. La multiplicit\'e typique de ces \'ev\'enements est de 2 ou 4 jets tandis que celle du signal est de 6 jets. Le nombre de jets dans ces \'ev\'enement repr\'esente une variable discriminante suppl\'ementaire comme illustr\'e sur les figures~\ref{fig:3.3}.(a) et ~\ref{fig:3.3}.(b). (obtenus avec une simulation complète d'évènements $t\bar{t}{\rightarrow}\mu \nu b\bar{b} q\bar{q}$ et $t\bar{t}H{\rightarrow}l \nu b\bar{b} q\bar{q}W^+W^- \ (\tau^+\tau^-, ZZ)$ avec le détecteur ILD) .
+
+\begin{figure}[H]
+  \centering
+  \subfigure[]{
+    \includegraphics[width=0.45\columnwidth,keepaspectratio=true]{Plots/number_of_jets_ttbar.pdf}
+  }
+  \quad
+  \subfigure[]{
+    \includegraphics[width=0.45\columnwidth,keepaspectratio=true]{Plots/number_of_jets_tth.pdf}
+  }
+  \caption{(a)- Nombre de jets dans les d'\'ev\`enements (a)- $t\bar{t}$ et (b)- $t\bar{t}H$.}
+  \label{fig:3.3}
+\end{figure}
+
+La section efficace du signal ($\sigma$) lors d'une mesure par comptage ainsi que son incertitude statistique sont donn\'ees par les relations~\eqref{eq:3.3} et~\eqref{eq:3.4} respectivements : 
+\begin{equation}
+  \label{eq:3.3}
+  \sigma=\frac{N_{Data}-b}{\epsilon_{t\bar{t}H}.\mathcal{L}}
+\end{equation}
+
+\begin{equation}
+  \label{eq:3.4}
+ \frac{ \Delta \sigma}{\sigma}=\frac{1}{\delta}
+\end{equation}
+o\`u $N_{Data}$ nombre total d'\'ev\`enements observé sur données après sélection,  $b$ le nombre d'\'ev\`enements de bruit de fond estimé après sélection et $\epsilon_{t\bar{t}H}$ l'\'efficacit\'e de signal calcul\'ee sur Monte Carlo. La significance ($\delta$) est donn\'ee par la relation~\eqref{eq:3.5} : 
+
+\begin{equation}
+  \label{eq:3.5}
+  \delta=\frac{s}{\sqrt{s+b}}
+\end{equation}
+
+o\`u $s$ est le nombre d'\'ev\`enement du signal.
+~\par L'utilisation de la signature $l^{\pm}l^{\pm}$ permet d'atteindre une significance de $6.5$, soit une incertitude statistique sur la section efficace $t\bar{t}H$ de $15\%$.\\
+L'utilisation de la multiplicité des jets ($\geq 5\ jets$) permet de réduire la contamination en $t\bar{t}$ d'un facteur 5 (mauvaise identification de charge) ou 3.3 (lepton secondaire) pour une perte en signal de $30\%$. La significance est alors de 7.4 (incertitude statistique de $13\%$).\\
+Le pouvoir de réjection du bruit de fond de cette signature a été estimé avec une paramétrisation des leptons, et devra être rafiné avec une simulation complète et une reconstruction des leptons optimisée.\\
+L'utilisation des jets ne devra pas se limiter à leurs multiplicités, mais aussi inclure des reconstruction de masse. La résolution sur les jets, en particulier dans l'environement à 6 jets, sera alors essentielle.  

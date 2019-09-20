@@ -1,0 +1,76 @@
+\documentclass[12pt,a4paper,twoside]{article}% impression recto verso, utilisez \documentclass[a4paper,11pt,twoside,final]{article}
+\usepackage[english]{babel}
+\usepackage[english]{varioref}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{times,mathptmx,textcomp} % Times New Roman, textcomp: create a symbol with both serif and sans-serif
+\usepackage{epsfig,subfigure,lscape,float,pbox} % float: [H] to force figure placement, pbox: Pour saut de ligne dans une cellule
+\usepackage{tabularx,array,multirow,blkarray} %\multirow{number rows}{width}{text},\multicolumn{number cols}{align}{text},align: l,c,r,blkarray:matrix
+\usepackage{amsmath,amssymb,mathrsfs} % extensions pour écrire des mathématiques, mathrsfs: pour les lettres calligraphiée
+\usepackage[makeroom]{cancel} % cross out caracters
+\usepackage{tikz} \newcommand*\circled[1]{\tikz[baseline=(char.base)]{\node[shape=circle,draw,inner sep=2pt](char){#1};}} % circle
+\usepackage{setspace,hyperref,url}
+\usepackage{geometry}
+\usepackage{graphicx}  %\usepackage[dvips][pdftex]{graphicx}
+
+% Pour les marges de la page
+\geometry{a4paper, top=2.5cm, bottom=3.5cm, left=1.5cm, right=1.5cm, marginparwidth=1.2cm}
+\parskip=5pt %% distance entre Â§ (paragraphe)
+\sloppy %% respecter toujours la marge de droite
+
+% Pour les pénalités :
+\interfootnotelinepenalty=150 %note de bas de page
+\widowpenalty=150 %% veuves et orphelines
+\clubpenalty=150
+
+\newcommand{\reporttitle}{Search for Hybrid mesons in photoproduction at GlueX} % Titre
+\newcommand{\reportauthor}{ \textsc{Abdennacer HAMDI}} % Auteur
+\newcommand{\reportsubject}{Dissertation zur Erlangung des Doktorgrades der Naturwissenschaften} % Sujet
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+\setlength{\parskip}{1ex} % Espace entre les paragraphes
+
+% \hypersetup{
+%   pdftitle={\reporttitle},%
+%   pdfauthor={\reportauthor},%
+%   pdfsubject={\reportsubject},%
+%   pdfkeywords={rapport} {vos} {mots} {clés}
+% }
+
+\hypersetup{
+    colorlinks=true, %set true if you want colored links
+    linktoc=all,     %set to all if you want both sections and subsections linked
+    linkcolor=blue,  %choose some color if you want links to stand out
+}
+
+
+\begin{document}
+\include{title}
+\cleardoublepage % Dans le cas du recto verso, ajoute une page blanche si besoin
+\clearpage
+\tableofcontents % Table des matières
+\sloppy          % Justification moins stricte : des mots ne dépasseront pas des paragraphes
+\cleardoublepage
+\include{remerciements}
+\cleardoublepage
+\include{intro}
+\clearpage
+\include{part1}
+\clearpage
+\include{part2}
+\clearpage
+\include{part3}
+\clearpage
+\include{part4}
+\clearpage
+% \include{part5}
+% \clearpage
+% \include{part6}
+% \clearpage
+% \include{part7}
+% \clearpage
+\include{concl}
+\cleardoublepage
+\include{references}
+\cleardoublepage
+\include{abstract}
+\end{document}
