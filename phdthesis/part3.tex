@@ -1,10 +1,57 @@
 \section{Mean Energy Loss estimation in the Central Drift Chamber}
 \label{p3}
 
-Reconstructing the final charged and neutral tracks are essential for particle identification (PID). As an example looking for the Hybrid candidate, $Y(2175)$, in the exclusive reaction $\gamma p \rightarrow Y(2175) p \rightarrow K^{+}K^{-}\pi^{+}\pi^{-}p$ demands a good $K$, $\pi$ and $p$ separation. One of the crucial GlueX spectrometer subsystems for providing the PID information is the CDC detector, by measuring the mean energy loss per length $dE/dx$.
-When a charged particle passes through the detector, it can traverse through multiple straws. On the wire in the straw where the particle passed through an electrical signal is induced. From timing characteristics of this signal the distance of closest approach can be reconstructed (hit-radius). When 3 or more hit-radii are reconstructed in an event, a track finding algorithm is applied. Every combination of two hit-radii is taken to provide four possible tracks by tangent lines connecting the two circles defined by the two hit-radii. These trajectories are then used to search other straws with hit-radii within a 4 mm window of these track candidates. The track with the most hits or the lowest $\chi^{2}/dof$ (if the number of hits is the same) is identified as the actual track and passed to the track fitting algorithm.
+\subsection{Introduction}
 
-% Due to their cylindrical geometry, straw tubes can have very low mass, which reduces multiple scattering of charged particles. Individual wire breakage does not affect neighboring wires because each straw is self-contained. Another advantage of straw tubes is that they can support their own wire-tension and in this way the end plates (plates that hold the straws) can be made much thinner compared to a conventional wire chamber, which also reduces multiple scattering. The CDC will consist of 3500, 1.5 m long, straw tubes. The straws are mounted in 28 layers: 12 axial and 16 stereo and the placement of the straws is chosen to minimize tracking ambiguities. The inner and outer diameter of the chamber is 20 and 120 cm respectively. Both end plates, on the side opposite to where the straws end, gas plenums are constructed. These plenums allow gas to be distributed to all the straws at the same time instead of feeding gas to straws individually. High voltage distribution boards and pre-amplifiers are mounted on the upstream gas-plenum, outside the gas volume. The output signals of the pre-amplifiers travel over a 20 m long cable to readout-electronics in VME crates. FIG. 1: Drawing of the final CDC design. The CDC will be operated inside a solenoid that generates a magnetic field of 2.24 T. The goal for position resolution transverse to the wire is 150 µm and 1.5 mm along the axis of the chamber. Full tracking will be achieved using both the CDC and the Forward Drift Chambers, which are located directly downstream the CDC. The target will be located 25 cm upstream from the center of the CDC. The polar angular coverage is between 6 and 165. This detector is designed to enable dE/dx particle identification for pions, kaons, and protons with momenta lower than 450 MeV. A drawing of the final CDC design is shown in Fig. 1. First the straw tube design will be presented with tests concerning sagging and radiation damage. Then the electronics and gas system is introduced followed by studies to characterize the detector. These studies are used to construct a Monte Carlo simulation that describes the detector performance, followed by timing and resolution studies. The possibility of particle identification (PID) by measuring the energy loss of the particles in the straw volume is investigated using the Monte Carlo simulation. Possible improvement of position resolution along the wire by application of charge division is investigated, followed by final remarks and conclusions.
+Reconstructing the final charged and neutral tracks are essential for particle identification (PID). Searching for a Hybrid candidate, e.g. $Y(2175)$, in the exclusive reaction $\gamma p \rightarrow Y(2175) p \rightarrow K^{+}K^{-}\pi^{+}\pi^{-}p$ demands a good kaons, pions and protons separation. One of the crucial GlueX spectrometer subsystems for providing the PID information is the CDC detector, through the measurement of energy loss $dE/dx$.
+
+\subsection{Particle Identification in the CDC}
+
+The Central Drift chamber is a gas (mixture of argon and $CO_{2}$) filled detector for the detection of charged particles. A charged particle traversing the gas volume ionises some of the gas atoms, so that electron-ion pairs are produced. Due to the electric field introduced by the Solenoid magnet and applied to the gas volume, the electrons and ions start drifting in opposite directions: the negatively charged electrons to the anode and the positively charged ions to the cathode. For the anode, a thin wire of $20~\mu m$ diameter is used in order to obtain a high electric field nearby. Electrons reaching the vicinity of the anode wire after the drift time are accelerated by this strong field so that they can ionise other gas molecules. The electrons form an avalanche that can be measured as a negative electric pulse. 
+The energy loss $dE/dx$ in the CDC is described by the Bethe-Bloch equation~\ref{eq.3.2}.
+
+\begin{equation}
+    \label{eq.3.2}
+    -\frac{dE}{dX} = 2 \pi N_A r_e^2 m_e c^2 \rho \frac{Z}{A} \frac{z^2}{\beta^2} \left [ \ln \left( \frac{2 m_e \gamma^2 \beta^2 W_{max}}{I^2} \right) - 2 \beta^2 - \delta - 2\frac{C}{Z} \right].
+\end{equation}
+
+\noindent
+with $2 \pi N_A r_e^2 m_e c^2 = 0.1535$~MeV$~\!$cm$^2$/gm. The terms in this expression are defined in Table~\ref{tab.3.1}.
+
+\begin{table}[htbp]
+    \begin{center}
+        \begin{tabular} {||l||l||} \hline
+            $r_e$ : classical electron radius   & $\rho$ : density of medium \\
+            ~~~~~~ (2.817$\times$10$^{-13}$~cm) & $ze$ : charge of incident particle \\
+            $m_e$ : electron mass               & $\beta$ : $v/c$ of incident particle \\
+            $N_A$ : Avogadro's number           & $\gamma$ : $1/\sqrt{1 - \beta^2}$ \\
+            $I$  : Mean excitation potential    & $\delta$ : density correction \\
+            $Z$ : Atomic number of medium       & $C$ : shell correction \\
+            $A$ : Atomic weight of medium       & $W_{max}$ : max. energy transfer \\ \hline
+        \end{tabular}
+    \end{center}
+    \caption{\small{Terms in the Bethe-Bloch formula for the energy loss.}}
+    \label{tab.3.1}
+\end{table}
+
+The maximum energy transfer that can be provided in a head-on collision from the incident particle of mass $M$ to an atomic electron in the medium, $W_{max}$, can be computed as:
+
+\begin{equation}
+    \label{eq.3.2}
+    W_{max} = \frac{2 m_e c^2 \eta}{1 + 2 s \sqrt{1 + \eta^2} + s^2},
+\end{equation}
+
+\noindent
+where $s = m_e/M$ and $\eta = \beta \gamma$.
+
+It is a universal function of $\beta \gamma$ for all particle masses .The energy loss as function of momentum shows a characteristic decrease with $1/\beta^{2}$, reaches a minimum around $\beta \gamma$ = 4, and continues with a logarithmic rise ("relativistic rise region") until it saturates (" Fermi plateau"). By measuring the momentum of a particle as well as its energy loss, the mass of the particle can be determined.
+This method of particle identification has been used in recent years by several experiments (some examples are described in refs . [5-10]), and is also employed by other LEP experiments [11,12]. Detailed models have been developed which allow the calculation of particle energy losses for many gases [13] .Typical curves are shown in fig. l, where the energy loss is plotted as a function of the particle momentum Due to the small difference in energy loss between the particle species (e.g . at 10 GcV/c the difference in mean dE/dx between pions and electrons is about 10$\%$), the application of an energy loss measurement for the identification of relativistic particles faces several constraints . The energy loss distribution (approximately a Landau distribution) has a large inherent width of 60 to 70$\%$ (FWHM for a path length of 1 cm of gas at atmospheric pressure). This makes it necessary to measure many samples along each track in
+order to determine the mean energy loss with sufficient accuracy . Reduction of the fluctuations of the energy loss can also be achieved by using thicker samples, for example by increasing the gas pressure. However, increasing the thickness results in a lower Fermi plateau (see e.g . ref. [141) and a different slope of the relativistic rise and therefore smaller differences in the energy loss of different particle species . The figure of merit which has to be optimised is not the resolution but the particle separation power expressed as resolution normalised to the energy loss difference. For commonly used drift chamber gases, the optimum value for the separation power is at a pressure of 3 to 4 bar [14,151 . An extensive study of the separation power in this
+pressure range has been performed with a full scale prototype (FSP) [161 of the OPAL drift chamber. Systematic errors must be kept below a level of 1-2$\%$. Corrections which depend on track direction and background conditions must therefore be known to this precision .
+% From timing characteristics of this signal the distance of closest approach can be reconstructed (hit-radius). When 3 or more hit-radii are reconstructed in an event, a track finding algorithm is applied. Every combination of two hit-radii is taken to provide four possible tracks by tangent lines connecting the two circles defined by the two hit-radii. These trajectories are then used to search other straws with hit-radii within a 4 mm window of these track candidates. The track with the most hits or the lowest $\chi^{2}/dof$ (if the number of hits is the same) is identified as the actual track and passed to the track fitting algorithm. By arranging the sense wires in different directions, the track was measured in different stereo directions, thus allowing the full track reconstruction in three dimensions to be made.
+
+% Due to their cylindrical geometry, straw tubes can have very low mass, which reduces multiple scattering of charged particles. Individual wire breakage does not affect neighboring wires because each straw is self-contained. Another advantage of straw tubes is that they can support their own wire-tension and in this way the end plates (plates that hold the straws) can be made much thinner compared to a conventional wire chamber, which also reduces multiple scattering. The CDC will consist of 3500, 1.5 m long, straw tubes. The straws are mounted in 28 layers: 12 axial and 16 stereo and the placement of the straws is chosen to minimize tracking ambiguities. The inner and outer diameter of the chamber is 20 and 120 cm respectively. Both endplates, on the side opposite to where the straws end, gas plenums are constructed. These plenums allow gas to be distributed to all the straws at the same time instead of feeding gas to straws individually. High voltage distribution boards and pre-amplifiers are mounted on the upstream gas-plenum, outside the gas volume. The output signals of the pre-amplifiers travel over a 20 m long cable to readout-electronics in VME crates. FIG. 1: Drawing of the final CDC design. The CDC will be operated inside a solenoid that generates a magnetic field of 2.24 T. The goal for position resolution transverse to the wire is 150 µm and 1.5 mm along the axis of the chamber. The polar angular coverage is between 6 and 165. This detector is designed to enable dE/dx particle identification for pions, kaons, and protons with momenta lower than 450 MeV. A drawing of the final CDC design is shown in Fig. 1.
+
 \subsection{Energy Loss Calibration}
 
 \subsection{Mean Energy Loss Estimation}
