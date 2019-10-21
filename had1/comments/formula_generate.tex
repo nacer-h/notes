@@ -1,0 +1,51 @@
+% \documentclass[multi={mymath},border=1pt]{standalone}
+\documentclass[12pt]{article}
+\usepackage[margin=0.1in]{geometry}
+\usepackage[english]{babel}
+\usepackage[english]{varioref}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{amsmath,amssymb,mathrsfs}
+\pagestyle{empty}
+% \newenvironment{mymath}{$\displaystyle}{$}
+
+\begin{document}
+
+ % cross-section phi2pi
+\begin{equation}
+    \boxed{\sigma = \frac{N_{\phi(measured)}}{\epsilon~\mathcal{L}~BR(\phi\rightarrow K^{+}K^{-})},~~~ \mathcal{L}=I \times T,~~~ I=\int dN_{\gamma(tagged)}/dE,~~~ T = 1.273~b^{-1}} 
+\end{equation}
+
+% efficiency phi2pi
+\begin{equation} 
+    \boxed{\epsilon=\frac{N_{\phi(observed)}}{N_{\phi(generated)}},~~~~~N_{\phi(generated)}=\int dN_{\gamma(truth)}/dE}
+\end{equation}
+
+% efficiency Y(2175)
+\begin{equation} 
+    \boxed{\epsilon=\frac{N_{Y(MC)}}{N_{Y(generated)}},~~~~~N_{Y(generated)}=\int dN_{\gamma(truth)}/dE}
+\end{equation}
+
+ % cross-section Y(2175)
+ \begin{equation}
+    \boxed{BR(Y(2175)\rightarrow \phi \pi^{+} \pi^{-})~\times~\sigma = \frac{N_{Y(measured)}}{\epsilon~\mathcal{L}~BR(\phi\rightarrow K^{+}K^{-})},~~~ \mathcal{L}=I \times T,~~~ I=\int dN_{\gamma(tagged)}/dE,~~~ T = 1.273~b^{-1}}
+\end{equation}
+
+ % Upper limit Y(2175)
+ \begin{equation}
+    \int_{0}^{+\infty} G(x;\sigma,\delta_{\sigma})~dx
+\end{equation}
+
+ % Upper limit Y(2175) (continue)
+ \begin{equation}
+    \boxed{\delta_{\sigma}=\sqrt{\delta_{stat}^{2} + \delta_{sys}^{2}},~~~\frac{\int_{0}^{UL_{90}} G(x;\sigma,\delta_{\sigma})~dx}{\int_{0}^{+\infty} G(x;\sigma,\delta_{\sigma})~dx} = 0.9}
+\end{equation}
+
+% % efficiency
+% \begin{mymath} 
+%     \boxed{\epsilon=\frac{N_{\phi(observed)}}{N_{\phi(generated)}},~~~~~N_{\phi(generated)}=\int dN_{\gamma(truth)}/dE}
+% \end{mymath}
+
+\end{document}
