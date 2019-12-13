@@ -36,92 +36,96 @@ The maximum energy transfer that can be provided in a head-on collision from the
 \end{equation}
 where $s = m_e/M$ and $\eta = \beta \gamma$.
 It is a universal function of $\beta \gamma$ for all particle masses. The energy loss as function of momentum shows a characteristic decrease with $1/\beta^{2}$, reaches a minimum around $\beta \gamma$ = 4, and continues with a logarithmic rise "relativistic rise region" until it saturates " Fermi plateau". In practice two corrections are made to this expression to account for density effects ($\delta$) and shell corrections ($C$). The notion of density effects, which are important as the energy of the incident charged particle increases, arises from the fact that the electric field of a charged particle tends to polarize the atoms along its path. Due to this effect, electrons far from the path of the particle are shielded from the full electric field intensity. The notion of shell effects, which are most important at low energies, is needed to account for effects that arise when the velocity of the incident particle is comparable to the orbital velocity of the atomic electrons in the medium. In this case the atomic electrons cannot be assumed as stationary, and capture process is possible. By measuring the momentum of a particle as well as its energy loss, the mass of the particle can be determined. Figure~\ref{fig.3.1} shows the energy loss as a function of reconstructed particle momentum, where we see two distinguished bands for protons and for other lighter particles ($\pi$, $K$ and $e$) for tracks up to $\sim$ 1 GeV/c, beyond that the bands merge resulting in a bad particle identification.
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
-    \includegraphics[width=30pc]{plots/dedxvsp_cdc.png}
+    \includegraphics[width=0.5\textwidth]{plots/dedxvsp_cdc.png}
     \caption{\label{fig.3.1}Energy loss dE/dx in the CDC as a function of reconstructed particle momentum.}
 \end{figure}
 
 \subsection{Mean Energy Loss Estimation}
 A precise and accurate dE/dx measurement is crucial for quality particle identification, a study of the $\gamma p \rightarrow \pi^{+} \pi^{-} p$ phase space shows that the recoiled proton mostly hits the CDC, see figure~\ref{fig.3.2}.
 Measuring the $dE/dx$ will be the main information to identify these recoiled proton.
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
-    \includegraphics[width=25pc]{plots/top_view_detector_dedx.png}
+    \includegraphics[width=0.5\textwidth]{plots/top_view_detector_dedx.png}
     \caption{\label{fig.3.2}Top view of the detector, with reconstructed tracks of final state particles in the $\gamma p \rightarrow \pi^{+} \pi^{-} p$ reaction.}
 \end{figure}
 Before the mean energy loss of a track can be calculated, many corrections were required due to the variations in temperature, atmospheric pressure and other environmental conditions which will affect the $dE/dx$ measurements. Furthermore, the geometric structure of the CDC, the charge-particle trajectory and non-uniformity of the electric and magnetic fields, also cause biases in the $dE/dx$ measurement.\\
 The $dE/dx$ distribution has a long tail (approximately a Landau distribution), towards high energy loss and is mainly caused by particles having direct collisions with electrons. Since the high-energy tail, the mean moves towards higher energy loss, and the mean energy loss value is higher than the most probable value see (left figure~\ref{fig.3.3}). This makes it necessary to measure many samples along each track in order to determine the mean energy loss with sufficient accuracy. Reduction of the fluctuations of the energy loss can also be achieved by using thicker samples, for example by increasing the gas pressure. However, increasing the thickness results in a lower Fermi plateau and a different slope of the relativistic rise and therefore smaller differences in the energy loss of different particle species.\\
 For a better estimate of the mean Energy loss, we use the the truncated mean method. This method rejects certain percentages of the lowest and highest dE/dx measurements from the calculation of the mean energy loss. Figure~\ref{fig.3.3} shows the energy loss for one track in the CDC. We observe that the $dE/dx$ distribution before the truncation (left figure~\ref{fig.3.3}) have a mean of $0.4~KeV/cm$, while the most probable $dE/dx$ is around $0.2~KeV/cm$. After a 40$\%$ truncation at high dE/dx (right figure~\ref{fig.3.3}) a better mean energy loss accuracy is achieved.
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
-    \begin{minipage}{18pc}
-        \includegraphics[width=18pc]{plots/dedxavtrack_before_trunc.png}
-    \end{minipage}\hspace{3pc}%
-    \begin{minipage}{18pc}
-        \includegraphics[width=18pc]{plots/dedxavtrack_after_trunc.png}
-    \end{minipage}
-    \caption{\label{fig.3.3} Energy loss for one track in the CDC.}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{plots/dedxavtrack_before_trunc.png}
+    \end{subfigure}\hfill
+    \begin{subfigure}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{plots/dedxavtrack_after_trunc.png}
+    \end{subfigure}
+    \caption{Energy loss for one track in the CDC}
+    \label{fig.3.3}
 \end{figure}
 The fraction of hits to be rejected is determined by optimizing three figure of merits: the average energy loss resolution of both the proton and pions, the separation power between particle species and the miss-identification (mis-ID) fraction between particle. The latter was introduced due to the fact that in some cases, where even with a good resolution and separation power there is still an important mix between the tails of the energy loss distributions of the different particles.
 
 \subsection{Simulation}
 We generate protons and pions over a symmetric phase-space in momentum and polar angle of the tracks, and we measure their energy loss in the CDC. The dE/dx distribution for the proton (left) and pions (right) in momentum of the tracks are sown in figure~\ref{fig.3.4}.
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
-    \begin{minipage}{18pc}
-        \includegraphics[width=18pc]{plots/cdedxp_proton_0_0.eps}
-    \end{minipage}\hspace{3pc}%
-    \begin{minipage}{18pc}
-        \includegraphics[width=18pc]{plots/cdedxp_pip_0_0.eps}
-    \end{minipage}
-    \caption{\label{fig.3.4} Energy loss versus track momentum for protons (left) and pions (right).}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{plots/cdedxp_proton_0_0.eps}
+    \end{subfigure}\hfill
+    \begin{subfigure}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{plots/cdedxp_pip_0_0.eps}
+    \end{subfigure}
+    \caption{Energy loss versus track momentum for protons (left) and pions (right).}
+    \label{fig.3.4}
 \end{figure}
 The average energy loss for protons and pions are shown figure~\ref{fig.3.5}, where the mis-ID fractions is shown in yellow, the latter is defined as the fraction of pion events that mix with protons, with a 95$\%$ reconstruction efficiency of proton tracks. In the following we will search for the optimal truncation combinations between low and high tail of average dE/dx distribution, that delivers the smallest mis-ID and the strongest separation power.
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
-    \includegraphics[width=25pc]{plots/dedxav_proton_pip_misid.png}
-    \caption{\label{fig.3.5} Average energy loss in the CDC for protons (Red) and Pions (blue).}
+    \includegraphics[width=0.5\textwidth]{plots/dedxav_proton_pip_misid.png}
+    \caption{\label{fig.3.5}Average energy loss in the CDC for protons (Red) and Pions (blue).}
 \end{figure}
 Looking at the mis-ID fraction for different truncation combinations on figure~\ref{fig.3.6}, from no truncation (0$\%$,0$\%$) on the top left up to (80$\%$,0$\%$) on the bottom right, that smallest mis-ID is a result of a (0$\%$,20$\%$) truncation.
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
-    \includegraphics[width=40pc]{plots/dedxav_proton_pip_all.eps}
-    \caption{\label{fig.3.6} Average energy loss in the CDC for protons (Red) and Pions (blue).}
+    \includegraphics[width=1.0\textwidth]{plots/dedxav_proton_pip_all.eps}
+    \caption{\label{fig.3.6}Average energy loss in the CDC for protons (Red) and Pions (blue).}
 \end{figure}
 Similar results are seen when looking in details for the optimal truncation in every momentum and polar angle bin, see figure~\ref{fig.3.7}.
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
-    \includegraphics[width=40pc]{plots/cpthetamisid_all_proton_pip.eps}
-    \caption{\label{fig.3.7} Miss-identification fraction in bins of momentum and polar angle of protons and pions.}
+    \includegraphics[width=1.0\textwidth]{plots/cpthetamisid_all_proton_pip.eps}
+    \caption{\label{fig.3.7}Miss-identification fraction in bins of momentum and polar angle of protons and pions.}
 \end{figure}
 Studying the correlation between the optimal truncations for every momentum and polar angle of protons and pions (figure~\ref{fig.3.8}), shows a concentration of the optimal combination of truncations between 20$\%$ and 40$\%$ on the high tail of dEdx, for both the mis-ID (left) and separation power (right).
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
-    \begin{minipage}{18pc}
-        \includegraphics[width=18pc]{plots/ctruncmisidcorr_proton_pip.eps}
-    \end{minipage}\hspace{3pc}%
-    \begin{minipage}{18pc}
-        \includegraphics[width=18pc]{plots/ctruncsepcorr_proton_pip.eps}
-    \end{minipage}
-    \caption{\label{fig.3.8} Energy loss versus track momentum for protons (left) and pions (right).}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{plots/ctruncmisidcorr_proton_pip.eps}
+    \end{subfigure}\hfill
+    \begin{subfigure}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{plots/ctruncsepcorr_proton_pip.eps}
+    \end{subfigure}
+    \caption{Energy loss versus track momentum for protons (left) and pions (right).}
+    \label{fig.3.8}
 \end{figure}
 Averaging over all the polar angles oh the tracks, reflected on the error bars in figure~\ref{fig.3.9}, we show the mis-ID (top left), separation power (top right), dE/dx resolution of protons (bottom left) and of pions (bottom right), in track momentum dependence for four different truncation combinations. In the four cases the optimal truncation is 20$\%$ - 40$\%$ on the high tail of energy loss distribution.
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
-    \begin{minipage}{18pc}
-        \includegraphics[width=18pc]{plots/cmgergrmisidp_proton_pip.eps}
-    \end{minipage}\hspace{3pc}%
-    \begin{minipage}{18pc}
-        \includegraphics[width=18pc]{plots/cmgergrsepp_proton_pip.eps}
-    \end{minipage}
-    \begin{minipage}{18pc}
-        \includegraphics[width=18pc]{plots/cmgergrresp_proton.eps}
-    \end{minipage}\hspace{3pc}%
-    \begin{minipage}{18pc}
-        \includegraphics[width=18pc]{plots/cmgergrresp_pip.eps}
-    \end{minipage}
-    \caption{\label{fig.3.9} mis-ID (top left), separation power (top right), dE/dx resolution of protons (bottom left) and of pions (bottom right) versus the momentum, the error bars are the averaging over polar angles.}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{plots/cmgergrmisidp_proton_pip.eps}
+    \end{subfigure}\hfill
+    \begin{subfigure}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{plots/cmgergrsepp_proton_pip.eps}
+    \end{subfigure}\hfill
+    \begin{subfigure}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{plots/cmgergrresp_proton.eps}
+    \end{subfigure}\hfill
+    \begin{subfigure}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{plots/cmgergrresp_pip.eps}
+    \end{subfigure}
+    \caption{mis-ID (top left), separation power (top right), dE/dx resolution of protons (bottom left) and of pions (bottom right) versus the momentum, the error bars are the averaging over polar angles.}
+    \label{fig.3.9}
 \end{figure}
 
 \subsection{Conclusions}
