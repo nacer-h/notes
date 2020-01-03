@@ -1,7 +1,7 @@
 \documentclass[12pt,a4paper,twoside]{article}% impression recto verso, utilisez \documentclass[a4paper,11pt,twoside,final]{article}
 \usepackage[english]{babel}
 \usepackage[english]{varioref}
-\usepackage[utf8]{inputenc}
+% \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{times,mathptmx,textcomp} % Times New Roman, textcomp: create a symbol with both serif and sans-serif
 \usepackage{epsfig,lscape,float,pbox} % float: [H] to force figure placement, pbox: Pour saut de ligne dans une cellule
@@ -14,6 +14,14 @@
 \usepackage{graphicx}  %\usepackage[dvips][pdftex]{graphicx}
 \usepackage{subcaption}
 \usepackage{float}
+
+% \usepackage{fancyhdr}
+ 
+% \fancypagestyle{plain}{%
+%    \fancyhf{}
+%    \fancyfoot[C]{\iffloatpage{}{\thepage}}
+%    \renewcommand{\headrulewidth}{0pt}}
+% \pagestyle{plain}
 
 % Pour les marges de la page
 \geometry{a4paper, top=2.5cm, bottom=3.5cm, left=1.5cm, right=1.5cm, marginparwidth=1.2cm}
@@ -31,9 +39,9 @@
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
 \setlength{\parskip}{1ex} % Espace entre les paragraphes
 
-\usepackage[belowskip=-15pt,aboveskip=0pt]{caption}
+% \usepackage[belowskip=-15pt,aboveskip=0pt]{caption}
  
-\setlength{\intextsep}{10pt plus 2pt minus 2pt}
+% \setlength{\intextsep}{10pt plus 2pt minus 2pt}
 
 % \hypersetup{
 %   pdftitle={\reporttitle},%

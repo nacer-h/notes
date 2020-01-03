@@ -1,56 +1,438 @@
 \section{Search For the Y(2175) Meson in Photoproduction at GlueX}
-\label{p4}
+\label{p.4}
 
 \subsection{Introduction}
+\label{p.4.1}
+
+blabla
 
 \subsection{Event Selection}
+\label{p.4.2}
+
+To study the $\gamma p \rightarrow  K^+ K^- \pi^+ \pi^- p$ reaction, we will need to subtract as much as possible the background events (B) that mimics our signal, as well as keeping as much as possible the signal events (S), and this is realized by requiring the cuts that optimize the significance (Z), which is defined in Eq.~\ref{eq.4.2.1}.
+
+\begin{equation}
+    \label{eq.4.2.1}
+    Z = \frac{S}{\sqrt{B}}~,
+\end{equation}
+
+Where S is extracted from Monte Carlo (MC) simulation and B from experimental data. All the following cuts are applied on both MC and experimental data.
+\par We start by requiring one tagged beam photon, three reconstructed positively charged tracks, and two reconstructed negatively charged track, which together create a single combination and match the desired decay. Multiple combinations of the reconstructed particles lead to the possibility of multiple hypotheses for a single event. Preventing double counting by keeping track of the particles used in a combination.
+\par Further requirements include keeping only events within the timing window of the beam period of 4.008 ns, and subtracting the potential background coming in the same time window, which was estimated by averaging over the events outside that period see fig.~\ref{fig.4.2.1.a}. The RF time comes from the accelerator clock corresponding to the incoming beam photon time at the center of the target for a selected beam bucket.
+\par Comparing the RF beam bunch time and the track vertex time to each respective detector for every final state particle $K^{+}$, $K^{-}$, $\pi^{+}$, $\pi^{-}$ and $p$ candidates, provides an excellent PID, and a timing cut was made for each detector. The vertex time is the time of the matched hit, propagated to the point of closest approach to the beamline. Since the reference plane for timing is chosen to be at the center of the liquid-hydrogen target. A correction is made to the vertex time to account for the distance between the vertex location and the reference plane. The fig.~\ref{fig.4.2.1.b} shows this timing difference for the TOF detector for pion candidates as a function of particle momentum. The pions are situated in the range [-0.2,+0.2] (ns), and all the rest events outside this time window are Kaons or protons, and so this technique helps to distinguish the different particle species.
+\par A conservation of mass in the reaction was required, although the missing mass is not vanishing due to the detector uncertainty in determining the particles mass, which generates a source of background, to get rid of this background, we select events with a missing mass squared (MM) close to 0 in the range [-0.01,+0.01] (GeV /c$^2$ )$^2$, see Fig.~\ref{fig.4.2.1.c}, and the missing mass is defined by Eq.~\ref{eq.4.2.2}
+
+\begin{equation}
+    \label{eq.4.2.2}
+    MM^2 = (M^2_\gamma + M^2_p) - (M^2_{k^+} + M^2_{k^-} + M^2_{\pi^+} + M^2_{\pi^-})~,
+\end{equation}
+
+Since all the particles from the reaction originate from the hydrogen target, which occupies 30 cm length, we select this region, shown in Fig.~\ref{fig.4.2.1.d}.
+\par A kinematic fit was also introduced which fits the reconstructed tracks to a common vertex, and constrains the four-momenta of the particles, to conserve the four-momentum in the reaction. The kinematic fit was required to converge, and an optimal cut of 25 is applied see Fig.~\ref{fig.4.2.1.e}. The Optimization of these variable was done by studying the significance. Fig.~\ref{fig.4.2.3} show the significance as a function of the $\chi^2$ of the kinematic fit, the highest significance is around a $\chi^2$ of 25.
 
 \begin{figure}[H]
     \centering
     \begin{subfigure}[b]{0.45\textwidth}
         \includegraphics[width=\textwidth]{plots/cyphifo_17_chi100_TaggerAccidentals.eps}
         \caption{Time difference between the interaction vertex and the RF clock.}
-        \label{fig.4.1.a}
+        \label{fig.4.2.1.a}
     \end{subfigure}\hfill
       %~ add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc. 
       %(or a blank line to force the subfigure onto a new line)
     \begin{subfigure}[b]{0.45\textwidth}
         \includegraphics[width=\textwidth]{plots/cyphifo_17_chi100_pip_dttof.eps}
-        \caption{Time difference between measured at TOF and the RF clock}
-        \label{fig.4.1.b}
+        \caption{Time difference between the interaction vertex to the TOF respectively and the RF clock as a function of particle momentum.}
+        \label{fig.4.2.1.b}
     \end{subfigure}\hfill
     \begin{subfigure}[b]{0.45\textwidth}
         \includegraphics[width=\textwidth]{plots/cyphifo_17_chi100_mm2.eps}
         \caption{Missing mass squared}
-        \label{fig.4.1.c}
+        \label{fig.4.2.1.c}
     \end{subfigure}\hfill
     \begin{subfigure}[b]{0.45\textwidth}
         \includegraphics[width=\textwidth]{plots/cyphifo_17_chi100_p_vertexz.eps}
         \caption{Vertex position along the beam axis}
-        \label{fig.4.1.d}
+        \label{fig.4.2.1.d}
     \end{subfigure}\hfill
     \begin{subfigure}[b]{0.45\textwidth}
         \includegraphics[width=\textwidth]{plots/cyphifo_17_chi100_kin_chisq.eps}
         \caption{$\chi^{2}$ of the four-momentum and vertex kinematic fit}
-        \label{fig.4.1.e}
+        \label{fig.4.2.1.e}
     \end{subfigure}
     \caption{Main variables of the event selection.}
-    \label{fig:4.1}
+    \label{fig.4.2.1}
 \end{figure}
+
+As covered in the precedent Chapter~\ref{p3}, we isolate the recoiled protons which are detected in the CDC, by applying a cut on the dE/dx, the results are shown on Fig.~\ref{fig.4.2.2}. The energy loss as a function of momentum can be seen before Fig.~\ref{fig.4.2.2.a} and after ~\ref{fig.4.2.2.b} the cut. According to the Bethe-Bloch equation, lower momentum protons deposit more energy than light particles at the same momentum. The horizontal band below a dE/dx of 2 keV /cm corresponds to particles other than protons. We use an exponential cut of the form (Eq.~\ref{eq.4.2.3})
+
+\begin{equation}
+    \label{eq.4.2.3}
+    \frac{dE}{dx} =  e^{(-4.0~p + 2.25)} + 1.0~,
+\end{equation}
+where the parameters were determined empirically.
+ 
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{plots/cdcdedxp_precut.eps}
+        \caption{Before selection.}
+        \label{fig.4.2.2.a}
+    \end{subfigure}\hfill
+    \begin{subfigure}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{plots/cdcdedxp_postcut.eps}
+        \caption{After selection.}
+        \label{fig.4.2.2.b}
+    \end{subfigure}\hfill
+    \caption{dE/dx in the CDC for protons as a function of momentum.}
+    \label{fig.4.2.2}
+\end{figure}
+
 
 \begin{figure}[H]
     \centering
         \includegraphics[width=0.5\textwidth]{plots/cgrsim_YMass_chi2cut.eps}
-        \caption{Time difference between the interaction vertex and the RF clock.}
-        \label{fig.4.1.a}
+        \caption{Relative significance as a function of cuts on the $\chi^{2}$ of the kinematic fit.}
+        \label{fig.4.2.3}
 \end{figure}
 
+The selection criteria applied on the main variables are summarized in Tab.~\ref{tab.4.2}
+
+\begin{table}[H]
+    \centering
+    \caption{Main variables of event selection}
+    \label{tab.4.2}
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        Variable & Candidate & Detector System & Cuts \\
+        \hline
+        $\Delta T$ & All & All & $\pm$ 2.004 ns \\
+        \hline
+        $\Delta T$ & $K^{\pm}$ & TOF & $\pm$ 0.135 ns \\
+        \hline
+        $\Delta T$ & $K^{\pm}$ & BCAL & $\pm$ 0.4125 ns \\
+        \hline
+        $\Delta T$ & $K^{\pm}$ & FCAL & $\pm$ 1 ns \\
+        \hline
+        $\Delta T$ & $\pi^{\pm}$ & TOF & $\pm$ 0.15 ns \\
+        \hline
+        $\Delta T$ & $\pi^{\pm}$ & BCAL & $\pm$ 0.85 ns \\
+        \hline
+        $\Delta T$ & $p$ & TOF & $\pm$ 0.27 ns \\
+        \hline
+        $MM^2$ & All & All & $\pm$ 0.01 (GeV/c$^2$ )$^2$ \\
+        \hline
+        Vertex $Z$ & All & All & [50, 80] cm\\
+        \hline
+        $\chi^2$ of Kinematic Fit & All & All & $<$ 25\\
+        \hline
+    \end{tabular}
+\end{table}
+
 \subsection{Monte Carlo Simulation}
+\label{p.4.3}
 
+To understand our experimental data and optimize the event selection, a simulated sample is used. The Monte carlo (MC) samples are generated on an isobar model based, where a meson decays to two particle daughters, with widths and masses extracted from PDG data. Four samples for each reaction and three different sets for every sample was generated to match the different scales in the experimental data. The generated events were then passed through the various modeled GlueX detectors based on Geant4, to simulate their response. In addition, the results were then smeared to model the detector resolutions and efficiencies. Finally, the simulated events were then reconstructed and analyzed in the same way as real data. A summary of theses samples with the number of generated events are shown in Tab.~\ref{tab.4.3}   
 
+\begin{table}[H]
+    \centering
+    \caption{Monte Carlo samples}
+    \label{tab.4.3}
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        MC samples & 2016 & 2017 & 2018 \\
+        \hline
+        $\gamma p \rightarrow \phi \pi^+ \pi^- p$ & 2M & 21M & 58M \\
+        \hline
+        $\gamma p \rightarrow Y(2175) p \rightarrow \phi \pi^+ \pi^- p$ & 2M & 21M & 58M \\
+        \hline
+        $\gamma p \rightarrow \phi \mathrm{f}_0 p$ & 2M & 21M & 58M \\
+        \hline
+        $\gamma p \rightarrow Y(2175) p \rightarrow \phi \mathrm{f}_0 p$ & 2M & 21M & 58M \\
+        \hline
+    \end{tabular}
+\end{table}
+
+The invariant mass spectrums can be seen in Fig.~\ref{fig.4.3.1}. The f$_0$(980) resonance in Fig.~\ref{fig.4.3.1.b} is fitted with a Breit-Wigner model. The $\phi$(1020) in Fig.~\ref{fig.4.3.1.a} and the Y(2175) in Fig.~\ref{fig.4.3.1.c} resonances are fitted with a Voigtian model defined in Eq.~\ref{eq.4.3.1}. The widths and masses are extracted from the PDG data. The backgrounds are described by a polynomial function.
+
+\begin{equation}
+    \label{eq.4.3.2}
+    BW(x;\Gamma) =  \frac{A}{2\pi}\frac{\Gamma}{(x-\mu)^2+(\frac{\Gamma}{2})^2}~,
+\end{equation}
+
+where the amplitude ($A$), mean ($\mu$) and the width $\Gamma$ are the fit parameters.
+
+\begin{equation}
+\label{eq.4.3.1}
+    \begin{aligned}
+        V(x;\sigma,\gamma) = \int_{-\infty}^{+\infty} G(x';\sigma) BW(x-x';\Gamma)dx'~,~\mathrm{where}~~~G(x;\sigma) = \frac{1}{\sigma \sqrt{2\pi}}e^{-\frac{1}{2}(\frac{x-\mu}{\sigma})^2}
+    \end{aligned}
+\end{equation}
+
+Here $\Gamma$ is the half-width at half-maximum (HWHM) of the Breit-Wigner profile ($BW$) and $\sigma$ is the standard deviation of the Gaussian profile ($G$). With the mean $\mu$, these are the fit parameters.
+\par In addition to all the precedent event selection, both the $\pi^+ \pi^-$ and $K^+ K^- \pi^+ \pi^-$ invariant masses are plotted after a $K^+ K^-$ invariant mass cut between [1.005, 1.035 GeV/c$^2$], to reduce the background from the non-$\phi$(1020) events.
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{plots/cmc_PhiMass_postcuts_fitted_17.eps}
+        \caption{}
+        \label{fig.4.3.1.a}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{plots/cmc_foMass_postcuts_fitted_17.eps}
+        \caption{}
+        \label{fig.4.3.1.b}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{plots/cmc_YMass_postcuts_fitted_17.eps}
+        \caption{}
+        \label{fig.4.3.1.c}
+    \end{subfigure}
+    \caption{Invariant mass of $K^+ K^-$ (a), $\pi^+ \pi^-$ (b) and $\phi \pi^+ \pi^-$ (c) in simulation.}
+    \label{fig.4.3.1}
+\end{figure}
 
 \subsection{Data}
+\label{p.4.4}
 
-\subsection{Cross Sections and Upper Limits}
+The first phase running of the GlueX experiment was completed at the end of 2018. It has started collecting data since 2016,  with four run periods. Theses data sets are used in our study. The Tab.~\ref{tab.4.4} shows a summary of the data and their luminosity for the coherent photon beam region.
+
+\begin{table}[H]
+    \centering
+    \caption{GlueX phase-I data set Summary}
+    \label{tab.4.4}
+    \begin{tabular}{|c|c|}
+        \hline
+        Run period & Coherent peak luminosity (pb$^-1$)\\
+        \hline
+        2016 & 2 \\
+        \hline
+        2017 & 21.8 \\
+        \hline
+        Spring 2018 & 58.4 \\
+        \hline
+        Fall 2018 & 39.2 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+The Data sets go through the same selection criteria as the MC samples. A clear $\phi$(1020) peak is seen in the $K^+K^-$ invariant mass Fig.~\ref{fig.4.4.1.a}. After selecting the $\phi$(1020) signal region, shown between the two red vertical lines in Fig.~\ref{fig.4.4.1.a}, we measure the invariant masses of $\pi^+ \pi^-$ seen in in Fig.~\ref{fig.4.4.1.b} and $\phi \pi^+ \pi^-$ in Fig.~\ref{fig.4.4.1.c}. No clear f$_0$(980) or Y(2175) peaks are seen in these distributions, although an important backgrounds is present, as the $\rho$(770) peak in the $\pi^+ \pi^-$ invariant mass.
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{plots/c_pippimkpkm_17_PhiMass_postcuts.eps}
+        \caption{}
+        \label{fig.4.4.1.a}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{plots/c_pippimkpkm_17_foMass_postcuts.eps}
+        \caption{}
+        \label{fig.4.4.1.b}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{plots/c_pippimkpkm_17_YMass_postcuts.eps}
+        \caption{}
+        \label{fig.4.4.1.c}
+    \end{subfigure}
+    \caption{Invariant mass of $K^+K^-$ (a), $\pi^+\pi^-$ (b) and $\phi \pi^+ \pi^-$ (c) in data.}
+    \label{fig:4.4.1}
+\end{figure}
+
+\par In the following we will try to subtract the background underneath the $\phi$ peak. Due to the asymmetry of the background shape on the sides of the $\phi$ peak, the simple side band subtraction will not be appropriate, because it could include an over- or underestimation of the background events.\\
+An efficient method will be to study the $K^+K^-$ and $\pi^+\pi^-$ or $\phi \pi^+ \pi^-$ correlations. As an example we will apply the technique on the $\pi^+\pi^-$ invariant mass. The $K^+K^-$ and $\pi^+\pi^-$ correlation is shown on Fig.~\ref{fig.4.4.2}a, we notice the horizontal and vertical bands of the $\phi$(1020) and $\rho$(770) respectively. We project every bin of the $K^+K^-$ invariant mass shown in Fig.~\ref{fig.4.4.2}b, we describe the signal and background shapes, the signal fit parameters used are extracted from the corresponding MC sample. Finally, we look at $\pi^+\pi^-$ invariant mass for the events that contain the $\phi$(1020) signal only. The extracted $\phi$(1020) signal yield (N$_{\phi}$) as a function of the $\pi^+\pi^-$ invariant mass is shown in Fig.~\ref{fig.4.4.2}c, where a small enhancement around 980 GeV/c$^2$ is seen, a detail study of this enhancement will discussed in sections \ref{p.4.5.3} and \ref{p.4.5.4}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.0\textwidth]{plots/phi_scan.png}
+    \caption{\label{fig.4.4.2}$K^+K^-$ versus $\pi^+\pi^-$ invariant mass (a), $K^+K^-$ invariant mass projection in $\pi^+\pi^-$ bins (b) and $\pi^+\pi^-$ $\phi$-mass dependent invariant mass (c).}
+\end{figure}
+
+\subsection{Cross Section and Upper Limit}
+\label{p.4.5}
+
+In this section, we will measure the cross sections for $\gamma p \rightarrow \phi \pi^+ \pi^- p$, $\gamma p \rightarrow \phi \mathrm{f}_0 p$ and $\gamma p \rightarrow Y(2175) p \rightarrow \phi \mathrm{f}_0 p$ reactions, and measure an upper limit on the $\gamma p \rightarrow Y(2175) p \rightarrow \phi \pi^+ \pi^- p$ reaction.
+
+\subsubsection{\texorpdfstring{$\gamma p \rightarrow \phi \pi^+ \pi^- p$}{}}
+\label{p.4.5.1}
+
+Since there is a sufficient number of $\phi \pi^+ \pi^-$ events in this reaction, we will study the cross section in bin of the beam energy. The beam energy distribution as seen in Fig.~\ref{fig.4.5.1.1} in the range [6.5, 11.6] (GeV) divided in an equal 10 bins.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{plots/cpippimkpkm_17_beam_e.eps}
+    \caption{\label{fig.4.5.1.1}$K^+ K^-$ beam energy distribution in data.}
+\end{figure}
+
+Similar method is used to subtract the non-$\phi$(1020) background both in MC sample Fig.~\ref{fig.4.5.1.2} and real data Fig.~\ref{fig.4.5.1.3}. The $\phi$(1020) signal shape is extracted from MC sample and used in the real data, for every beam energy bin. This method is also applied on all different data sets.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.0\textwidth]{plots/c17_phie1_mc.eps}
+    \caption{\label{fig.4.5.1.2}Beam energy-mass dependent invariant mass in simulation.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.0\textwidth]{plots/c17_phie1.eps}
+    \caption{\label{fig.4.5.1.3}$K^+ K^-$ beam energy-mass dependent invariant mass in data.}
+\end{figure}
+
+The reconstruction efficiency 
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{plots/cmgeeff.eps}
+        \caption{}
+        \label{fig.4.5.1.4.a}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{plots/cmgexsec.eps}
+        \caption{}
+        \label{fig.4.5.1.4.b}
+    \end{subfigure}
+    \caption{Beam energy-dependent reconstruction efficiency (a) and total cross section (b).}
+    \label{fig:4.5.1.4}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{plots/cpippimkpkm_17_t_kin.eps}
+    \caption{\label{fig.4.5.1.5}Proton momentum transfer distribution in data.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{plots/cmgteff.eps}
+        \caption{}
+        \label{fig.4.5.1.6.a}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{plots/cmgtxsec.eps}
+        \caption{}
+        \label{fig.4.5.1.6.b}
+    \end{subfigure}
+    \caption{Proton momentum transfer-dependent reconstruction efficiency (a) and total cross section (b).}
+    \label{fig:4.5.1.6}
+\end{figure}
+
+\subsubsection{\texorpdfstring{$\gamma p \rightarrow Y(2175) p \rightarrow \phi \pi^+ \pi^- p$}{}}
+\label{p.4.5.2}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{plots/c_gphiy_17.eps}
+    \caption{\label{fig.4.5.2.1}$\phi$ mass-dependent $\phi \pi^+ \pi^-$ invariant mass in data.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{plots/c17_profxsec.eps}
+    \caption{\label{fig.4.5.2.2}Profile likelihood versus total cross section, with the vertical line indicating the cross section upper limit at 90$\%$ CL.}
+\end{figure}
+
+\begin{table}[!htbp]
+    \centering
+    \caption{Total cross-sections and upper limits for different data sets}
+    \label{tab.4.5.2}
+    \begin{tabular}{|c|c|c|c|c|}
+        \hline
+        Data set & $N_{measured}$ & $\epsilon$ [$\%$] & $\sigma$ [nb] & $90\%$ CL limit [nb] \\
+        \hline
+        2016 &  -53 $\pm$ 44 & 0.25 & -6.90 $\pm$ 5.69 $\pm$ -9.67 & 0.562 \\
+        \hline
+        2017 & -123 $\pm$ 112 & 0.21 & -1.62 $\pm$ 1.48 $\pm$ -0.98 & 0.279 \\
+        \hline
+        2018 & -240 $\pm$ 141 & 0.11 & -2.12 $\pm$ 1.24 $\pm$ -0.66 & -0.529 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\subsubsection{\texorpdfstring{$\gamma p \rightarrow \phi \mathrm{f}_0 p$}{}}
+\label{p.4.5.3}
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{plots/c_gphifo_17.eps}
+        \caption{}
+        \label{fig.4.5.3.1.a}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{plots/c_gphifo_18.eps}
+        \caption{}
+        \label{fig.4.5.3.1.b}
+    \end{subfigure}
+    \caption{$\phi$ mass-dependent $\pi^+ \pi^-$ invariant mass in 2017 (a) and 2018 (b) data.}
+    \label{fig:4.5.3.1}
+\end{figure}
+
+\begin{table}[!htbp]
+    \centering
+    \caption{Total cross-sections for different data sets}
+    \label{tab.4.5.3}
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        Data set & $N_{measured}$ & $\epsilon$ [$\%$] & $\sigma \times BR_{f_{0}\rightarrow\pi^{+}\pi^{-}}$ [nb] \\
+        \hline
+        2017 & 195 $\pm$ 180 & 0.15 & 3.50 $\pm$ 3.22 $\pm$ 0.04 \\
+        \hline
+        2018 & 321 $\pm$ 156 & 0.10 & 2.94 $\pm$ 1.43 $\pm$ 0.03 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\subsubsection{\texorpdfstring{$\gamma p \rightarrow Y(2175) p \rightarrow \phi \mathrm{f}_0 p$}{}}
+\label{p.4.5.4}
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{plots/c_gphifo_sideband_17.eps}
+        \caption{}
+        \label{fig.4.5.4.1.a}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{plots/c_gphifo_sideband_18.eps}
+        \caption{}
+        \label{fig.4.5.4.1.b}
+    \end{subfigure}
+    \caption{$\phi$ mass-dependent $\pi^+ \pi^-$ invariant mass in 2017 (a) and 2018 (b) data.}
+    \label{fig:4.5.4.1}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{plots/c_hgphiy_sub_17.eps}
+        \caption{}
+        \label{fig.4.5.4.2.a}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{plots/c_hgphiy_sub_18.eps}
+        \caption{}
+        \label{fig.4.5.4.2.b}
+    \end{subfigure}
+    \caption{$\phi f_0$ invariant mass after side band subtraction in 2017 (a) and 2018 (b) data.}
+    \label{fig:4.5.4.2}
+\end{figure}
+
+\begin{table}[!htbp]
+    \centering
+    \caption{Total cross-sections for different data sets}
+    \label{tab.4.5.4}
+    \begin{tabular}{|c|c|c|c|c|}
+        \hline
+        Data set & $N_{measured}$ & $\epsilon$ [$\%$] & $\sigma \times BR_{f_{0}\rightarrow\pi^{+}\pi^{-}}$ [nb] & Significance\\
+        \hline
+        2017 & 245 $\pm$ 40 & 1.17 & 0.57 $\pm$ 0.09 $\pm$ 0.01 & 6.47 \\
+        \hline
+        2018 & 574 $\pm$ 0 & 0.98 & 0.55 $\pm$ 0.00 $\pm$ 0.01 & 12.12 \\
+        \hline
+    \end{tabular}
+\end{table}
 
 \subsection{Conclusions}
+\label{p.4.6}
