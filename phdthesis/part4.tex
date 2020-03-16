@@ -1,19 +1,22 @@
-\section{Search For the Y(2175) Meson in Photoproduction at GlueX}
+\chapter{Search For the Y(2175) Meson in Photo-production at GlueX}
 \label{p.4}
 
-\subsection{Introduction}
+\section{Introduction}
 \label{p.4.1}
 
-blabla
+The recently discovered structure at 2175 MeV in e$^+$e$^{-}$ collider experiment~\cite{16, 17, 18, 19, 20, 21}, is claimed as an isospin singlet, and its spin-parity is determined to be $J^{PC}$ = 1$^{--}$. Henceforth, this structure is denoted by Y(2175). There are no known meson resonances with $I$ = 0 near this mass~\cite{8}, therefore it may not be a standard meson but rather an exotic, this stimulated many theoretical interpretations. Hence, the importance of finding this resonance in a different production mode.\\
+In this chapter, we will search for this resonance in photo-production, and study its different final states. We also measure cross sections for the resonant and non-resonant modes of these channels. For that end, we start by an event selection to reduce the background, then followed by a description of the Monte Carlo samples and the real data used in the analysis. To finally report the cross section measurements for the different channels, and discuss the systematic uncertainties associated with theses measurements.
 
-\subsection{Event Selection}
+\section{Event Selection}
 \label{p.4.2}
 
 To study the $\gamma p \rightarrow  K^+ K^- \pi^+ \pi^- p$ reaction, we will need to subtract as much as possible the background events (B) that mimics our signal, as well as keeping as much as possible the signal events (S), and this is realized by requiring the cuts that optimize the significance (Z), which is defined in Eq.~\ref{eq.4.2.1}.
 
 \begin{equation}
     \label{eq.4.2.1}
-    Z = \frac{S}{\sqrt{B}}~,
+    \begin{aligned}
+        Z = \frac{S}{\sqrt{B}}~,
+    \end{aligned}
 \end{equation}
 
 Where S is extracted from Monte Carlo (MC) simulation and B from experimental data. All the following cuts are applied on both MC and experimental data.
@@ -21,13 +24,17 @@ Where S is extracted from Monte Carlo (MC) simulation and B from experimental da
 \par Further requirements include keeping only events within the timing window of the beam period of 4.008 ns, and subtracting the potential background coming in the same time window, which was estimated by averaging over the events outside that period see fig.~\ref{fig.4.2.1.a}. The RF time comes from the accelerator clock corresponding to the incoming beam photon time at the center of the target for a selected beam bucket.
 \par Comparing the RF beam bunch time and the track vertex time to each respective detector for every final state particle $K^{+}$, $K^{-}$, $\pi^{+}$, $\pi^{-}$ and $p$ candidates, provides an excellent PID, and a timing cut was made for each detector. The vertex time is the time of the matched hit, propagated to the point of closest approach to the beamline. Since the reference plane for timing is chosen to be at the center of the liquid-hydrogen target. A correction is made to the vertex time to account for the distance between the vertex location and the reference plane. The fig.~\ref{fig.4.2.1.b} shows this timing difference for the TOF detector for pion candidates as a function of particle momentum. The pions are situated in the range [-0.2,+0.2] (ns), and all the rest events outside this time window are Kaons or protons, and so this technique helps to distinguish the different particle species.
 \par A conservation of mass in the reaction was required, although the missing mass is not vanishing due to the detector uncertainty in determining the particles mass, which generates a source of background, to get rid of this background, we select events with a missing mass squared (MM) close to 0 in the range [-0.01,+0.01] (GeV /c$^2$ )$^2$, see Fig.~\ref{fig.4.2.1.c}, and the missing mass is defined by Eq.~\ref{eq.4.2.2}
-
+\setlength{\belowdisplayskip}{15pt}
+\setlength{\abovedisplayskip}{15pt}
 \begin{equation}
     \label{eq.4.2.2}
-    MM^2 = (M^2_\gamma + M^2_p) - (M^2_{k^+} + M^2_{k^-} + M^2_{\pi^+} + M^2_{\pi^-})~,
+    \begin{aligned}
+        MM^2 = (P_i - P_f)^2 = [(P_{\gamma} + P_{proton}) - (P_{k^+} + P_{k^-} + P_{\pi^+} + P_{\pi^-})]^2~,
+    \end{aligned}    
 \end{equation}
 
-Since all the particles from the reaction originate from the hydrogen target, which occupies 30 cm length, we select this region, shown in Fig.~\ref{fig.4.2.1.d}.
+Where the $P_i$ and $P_f$ are the four-momenta of the initial and final particles.
+\par Since all the particles from the reaction originate from the hydrogen target, which occupies 30 cm length, we select this region, shown in Fig.~\ref{fig.4.2.1.d}.
 \par A kinematic fit was also introduced which fits the reconstructed tracks to a common vertex, and constrains the four-momenta of the particles, to conserve the four-momentum in the reaction. The kinematic fit was required to converge, and an optimal cut of 25 is applied see Fig.~\ref{fig.4.2.1.e}. The Optimization of these variable was done by studying the significance. Fig.~\ref{fig.4.2.3} show the significance as a function of the $\chi^2$ of the kinematic fit, the highest significance is around a $\chi^2$ of 25.
 
 \begin{figure}[H]
@@ -63,12 +70,15 @@ Since all the particles from the reaction originate from the hydrogen target, wh
     \label{fig.4.2.1}
 \end{figure}
 
-As covered in the precedent Chapter~\ref{p3}, we isolate the recoiled protons which are detected in the CDC, by applying a cut on the dE/dx, the results are shown on Fig.~\ref{fig.4.2.2}. The energy loss as a function of momentum can be seen before Fig.~\ref{fig.4.2.2.a} and after ~\ref{fig.4.2.2.b} the cut. According to the Bethe-Bloch equation, lower momentum protons deposit more energy than light particles at the same momentum. The horizontal band below a dE/dx of 2 keV /cm corresponds to particles other than protons. We use an exponential cut of the form (Eq.~\ref{eq.4.2.3})
+As covered in the precedent Chapter~\ref{p.3}, we isolate the recoiled protons which are detected in the CDC, by applying a cut on the dE/dx, the results are shown on Fig.~\ref{fig.4.2.2}. The energy loss as a function of momentum can be seen before Fig.~\ref{fig.4.2.2.a} and after ~\ref{fig.4.2.2.b} the cut. According to the Bethe-Bloch equation, lower momentum protons deposit more energy than light particles at the same momentum. The horizontal band below a dE/dx of 2 keV /cm corresponds to particles other than protons. We use an exponential cut of the form (Eq.~\ref{eq.4.2.3})
 
 \begin{equation}
-    \label{eq.4.2.3}
-    \frac{dE}{dx} =  e^{(-4.0~p + 2.25)} + 1.0~,
+    \begin{aligned}
+        \label{eq.4.2.3}
+        \frac{dE}{dx} =  e^{(-4.0~p + 2.25)} + 1.0~,
+    \end{aligned}
 \end{equation}
+
 where the parameters were determined empirically.
  
 \begin{figure}[H]
@@ -128,26 +138,26 @@ The selection criteria applied on the main variables are summarized in Tab.~\ref
     \end{tabular}
 \end{table}
 
-\subsection{Monte Carlo Simulation}
+\section{Monte Carlo Simulation}
 \label{p.4.3}
 
-To understand our experimental data and optimize the event selection, a simulated sample is used. The Monte carlo (MC) samples are generated on an isobar model based, where a meson decays to two particle daughters, with widths and masses extracted from PDG data. Four samples for each reaction and three different sets for every sample was generated to match the different scales in the experimental data. The generated events were then passed through the various modeled GlueX detectors based on Geant4, to simulate their response. In addition, the results were then smeared to model the detector resolutions and efficiencies. Finally, the simulated events were then reconstructed and analyzed in the same way as real data. A summary of theses samples with the number of generated events are shown in Tab.~\ref{tab.4.3}   
+To understand our experimental data and optimize the event selection, a simulated sample is used. The Monte carlo (MC) samples are generated on an isobar model based, where a meson decays to two particle daughters, with widths and masses extracted from PDG data~\cite{8}. Four samples for each reaction and three different sets for every sample was generated to match the different scales in the experimental data. The generated events were then passed through the various modeled GlueX detectors based on Geant4, to simulate their response. In addition, the results were then smeared to model the detector resolutions and efficiencies. Finally, the simulated events were then reconstructed and analyzed in the same way as real data. A summary of theses samples with the number of generated events are shown in Tab.~\ref{tab.4.3}   
 
 \begin{table}[H]
     \centering
     \caption{Monte Carlo samples}
     \label{tab.4.3}
-    \begin{tabular}{|c|c|c|c|}
+    \begin{tabular}{|c|c|c|c|c|}
         \hline
-        MC samples & 2016 & 2017 & 2018 \\
+        MC samples & 2016 & 2017 & Spring 2018 & Fall 2018 \\
         \hline
-        $\gamma p \rightarrow \phi \pi^+ \pi^- p$ & 2M & 21M & 58M \\
+        $\gamma p \rightarrow \phi \pi^+ \pi^- p$ & 10M & 10M & 10M & 10M \\
         \hline
-        $\gamma p \rightarrow Y(2175) p \rightarrow \phi \pi^+ \pi^- p$ & 2M & 21M & 58M \\
+        $\gamma p \rightarrow Y(2175) p \rightarrow \phi \pi^+ \pi^- p$ & 10M & 10M & 10M & 10M \\
         \hline
-        $\gamma p \rightarrow \phi \mathrm{f}_0 p$ & 2M & 21M & 58M \\
+        $\gamma p \rightarrow \phi \mathrm{f}_0 p$ & 10M & 10M & 10M & 10M \\
         \hline
-        $\gamma p \rightarrow Y(2175) p \rightarrow \phi \mathrm{f}_0 p$ & 2M & 21M & 58M \\
+        $\gamma p \rightarrow Y(2175) p \rightarrow \phi \mathrm{f}_0 p$ & 10M & 10M & 10M & 10M \\
         \hline
     \end{tabular}
 \end{table}
@@ -192,7 +202,7 @@ Here $\Gamma$ is the half-width at half-maximum (HWHM) of the Breit-Wigner profi
     \label{fig.4.3.1}
 \end{figure}
 
-\subsection{Data}
+\section{Data}
 \label{p.4.4}
 
 The first phase running of the GlueX experiment was completed at the end of 2018. It has started collecting data since 2016,  with four run periods. Theses data sets are used in our study. The Tab.~\ref{tab.4.4} shows a summary of the data and their luminosity for the coherent photon beam region.
@@ -248,12 +258,12 @@ An efficient method will be to study the $K^+K^-$ and $\pi^+\pi^-$ or $\phi \pi^
     \caption{\label{fig.4.4.2}$K^+K^-$ versus $\pi^+\pi^-$ invariant mass (a), $K^+K^-$ invariant mass projection in $\pi^+\pi^-$ bins (b) and $\pi^+\pi^-$ $\phi$-mass dependent invariant mass (c).}
 \end{figure}
 
-\subsection{Cross Section and Upper Limit}
+\section{Cross Section and Upper Limit}
 \label{p.4.5}
 
 In this section, we will measure the cross sections for $\gamma p \rightarrow \phi \pi^+ \pi^- p$, $\gamma p \rightarrow \phi \mathrm{f}_0 p$ and $\gamma p \rightarrow Y(2175) p \rightarrow \phi \mathrm{f}_0 p$ reactions, and measure an upper limit on the $\gamma p \rightarrow Y(2175) p \rightarrow \phi \pi^+ \pi^- p$ reaction.
 
-\subsubsection{\texorpdfstring{$\gamma p \rightarrow \phi \pi^+ \pi^- p$}{}}
+\subsection{\texorpdfstring{$\bm{\gamma p \rightarrow \phi \pi^{+} \pi^{-} p}$}{}}
 \label{p.4.5.1}
 
 Since there is a sufficient number of $\phi \pi^+ \pi^-$ events in this reaction, we will study the cross section in bin of the beam energy. The beam energy distribution as seen in Fig.~\ref{fig.4.5.1.1} in the range [6.5, 11.6] (GeV) divided in an equal 10 bins.
@@ -278,7 +288,37 @@ Similar method is used to subtract the non-$\phi$(1020) background both in MC sa
     \caption{\label{fig.4.5.1.3}$K^+ K^-$ beam energy-mass dependent invariant mass in data.}
 \end{figure}
 
-The reconstruction efficiency 
+After extracting the number of $\phi \pi^+ \pi^-$ signal events ($N_{\phi}^{MC}$) in simulation for every beam energy, we compute the reconstruction efficiency ($\epsilon$) by Eq.~\ref{eq.4.5.1.1}
+
+\begin{equation}
+    \label{eq.4.5.1.1}
+    \begin{aligned}
+        \epsilon=\frac{N_{\phi}^{MC}}{N_{\phi}^{Generated}}~,
+    \end{aligned}
+\end{equation}
+
+where $N_{\phi}^{Generated}$ is the number of $\phi \pi^+ \pi^-$ signal events generated in beam energy.
+\par The reconstruction efficiency for the different data sets are shown in Fig.~\ref{fig.4.5.1.4.a}. An average of 1.5$\%$ is seen in the 2017 and 2018 data, and a higher efficiency is observed in the 2016 data.
+The next step is to measure the total cross section in beam energy bins using Eq.~\ref{eq.4.5.1.2}.
+
+\begin{equation}
+    \label{eq.4.5.1.2}
+    \begin{aligned}
+        \sigma = \frac{N_{\phi}^{Data}}{\epsilon~\mathcal{L}~BR(\phi\rightarrow K^{+}K^{-})}~,
+    \end{aligned}
+\end{equation}
+
+where $N_{\phi(Data)}$ is the number of $\phi \pi^+ \pi^-$ signal events in real data extracted from Fig.~\ref{fig.4.5.1.3}. $BR(\phi\rightarrow K^{+}K^{-})$ = 0.492 is the branching ratio of the $\phi\rightarrow K^{+}K^{-}$ channel, the value used is from PDG data. $\mathcal{L}$ is the integrated luminosity, defined in Eq.~\ref{eq.4.5.1.3}
+
+\begin{equation}
+    \label{eq.4.5.1.3}
+    \begin{aligned}
+        \mathcal{L}=I \times T,~~~ I=\int dN_{\gamma}^{Tagged}/dE,~~~ T = 1.273~b^{-1}~,
+    \end{aligned}
+\end{equation}
+
+were $I$ is the integrated flux, extracted from the yield of the tagged photons, and $T$ is the target thickness.
+\par The total cross section for different data sets is shown in Fig.\ref{fig.4.5.1.4.b}
 
 \begin{figure}[H]
     \centering
@@ -296,11 +336,25 @@ The reconstruction efficiency
     \label{fig:4.5.1.4}
 \end{figure}
 
+We observe a similar cross sections in 2016 and 2017 data within errors, and a discrepancy with the 2018 data, due to a gas supply issue in the CDC during 2018 data taking.  
+\par Another variable of interest is the momentum transfer ($t$) defined in Eq.~\ref{eq.4.5.1.4}.
+
+\begin{equation}
+    \label{eq.4.5.1.4}
+    \begin{aligned}
+        t = (P_{p} - P_{p'})^2~, 
+    \end{aligned}
+\end{equation}
+
+where $P_{p}$ and $P_{p'}$ are the four-momenta of the target and recoiled proton respectively. The distribution of the momentum transfer is shown in Fig.~\ref{fig.4.5.1.5}.
+
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.5\textwidth]{plots/cpippimkpkm_17_t_kin.eps}
-    \caption{\label{fig.4.5.1.5}Proton momentum transfer distribution in data.}
+    \caption{\label{fig.4.5.1.5}Momentum transfer distribution in data.}
 \end{figure}
+
+Dividing the momentum transfer distribution into 10 equidistant bins, and using a similar method to extract $\phi \pi^+ \pi^-$ signal both in MC and data. We then compute the reconstruction efficiency and the total cross section for different data sets, shown in Fig.~\ref{fig.4.5.1.6}. A stronger dependence of both the efficiency and cross section of the momentum transfer is seen. The cross section difference between the different data sets is similar to the case of the beam energy dependent ones. 
 
 \begin{figure}[H]
     \centering
@@ -315,11 +369,13 @@ The reconstruction efficiency
         \label{fig.4.5.1.6.b}
     \end{subfigure}
     \caption{Proton momentum transfer-dependent reconstruction efficiency (a) and total cross section (b).}
-    \label{fig:4.5.1.6}
+    \label{fig.4.5.1.6}
 \end{figure}
 
-\subsubsection{\texorpdfstring{$\gamma p \rightarrow Y(2175) p \rightarrow \phi \pi^+ \pi^- p$}{}}
+\subsection{\texorpdfstring{$\bm{\gamma p \rightarrow Y(2175) p \rightarrow \phi \pi^{+} \pi^{-} p}$}{}}
 \label{p.4.5.2}
+
+In the following we will study the resonant mode of the previous reaction. First, we select $\phi \pi^+ \pi^-$ signal, by subtracting non-$\phi$(1020) background. The results are shown in Fig.~\ref{fig.4.5.2.1}, it is clear that no Y(2175) is observed around 2175 GeV/c$^2$. The next step will be then to set an upper limit on the cross section. By fixing the Y(2175) shape in data, using the same fit parameters from MC, except the amplitude parameter, which will be varied around its nominal value, and extracting the profile likelihood in each case, shown in Fig~\ref{fig.4.5.2.2}. The cross section value at 90$\%$ of this likelihood distribution is the upper limit at 90$\%$ Confidence Limit (Blue vertical line). This technique is applied on the different data sets, and the results are summarized in the Tab.~\ref{tab.4.5.2}.
 
 \begin{figure}[H]
     \centering
@@ -341,17 +397,20 @@ The reconstruction efficiency
         \hline
         Data set & $N_{measured}$ & $\epsilon$ [$\%$] & $\sigma$ [nb] & $90\%$ CL limit [nb] \\
         \hline
-        2016 &  -53 $\pm$ 44 & 0.25 & -6.90 $\pm$ 5.69 $\pm$ -9.67 & 0.562 \\
+        2016 &  -72 $\pm$ 42 & 0.25 & -9.347 $\pm$ 5.429 $\pm$ -9.674 & 4.962 \\
         \hline
-        2017 & -123 $\pm$ 112 & 0.21 & -1.62 $\pm$ 1.48 $\pm$ -0.98 & 0.279 \\
+        2017 & -146 $\pm$ 109 & 0.2 & -1.918 $\pm$ 1.442 $\pm$ -0.985 & 1.488 \\
         \hline
-        2018 & -240 $\pm$ 141 & 0.11 & -2.12 $\pm$ 1.24 $\pm$ -0.66 & -0.529 \\
+        2018 & -284 $\pm$ 136 & 0.1 & -2.507 $\pm$ 1.206 $\pm$ -0.661 & 0.989 \\
         \hline
     \end{tabular}
 \end{table}
 
-\subsubsection{\texorpdfstring{$\gamma p \rightarrow \phi \mathrm{f}_0 p$}{}}
+\subsection{\texorpdfstring{$\bm{\gamma p \rightarrow \phi \mathrm{f}_0 p}$}{}}
 \label{p.4.5.3}
+
+In the section, we will study the non-resonant $\phi \mathrm{f}_0 p$ reaction. After selecting the $\phi$(1020) signal as previously, we extract the $\pi^+ \pi^-$ invariant mass, for every $\phi$(1020) bin using the method in \ref{p.4.4}.
+The $\phi$(1020)-mass dependent $\pi^+ \pi^-$ invariant mass for both 2017 data in Fig.~\ref{fig.4.5.3.1.a} and 2018 data in Fig.~\ref{fig.4.5.3.1.b} are shown. The f$_0$(980) is observed in both data sets, with more statistic in the 2018. A Breit-Wigner signal shape is used to describe the structure at 0.974 GeV/c$^2$, and the parameters are consistent with the PDG data values for this meson.
 
 \begin{figure}[H]
     \centering
@@ -366,8 +425,11 @@ The reconstruction efficiency
         \label{fig.4.5.3.1.b}
     \end{subfigure}
     \caption{$\phi$ mass-dependent $\pi^+ \pi^-$ invariant mass in 2017 (a) and 2018 (b) data.}
-    \label{fig:4.5.3.1}
+    \label{fig.4.5.3.1}
 \end{figure}
+
+The reconstruction efficiency and the total cross section for 2017 and 2018 data sets are summarized in Tab.~\ref{tab.4.5.3}.
+The absence of 2016 data set is due to the low statistics, and the non observation of the f$_0$(980).
 
 \begin{table}[!htbp]
     \centering
@@ -384,8 +446,17 @@ The reconstruction efficiency
     \end{tabular}
 \end{table}
 
-\subsubsection{\texorpdfstring{$\gamma p \rightarrow Y(2175) p \rightarrow \phi \mathrm{f}_0 p$}{}}
+\subsection{\texorpdfstring{$\bm{\gamma p \rightarrow Y(2175) p \rightarrow \phi \mathrm{f}_0 p}$}{}}
 \label{p.4.5.4}
+
+Using the $\phi$(1020)-mass dependent $\pi^+ \pi^-$ invariant mass measured previously in section~\ref{p.4.5.3}, we reduce the background underneath the f$_0$(980) signal, by a side band subtraction. Then we measure the $\phi \mathrm{f}_0$ invariant mass, and fit the distribution with a fixed Y(2175) signal shape from MC, once with the signal included, and extract the Likelihood (H$_1$) and the other one without the signal hypothesis (H$_0$), for both 2017 in Fig.~\ref{fig.4.5.4.1.a} and 2018 data in Fig.~\ref{fig.4.5.4.1.b}. The enhancement around 2.191 GeV/c$^2$ and its width are consistent with the PDG data of for the Y(2175) resonance. A measurement significance (Z) of 6$\sigma$ and 12$\sigma$ for the 2017 and 2018 data respectively, which is defined in Eq.~\ref{eq.4.5.4}. The summary of the efficiencies and cross sections are listed in Tab.~\ref{tab.4.5.4}
+
+\begin{equation}
+    \label{eq.4.5.4}
+    \begin{aligned}
+        Z = \sqrt{-2 ~(Log(H_{0}) - Log(H_{1}))}~,
+    \end{aligned}
+\end{equation}
 
 \begin{figure}[H]
     \centering
@@ -400,7 +471,7 @@ The reconstruction efficiency
         \label{fig.4.5.4.1.b}
     \end{subfigure}
     \caption{$\phi$ mass-dependent $\pi^+ \pi^-$ invariant mass in 2017 (a) and 2018 (b) data.}
-    \label{fig:4.5.4.1}
+    \label{fig.4.5.4.1}
 \end{figure}
 
 \begin{figure}[H]
@@ -434,5 +505,50 @@ The reconstruction efficiency
     \end{tabular}
 \end{table}
 
-\subsection{Conclusions}
+\section{Systematic Studies}
 \label{p.4.6}
+
+In the cross section measurements for all the reactions above, both the statistic and systematic errors are computed.
+The latter are associated with variations around the nominal measurements for different parameters that will be discussed in this section. For ever source of systematic error estimation, we calculate the root mean square ($RMS$) defined in Eq.~\ref{eq.4.6.1}, for a number of variations ($N$) of the measured parameter ($x_i$) with respect to the optimal value ($x_{mean}$).
+
+\begin{equation}
+    \label{eq.4.6.1}
+    \begin{aligned}
+        RMS = \sqrt{\frac{\sum\limits_{i=1}^{N} (x_i-x_{mean})^2}{N}}~,
+    \end{aligned}
+\end{equation}
+
+\begin{itemize}
+    \item \textbf{Background Polynomial Order}: The background polynomial order is allowed to vary between 3 and 5 in order to estimate the uncertainty due to background parameterization. The shape is described by the Chebyshev polynomial $T_n(x)$ of degree $n$ as defined in Eq.~\ref{eq.4.6.2}
+ 
+    \begin{equation}
+        \label{eq.4.6.2}
+        \begin{aligned}
+            T_n(x) = \frac{(-2)^{n}n!}{(2n)!}\sqrt{1-x^2}\frac{d^n}{dx^n}(1-x^2)^{n-1/2}~,
+        \end{aligned}
+    \end{equation}
+
+    \item \textbf{Fitting region}: Fitting the Y(2175) resonance in the range [2, 3 GeV/c$^2$] to extract the number of signal events. This range was varied between [1.8, 3.2 GeV/c$^2$], and the signal events were measured for each case, to study the impact of the fit window on signal yield measurement.
+    \item \textbf{Finite binning}: The $K^+K^-$ invariant mass correlation with both $\pi^+\pi^-$ and $K^+K^-\pi^+\pi^-$ used to reduce the no-$\phi$(1020) background, was binned over 50 steps, this binning was varied between 40 and 60 steps, to study the impact of number of data point on the quality of the fit.
+    \item \textbf{Signal width and mean}: The Y(2175) signal mean and width used in data are extracted from MC samples. A variation of these parameters around their nominal value between [2.183, 2.205 GeV/c$^2$] and [0.065, 0.093 GeV/c$^2$] for the mean and width respectively, to study the stability of the signal model.
+\end{itemize}
+
+Finally, the RMS of the above potential systematic errors, which are treated independently of each other, are added in quadrature to calculate the total systematic errors. The latter is quoted in the cross section measurements above. A summary f these systematic errors are displayed in ab.~\ref{tab.4.6}.
+
+\begin{table}[!htbp]
+    \centering
+    \caption{Systematic errors summary}
+    \label{tab.4.6}
+    \begin{tabular}{|c|c|c|c|c|}
+        \hline
+        Polynomial degrees [ $\%$ ] & Fit Range [$\%$] & $\phi$-mass bins [$\%$]  & Y Mean [$\%$] & Y width [$\%$] \\
+        \hline
+        4.56 & 17.34 & 12.49 & 1.65 & 16.24 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\section{Conclusions}
+\label{p.4.7}
+
+A first measurement of the Y(2175) in photo-production in the $\gamma p \rightarrow Y(2175) p \rightarrow \phi \mathrm{f}_0 p$ reaction is successfully achieved with a 6$\sigma$ and 12$\sigma$ significance, for 2017 and 2018 data sets respectively. The observed Y(2175) resonance parameters are consistent with previous measurements. The production of this resonance with the photon beam is a confirmation that it is a $1^{--}$ state, and a detail study of its production mechanism may lead to unravel its true nature. Also the cross section for both the non-resonant $\phi \pi^+\pi^-$ and $\phi \mathrm{f}_0$ channels were measured. A strong dependence of the $\phi \pi^+\pi^-$ efficiency and cross section on the momentum transfer was observed, which could be explained by the presence of target fragmentation sources in the reaction, like $\Delta^{++} \rightarrow \pi^+ p$ rather than ${f}_0 \rightarrow \pi^+\pi^-$, and this leads to different final state particles phase-space occupation, and with the detector asymmetric acceptance, this will be translated in the efficiency and eventually in the cross section measurements. The Y(2175) was not observed in the $\phi \pi^+\pi^-$ channel, and an upper limit on the cross section was established. The non observation of the resonance in this latter reaction may be an indication of presence of other sources of background, like $\Delta^{++}$, in the reaction. While in the $\phi \mathrm{f}_0$ channel an extra constrain on the $\pi^+\pi^-$ invariant mass was applied, that efficiently improved the Y(2175) signal selection.
