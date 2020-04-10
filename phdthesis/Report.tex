@@ -1,29 +1,41 @@
-\documentclass[12pt,a4paper]{report}% impression recto verso, utilisez \documentclass[a4paper,11pt,twoside,final]{article}
+\documentclass[12pt,a4paper]{report} 
+% impression recto verso, utilisez \documentclass[a4paper,11pt,twoside,final]{article}
+\usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
 % \usepackage[english]{varioref}
-\usepackage[utf8]{inputenc}
 % \usepackage[T1]{fontenc}
 \usepackage{amsmath,amssymb} % extensions pour écrire des mathématiques, mathrsfs: pour les lettres calligraphiée
 % \usepackage{times,mathptmx,textcomp} % Times New Roman, textcomp: create a symbol with both serif and sans-serif
 \usepackage{epsfig,lscape,float,pbox} % float: [H] to force figure placement, pbox: Pour saut de ligne dans une cellule
-\usepackage{tabularx,array,multirow,blkarray} %\multirow{number rows}{width}{text},\multicolumn{number cols}{align}{text},align: l,c,r,blkarray:matrix
+\usepackage{tabularx,array,multirow,blkarray,booktabs} %\multirow{number rows}{width}{text},\multicolumn{number cols}{align}{text},align: l,c,r,blkarray:matrix
 \usepackage[makeroom]{cancel} % cross out caracters
 % \usepackage{tikz} \newcommand*\circled[1]{\tikz[baseline=(char.base)]{\node[shape=circle,draw,inner sep=2pt](char){#1};}} % circle
 \usepackage{setspace,hyperref,url}
 \usepackage{geometry}
 \usepackage{graphicx}  %\usepackage[dvips][pdftex]{graphicx}
 \usepackage{subcaption}
-\usepackage{cite} % shrink multiple references (1/2)
+% \usepackage{cite} % shrink multiple references (1/2)
 % \usepackage[square, comma, sort&amp;compress]{natbib} % shrink multiple references (2/2)
+% \usepackage[numbers]{natbib}
+% \usepackage{notoccite}
+\usepackage[nottoc,numbib]{tocbibind}
+\usepackage{csquotes}
+\usepackage[style=nature,sorting=none]{biblatex} %style=numeric-comp
+\bibliography{xampl}
+\renewbibmacro{in:}{}
+\addbibresource{reference.bib}
 \usepackage{float}
 \usepackage{bm}
 \usepackage{titlesec} % allows to do Start new page with each section (1/2)
 \newcommand{\sectionbreak}{\clearpage} % allows to do Start new page with each section (2/2)
 \usepackage{enumitem} % personalize the itemize 
 \usepackage{tabulary}
+\usepackage{makecell}
+\usepackage{cellspace}
 \usepackage{caption}
 \usepackage{setspace}
 \renewcommand{\baselinestretch}{1.5}
+% \usepackage{feynman}
 % \usepackage[belowskip=0pt,aboveskip=0pt]{caption}
 % \setlength{\intextsep}{10pt plus 2pt minus 2pt}
 
@@ -71,7 +83,6 @@
 \begin{document}
 \include{title}
 \cleardoublepage % Dans le cas du recto verso, ajoute une page blanche si besoin
-
 \include{abstract}
 \clearpage
 \include{remerciements}
@@ -98,7 +109,8 @@
 \include{concl}
 \clearpage
 \include{zusammenfassung}
-\cleardoublepage
-\include{bibliography}
+\clearpage
+\printbibliography[heading=bibintoc, title={Bibliography}]
+% \include{bibliography}
 % \cleardoublepage
 \end{document}

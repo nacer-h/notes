@@ -1,11 +1,95 @@
-\chapter{Search For the Y(2175) Meson in Photo-production at GlueX}
+\chapter{Search For the Y(2175) in Photoproduction at GlueX}
 \label{p.4}
 
 \section{Introduction}
 \label{p.4.1}
 
-The recently discovered structure at 2175 MeV in e$^+$e$^{-}$ collider experiment~\cite{16, 17, 18, 19, 20, 21}, is claimed as an isospin singlet, and its spin-parity is determined to be $J^{PC}$ = 1$^{--}$. Henceforth, this structure is denoted by Y(2175). There are no known meson resonances with $I$ = 0 near this mass~\cite{8}, therefore it may not be a standard meson but rather an exotic, this stimulated many theoretical interpretations. Hence, the importance of finding this resonance in a different production mode.\\
-In this chapter, we will search for this resonance in photo-production, and study its different final states. We also measure cross sections for the resonant and non-resonant modes of these channels. For that end, we start by an event selection to reduce the background, then followed by a description of the Monte Carlo samples and the real data used in the analysis. To finally report the cross section measurements for the different channels, and discuss the systematic uncertainties associated with theses measurements.
+The discovered structure at 2175 MeV in e$^+$e$^{-}$ collider experiment, is claimed as an isospin singlet, and its spin-parity is determined to be $J^{PC}$ = 1$^{--}$. While the PDG meanwhile introduced the notation $\phi(2170)$, within this work the state will be still denoted $Y(2175)$. The observation of this resonance, with its peculiar width and mass, besides a seemingly preferential decay modes, has triggered many theoretical interpretations, most of which propose exotic solutions. 
+~\par Despite all previous experimental efforts, our knowledge of the $Y(2175)$ is not enough to confirm or suppress one of the theoretical interpretations. So far, all the experimental information about the $Y(2175)$ are limited to the e$^+$e$^{-}$ annihilation and $J/\psi$ hadronic decay. The $Y(2175)$ production in other processes will be helpful to shed light on its nature.
+~\par Hadron production induced by photons has been largely studied since it provides an excellent tool to probe the hadron spectrum~\cite{Ballam68, Meyer70, Wang14, Wang17}. The strong affinity of photons for $s\bar{s}$ allows to use photon beams to study the strangeonium-like states, like the observation of the $\phi(1019)$~\cite{Mibe05} and $\phi(1680)$~\cite{Aston81} in $\gamma p \rightarrow K^{+}K^{-}p$ reaction. Since the $Y(2175)$ was observed in the $\phi \pi^{+}\pi^{-}$ and $\phi f_{0}(980)$ channels, indicating a substantial $s\bar{s}$ component in the $Y(2175)$, it would be straightforward to search for the resonance $Y(2175)$ in the reaction of $\gamma p \rightarrow \phi f_{0}(980)p$ and $\gamma p \rightarrow \phi \pi^{+}\pi^{-}p$.
+~\par In this chapter, we will search for the $Y(2175)$ resonance in photoproduction, in both $\phi \pi^{+}\pi^{-}$ and $\phi f_{0}(980)$ decay modes, while studying the $\gamma p \rightarrow K^{+}K^{-} \pi^{+}\pi^{-} p$ final state. Thus, we measure cross sections for the $\gamma p \rightarrow Y(2175) p \rightarrow \phi \pi^+ \pi^{-} p$ and $\gamma p \rightarrow Y(2175) p \rightarrow \phi f_{0}(980) p$ resonant and non-resonant (without the $Y(2175)$ state) modes. To achieve that, we start by an event selection to reduce the background, that is followed by a description of the Monte Carlo samples and the real data used in the analysis. We finally report the cross section measurements for the different channels, and discuss the systematic uncertainties associated with theses measurements.
+
+\section{Data}
+\label{p.4.4}
+
+The first phase running of the GlueX experiment was completed at the end of 2018. It has started collecting data since 2016, with four run periods. Theses data sets are used in this study.
+
+\subsection{Data Samples}
+
+The data are organized into a number of "runs" that correspond to $\sim$ 2 hours of data collection. In 2016, most of the runs were spent on studying hardware performance, thus only a subset of runs (from 11366 to 11555) are selected, which was the optimal running conditions of the detector.
+~\par During the selected set of runs, the polarized photon beam was produced on a thin diamond radiator and passed through the collimator. The diamond was rotated between two perpendicular orientations, parallel and perpendicular polarizations, with respect to the floor. A small set of the selected runs are produced with unpolarized photon beam, using an aluminum radiator instead of the diamond radiator. Since the importance of having a large data sample to increase the probability of finding the $Y(2175)$ in photoproduction, all the different polarizations are combined in a dataset.
+~\par The CEBAF accelerator delivers a 250 MHz electron beam, corresponding to a beam bunch spacing of 4.008 ns, with different average intensities in the datasets. Due to large quantity of data collection, and to efficiently store and process these data, a set of conditions were implemented to save only events of potential physics interest, these events that pass the trigger conditions are referred as triggers. For instance, a minimum energy deposition in the FCAL and/or BCAL is used to determine a good event, which is used in the 2017 dataset triggers. A summary of the luminosity in the coherent peak region, the number of triggers, and the running conditions for the different datasets is presented in Tab.~\ref{tab.4.2.1}.
+
+\begin{table}[H]
+    \centering
+    \small
+    \caption{GlueX phase-I selected datasets Summary}
+    \label{tab.4.2.1}
+    \begin{tabular}{>{\centering}|c|c|c|c|c|c|}}%|c|c|c|c|c|c|
+        \hline
+        \multirow{2}{*}{Run period} & \multirow{2}{*}{\thead{Coherent\\peak\\luminosity\\(pb$^-1$)}} & \multirow{2}{*}{\thead{Number of\\Triggers\\(x $10^9$)}} & \multicolumn{3}{c|}{Runing Conditions} \\
+        \cline{4-6}
+         & & & \thead{Beam\\Intensity\\(nA)} & \thead{Radiator\\Thickness\\(mm)} & \thead{Collimator\\Diameter\\(mm)}\\
+        \cline{4-6}
+        \hline
+        2016 & 2.0 & 6.1 &  & & \\
+        \hline
+        2017 & 21.8 & 49.6 & & & \\
+        \hline
+        Spring 2018 & 58.4 & 146.0 & & & \\
+        \hline
+        Fall 2018 & 39.2 & 80.14 & & & \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\subsection{Data Processing and Particle Combinations}
+
+The triggered events are stored in a raw format, witch is then processed and used to reconstruct the four-momentum vectors, positions of the tracks and showers, and many other important quantities, $e.g.$: $dE/dx$,..,$etc$. After every improvement in reconstruction and calibration the data is processed again to produce the above quantities with a better precision. The latest reconstruction versions are used in this analysis.
+~\par Five tracks are selected from the reconstructed data, with three positive and two negative combinations consistent with the $K^+$, $K^-$, $\pi^+$, $\pi^-$, and proton final state. Mass hypotheses are tested for  both the positive and negative charged tracks. In addition, three extra "good" charged tracks are allowed in the event, that have a matching hit in one of the detectors besides the drift chambers.
+
+\subsection{Tagged Flux}
+
+The tagged photon flux for a data run period is determined using the hit coincidence between the PS and the TAGM or TAGH, including the PS acceptance correction. The tagged flux integrated over the run periods of the different datasets used in this study is shown in Fig.~\ref{fig.4.2.2}.
+~\par The increase in the number of triggers from 2016 to 2018 Spring datasets, is reflected in the flux yields seen in Fig.~\ref{fig.4.2.2}. As expected, The coherent photons region is produced between 8 - 9.2 GeV, with a shift in the 2016 dataset energy peak towards a higher energy, due to the decrease in the electron beam energy delivered to the GleX experiment from $\sim$ 12 GeV in 2016 data to 11.6 GeV in the rest datasets.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{plots/ctot_tagged_flux.eps}
+    \caption{\label{fig.4.2.2}The tagged photon flux versus the photon beam energy distributions for 2016 (black), 2017 (blue), Spring 2018 (red), and Fall 2018 (magenta) datasets.}
+\end{figure}
+
+The Data sets go through the same selection criteria as the MC samples. A clear $\phi$(1020) peak is seen in the $K^+K^-$ invariant mass Fig.~\ref{fig.4.4.1.a}. After selecting the $\phi$(1020) signal region, shown between the two red vertical lines in Fig.~\ref{fig.4.4.1.a}, we measure the invariant masses of $\pi^+ \pi^-$ seen in in Fig.~\ref{fig.4.4.1.b} and $\phi \pi^+ \pi^-$ in Fig.~\ref{fig.4.4.1.c}. No clear f$_0$(980) or Y(2175) peaks are seen in these distributions, although an important backgrounds is present, as the $\rho$(770) peak in the $\pi^+ \pi^-$ invariant mass.
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{plots/c_pippimkpkm_17_PhiMass_postcuts.eps}
+        \caption{}
+        \label{fig.4.4.1.a}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{plots/c_pippimkpkm_17_foMass_postcuts.eps}
+        \caption{}
+        \label{fig.4.4.1.b}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{plots/c_pippimkpkm_17_YMass_postcuts.eps}
+        \caption{}
+        \label{fig.4.4.1.c}
+    \end{subfigure}
+    \caption{Invariant mass of $K^+K^-$ (a), $\pi^+\pi^-$ (b) and $\phi \pi^+ \pi^-$ (c) in data.}
+    \label{fig:4.4.1}
+\end{figure}
+
+\par In the following we will try to subtract the background underneath the $\phi$ peak. Due to the asymmetry of the background shape on the sides of the $\phi$ peak, the simple side band subtraction will not be appropriate, because it could include an over- or underestimation of the background events.\\
+An efficient method will be to study the $K^+K^-$ and $\pi^+\pi^-$ or $\phi \pi^+ \pi^-$ correlations. As an example we will apply the technique on the $\pi^+\pi^-$ invariant mass. The $K^+K^-$ and $\pi^+\pi^-$ correlation is shown on Fig.~\ref{fig.4.4.2}a, we notice the horizontal and vertical bands of the $\phi$(1020) and $\rho$(770) respectively. We project every bin of the $K^+K^-$ invariant mass shown in Fig.~\ref{fig.4.4.2}b, we describe the signal and background shapes, the signal fit parameters used are extracted from the corresponding MC sample. Finally, we look at $\pi^+\pi^-$ invariant mass for the events that contain the $\phi$(1020) signal only. The extracted $\phi$(1020) signal yield (N$_{\phi}$) as a function of the $\pi^+\pi^-$ invariant mass is shown in Fig.~\ref{fig.4.4.2}c, where a small enhancement around 980 GeV/c$^2$ is seen, a detail study of this enhancement will discussed in sections \ref{p.4.5.3} and \ref{p.4.5.4}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.0\textwidth]{plots/phi_scan.png}
+    \caption{\label{fig.4.4.2}$K^+K^-$ versus $\pi^+\pi^-$ invariant mass (a), $K^+K^-$ invariant mass projection in $\pi^+\pi^-$ bins (b) and $\pi^+\pi^-$ $\phi$-mass dependent invariant mass (c).}
+\end{figure}
 
 \section{Event Selection}
 \label{p.4.2}
@@ -200,62 +284,6 @@ Here $\Gamma$ is the half-width at half-maximum (HWHM) of the Breit-Wigner profi
     \end{subfigure}
     \caption{Invariant mass of $K^+ K^-$ (a), $\pi^+ \pi^-$ (b) and $\phi \pi^+ \pi^-$ (c) in simulation.}
     \label{fig.4.3.1}
-\end{figure}
-
-\section{Data}
-\label{p.4.4}
-
-The first phase running of the GlueX experiment was completed at the end of 2018. It has started collecting data since 2016,  with four run periods. Theses data sets are used in our study. The Tab.~\ref{tab.4.4} shows a summary of the data and their luminosity for the coherent photon beam region.
-
-\begin{table}[H]
-    \centering
-    \caption{GlueX phase-I data set Summary}
-    \label{tab.4.4}
-    \begin{tabular}{|c|c|}
-        \hline
-        Run period & Coherent peak luminosity (pb$^-1$)\\
-        \hline
-        2016 & 2 \\
-        \hline
-        2017 & 21.8 \\
-        \hline
-        Spring 2018 & 58.4 \\
-        \hline
-        Fall 2018 & 39.2 \\
-        \hline
-    \end{tabular}
-\end{table}
-
-The Data sets go through the same selection criteria as the MC samples. A clear $\phi$(1020) peak is seen in the $K^+K^-$ invariant mass Fig.~\ref{fig.4.4.1.a}. After selecting the $\phi$(1020) signal region, shown between the two red vertical lines in Fig.~\ref{fig.4.4.1.a}, we measure the invariant masses of $\pi^+ \pi^-$ seen in in Fig.~\ref{fig.4.4.1.b} and $\phi \pi^+ \pi^-$ in Fig.~\ref{fig.4.4.1.c}. No clear f$_0$(980) or Y(2175) peaks are seen in these distributions, although an important backgrounds is present, as the $\rho$(770) peak in the $\pi^+ \pi^-$ invariant mass.
-
-\begin{figure}[H]
-    \centering
-    \begin{subfigure}[b]{0.45\textwidth}
-        \includegraphics[width=\textwidth]{plots/c_pippimkpkm_17_PhiMass_postcuts.eps}
-        \caption{}
-        \label{fig.4.4.1.a}
-    \end{subfigure}
-    \begin{subfigure}[b]{0.45\textwidth}
-        \includegraphics[width=\textwidth]{plots/c_pippimkpkm_17_foMass_postcuts.eps}
-        \caption{}
-        \label{fig.4.4.1.b}
-    \end{subfigure}
-    \begin{subfigure}[b]{0.45\textwidth}
-        \includegraphics[width=\textwidth]{plots/c_pippimkpkm_17_YMass_postcuts.eps}
-        \caption{}
-        \label{fig.4.4.1.c}
-    \end{subfigure}
-    \caption{Invariant mass of $K^+K^-$ (a), $\pi^+\pi^-$ (b) and $\phi \pi^+ \pi^-$ (c) in data.}
-    \label{fig:4.4.1}
-\end{figure}
-
-\par In the following we will try to subtract the background underneath the $\phi$ peak. Due to the asymmetry of the background shape on the sides of the $\phi$ peak, the simple side band subtraction will not be appropriate, because it could include an over- or underestimation of the background events.\\
-An efficient method will be to study the $K^+K^-$ and $\pi^+\pi^-$ or $\phi \pi^+ \pi^-$ correlations. As an example we will apply the technique on the $\pi^+\pi^-$ invariant mass. The $K^+K^-$ and $\pi^+\pi^-$ correlation is shown on Fig.~\ref{fig.4.4.2}a, we notice the horizontal and vertical bands of the $\phi$(1020) and $\rho$(770) respectively. We project every bin of the $K^+K^-$ invariant mass shown in Fig.~\ref{fig.4.4.2}b, we describe the signal and background shapes, the signal fit parameters used are extracted from the corresponding MC sample. Finally, we look at $\pi^+\pi^-$ invariant mass for the events that contain the $\phi$(1020) signal only. The extracted $\phi$(1020) signal yield (N$_{\phi}$) as a function of the $\pi^+\pi^-$ invariant mass is shown in Fig.~\ref{fig.4.4.2}c, where a small enhancement around 980 GeV/c$^2$ is seen, a detail study of this enhancement will discussed in sections \ref{p.4.5.3} and \ref{p.4.5.4}.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1.0\textwidth]{plots/phi_scan.png}
-    \caption{\label{fig.4.4.2}$K^+K^-$ versus $\pi^+\pi^-$ invariant mass (a), $K^+K^-$ invariant mass projection in $\pi^+\pi^-$ bins (b) and $\pi^+\pi^-$ $\phi$-mass dependent invariant mass (c).}
 \end{figure}
 
 \section{Cross Section and Upper Limit}
@@ -505,7 +533,7 @@ Using the $\phi$(1020)-mass dependent $\pi^+ \pi^-$ invariant mass measured prev
     \end{tabular}
 \end{table}
 
-\section{Systematic Studies}
+\section{Systematic Uncertainties}
 \label{p.4.6}
 
 In the cross section measurements for all the reactions above, both the statistic and systematic errors are computed.

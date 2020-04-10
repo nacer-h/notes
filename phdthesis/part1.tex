@@ -1,12 +1,12 @@
 \chapter{Introduction}
 \label{p.1}
 
-Our understanding of the fundamental building blocks of matter has advanced greatly in the last few decades Ref.~\cite{1,2,3,4,5}. It is nearly half a century ago that Quantum Chromodynamics (QCD) was developed, a revolutionary proposal that protons, neutrons and all other strongly interacting particles, the so-called hadrons, are made of quarks interacting with each other through the gluons. Over the years, this proposal has become firmly established even though we have not observed free quarks directly, due to the phenomenon of confinement~\cite{6}. Despite decades of research, we still lack a detailed quantitative understanding of the way QCD generates the spectrum of hadrons~\cite{7}. A wide experimental research campaign is conducted to shed new light on the hadron excitation spectrum and the dynamics of hadrons~\cite{8}, helping to improve and test the theoretical models. A key player to study these properties is the GlueX experiment, which aims to discover and study the properties of the gluonic field contribution to the quantum numbers of the quark-antiquark bound system, the hybrid mesons~\cite{9}. In this chapter, we will give an overview of QCD, then look at hadron spectroscopy from a point of view of a simple quark model and Beyond, and we will finish with an experimental status of a hybrid meson candidate, the Y(2175) state~\cite{10}.
+Our understanding of the fundamental building blocks of matter has advanced greatly in the last few decades Ref.~\cite{Fritzsch94,Gell64,Gell62,Neeman61,Zweig64}. It is nearly half a century ago that Quantum Chromodynamics (QCD) was developed, a revolutionary idea that protons, neutrons and all other strongly interacting particles, the so-called hadrons, are made of quarks interacting with each other via the exchange of gluons. Over the years, this proposal has become firmly established even though we have not observed free quarks directly, due to the phenomenon of confinement~\cite{Gross05}. Despite decades of research, we still lack a detailed quantitative understanding of the way QCD generates the spectrum of hadrons~\cite{Wilczek05}. A wide experimental research campaign is conducted to shed new light on the hadron excitation spectrum and the dynamics of hadrons~\cite{Tanabashi18}, helping to improve and test the theoretical models. A key player to study these properties is the GlueX experiment, which aims to discover and study the properties of the gluonic field contribution to the quantum numbers of the quark-antiquark bound system, the hybrid mesons~\cite{Meyer18}. This chapter gives an overview of QCD, and look at hadron spectroscopy from a point of view of a simple quark model and Beyond. Eventually it gives an experimental status of a hybrid meson candidate, the Y(2175) state~\cite{Gui07}.
 
 \section{Quantum Chromo-Dynamics}
 \label{p.1.1}
 
-QCD is the framework that describes one of the three fundamental forces in the Standard Model of particle physics, the strong force. It acts on the quarks and gluons, quarks are spin 1/2 particles, with six different flavors: up ($u$), down ($d$), strange ($s$), charm ($c$), bottom ($b$) and top ($t$) quark. They carry a color charge: red, blue, or green, and each quark has an associated antiquark of the same mass and opposite charge. Gluons are spin 1 particles, they are eight different mediators of the strong force, and carry a color and anticolor charges. The dynamics of the strong interaction between quarks and gluons are contained in the QCD lagrangian defined in Eq.~\ref{eq.1.1}
+QCD is the framework that describes one of the three fundamental forces in the Standard Model of particle physics, the strong force. It acts on the quarks and gluons. Quarks are spin $1/2$ particles, with six different flavors: up ($u$), down ($d$), strange ($s$), charm ($c$), bottom ($b$) and top ($t$). Next to the electric charge, they also carry a color charge: red, blue, or green, and each quark has an associated antiquark of the same mass and opposite color charge, anti-red, anti-blue, and anti-green. Gluons are spin 1 particles, appearing in eight different color-anticolor configurations. The dynamics of the strong interaction between quarks and gluons are contained in the QCD Lagrangian defined in Eq.~\ref{eq.1.1}
 
 \begin{equation}
     \label{eq.1.1}
@@ -15,37 +15,41 @@ QCD is the framework that describes one of the three fundamental forces in the S
     \end{aligned}
 \end{equation}
 
-\noindent where $q_A$ ($\bar{q}_{A}$) are the quark (antiquark) fields with colour indices $A$, and $F_{A}$ are nonlinear terms in the field strength, that give rise to three and quadratic vertices in the theory so that gluons couple to themselves in addition to interacting with quarks as shown in Fig.~\ref{fig.1.1.1}.
+\noindent where $q_A$ ($\bar{q}_{A}$) are the quark (antiquark) fields with color indices $A$, and $F_{A}$ are nonlinear terms in the field strength, that give rise to three and quadratic vertices in the theory so that gluons couple to themselves in addition to interacting with quarks as shown in Fig.~\ref{fig.1.1.1}.
 
 \begin{figure}[H]
     \centering
-        \includegraphics[width=0.7\textwidth]{plots/qcd_vertex.png}
-        \caption{Interactions in QCD at the tree level. In the case of strong interaction, There are three basic Vertices, which is the place where particles are created or annihilated. The strait and wiggly lines represent the quarks (antiquarks) and gluon fields respectively. The strength of the interaction between the particle and the force carrier at that vertex is called the coupling constant. These representations are called Feynman diagrams.}
+        \includegraphics[width=1.0\textwidth]{plots/feynman_diag.png}
+        \caption{Interactions in QCD at the tree level. In the case of strong interaction, There are three fundamental vertices, representing particle creation or annihilation. The straight and curly lines represent the quarks (antiquarks) and gluon fields respectively. The strength of the interaction between the particle and the force carrier at that vertex is called the coupling constant. These representations are called Feynman diagrams.}
         \label{fig.1.1.1}
 \end{figure}
 
-However, due to the gluon self coupling, the vacuum will also be filled with virtual gluon pairs. Since gluons carry colour charge, it turns out that the effective color charge becomes larger with larger distance. In QCD, the anti-screening effect causes the strong coupling to become small at short distance (large momentum transfer). This causes the quarks inside hadrons to behave more or less as free particles, when probed at large enough energies. This property of the strong interaction is called asymptotic freedom. Asymptotic freedom allows us to use perturbation theory, and by this arrive at quantitative predictions for hard scattering cross sections in hadronic interactions. On the other hand, at increasing distance the coupling becomes so strong that it is impossible to isolate a quark from a hadron. In other words, free quarks have never been observed, as a result of a long distance confining property of the strong QCD force, where all quarks hadronize (become part of a hadron), the top quark instead decays before it has time to hadronize. Therefore all observable particle states are colour singlets, and formation of quark-antiquark pairs or three quarks known as mesons and baryons respectively. This mechanism is called confinement. The running of strong coupling constant as a function of the energy scale is shown in Fig.~\ref{fig.1.1.2}.
+However, due to the gluon self coupling, the vacuum will also be filled with virtual gluon pairs. Since gluons carry color charge, it turns out that the effective color charge becomes larger with larger distance. Whereas, in contrast, this anti-screening effect causes the strong coupling to become small at short distance (large momentum transfer). This lets the quarks inside hadrons to behave more or less as free particles, becoming evident when probed at large enough energies. This property of the strong interaction is called asymptotic freedom. Asymptotic freedom allows us to apply perturbation theory, resulting in quantitative predictions for hard scattering cross sections in hadronic interactions. On the other hand, at increasing distance the coupling becomes so strong that it is impossible to isolate a quark from a hadron. In other words, free quarks have never been observed, as a result of a long distance confining property of the strong QCD force, where all quarks hadronize (become part of a hadron). Only the the top quark instead decays before it has time to hadronize. Therefore all observable strongly bound states are color singlets, appearing as formations of quark-antiquark pairs (carrying color and anticolor) called mesons, or groups of three quarks (carrying all three colors) called baryons. This mechanism is called confinement. The running of strong coupling constant as a function of the energy scale is shown in Fig.~\ref{fig.1.1.2}.
 
-\begin{figure}[H]
+\begin{figure}[!t]
     \centering
         \includegraphics[width=0.8\textwidth]{plots/qcd_coupling.png}
-        \caption{Summary of measurements of the strong coupling constant, $\alpha_{s}$, as a function of the energy scale, $Q$, from experimental data which agree closely with QCD predictions. The respective degree of QCD perturbation theory used in the extraction of $\alpha_{s}$ is indicated in brackets (NLO: next-to-leading order; NNLO: next-to-next-to leading order). Reproduced from Ref.~\cite{8}.}
+        \caption{Summary of measurements of the strong coupling constant, $\alpha_{s}$, as a function of the energy scale, $Q$, from experimental data which agree closely with QCD predictions. The respective degree of QCD perturbation theory used in the extraction of $\alpha_{s}$ is indicated in brackets (NLO: next-to-leading order; NNLO: next-to-next-to leading order). Reproduced from Ref.~\cite{Tanabashi18}.}
         \label{fig.1.1.2}
 \end{figure}
 
-This self-interaction between gluons makes the theory nonlinear and very difficult to solve. Nevertheless in some special cases approximate solutions can be found using some QCD-inspired models and by numerical calculations on a lattice (LQCD)~\cite{12}. LQCD is the only non-perturbative method based uniquely on the first principles of QCD. In LQCD, spacetime is discretized onto a four dimensional lattice grid. Where quarks are placed on the grid points spaced by a distance, and Gluons lie on the links between these points, while quark masses and strong coupling constant are inputs to the model. The QCD continuum is reached, when the lattice spacing goes to zero. In order to have a small enough lattice spacing, small enough masses and a large enough box size, one needs a large number of degrees of freedom in a numerical computation. For QCD with realistic choices of the lattice spacing, volume and the quark masses, this is a serious computational challenge. In order to circumvent this problem, most numerical computations in LQCD have been done in the quenched approximation (ignoring all fermion loops), which leads to unphysically heavy quark masses. QCD also suggests existence of new forms of hadronic matter with excited gluonic degrees of freedom, known as glueballs and hybrids~\cite{8}. Recent development in computational technics and power have led to LQCD making predictions of the mass and quantum numbers of the meson spectrum shown in Fig.~\ref{fig.1.1.3}.
+This self-interaction between gluons makes the theory nonlinear and very difficult to solve. Nevertheless in some special cases approximate solutions can be found using some QCD-inspired models and by numerical calculations on a lattice (LQCD)~\cite{Dudek13}. LQCD is the only non-perturbative method based uniquely on the first principles of QCD. In LQCD, spacetime is discretized onto a four dimensional lattice grid. Quarks are placed on the grid points spaced by a distance, and Gluons lie on the links between these points, while quark masses and strong coupling constant are inputs to the model. The QCD continuum is reached, when the lattice spacing goes to zero. In order to have a sufficiently fine granular lattice spacing, small realistic masses and a sufficiently large box size, one needs a massive amount of computing power, being the limiting factor for such numerical calculations. For QCD with realistic choices of the lattice spacing, volume and the quark masses, this is a serious computational challenge. To circumvent this problem, most numerical computations in LQCD have been done in the quenched approximation, by ignoring all fermion loops. This introduces systematic errors, particularly for light quarks, due to the inverse proportionality between the effect of the fermion loop and its mass. QCD also suggests existence of new forms of hadronic matter with excited gluonic degrees of freedom, known as glueballs and hybrids~\cite{Tanabashi18}. Recent development in computational technics and power have led to LQCD making predictions of the mass and quantum numbers of the meson spectrum shown in Fig.~\ref{fig.1.1.3}.
 
-\begin{figure}[H]
-    \centering
+\begin{landscape}
+    \vspace*{\fill}
+    \begin{figure}[H]
+        \centering
         \includegraphics[width=1.0\textwidth]{plots/lqcd.png}
-        \caption{Spectrum of light meson predicted using Lattice QCD. The height of the boxes indicates their error and states highlighted in orange correspond to the lightest hybrid mesons~\cite{12}.}
+        \caption{Spectrum of light meson predicted using Lattice QCD. The height of the boxes indicates their error and states highlighted in orange correspond to the lightest hybrid mesons~\cite{Dudek13}.}
         \label{fig.1.1.3}
-\end{figure}
+    \end{figure}
+    \vspace*{\fill}
+\end{landscape}
 
 \section{Mesons in the Constituent Quark Model and Beyond}
 \label{p.1.2}
 
-In the quark model, mesons ($q\bar{q}$) are bound states of a quark ($q$) and an antiquark ($\bar{q}$), with $q$ and $\bar{q}$ being of the same or different quark flavors. Mesons with their total angular momentum $J = L \oplus S$, orbital angular momentum $L$ between the quarks, parity $P=(-1)^{L+1}$, which specify the symmetry of the wave function under reflection through a point in space, and charge conjugation $C=(-1)^{L+S}$ that transforms a particle into its antiparticle, are classified into $J^{PC}$ multiplets. Following a scheme of classification, the SU(3) flavor symmetry, there are nine possible $q\bar{q}$ combinations containing the light $u$, $d$, and $s$ quarks, grouped into an octet and a singlet of light quark mesons defined in Eq.~\ref{eq.1.2.1}:
+In the quark model, mesons ($q\bar{q}$) are bound states of a quark ($q$) and an antiquark ($\bar{q}$), with $q$ and $\bar{q}$ being of the same or different quark flavors. Mesons are classified into $J^{PC}$ multiplets based on  total angular momentum $J = L \oplus S$, orbital angular momentum $L$ between the quarks, parity $P=(-1)^{L+1}$, which specify the symmetry of the wave function under reflection through a point in space, and charge conjugation $C=(-1)^{L+S}$ that transforms a particle into its antiparticle. Following the SU(3) flavor symmetry, there are nine possible $q\bar{q}$ combinations containing the light $u$, $d$, and $s$ quarks, grouped into an octet and a singlet of light quark mesons defined in Eq.~\ref{eq.1.2.1}:
 
 \begin{equation}
     \label{eq.1.2.1}
@@ -54,7 +58,8 @@ In the quark model, mesons ($q\bar{q}$) are bound states of a quark ($q$) and an
     \end{aligned}
 \end{equation}
 
-The ground state ($L=0$) nonets of mesons with spin 0 (pseudoscalar) and spin 1 (vector) are shown in diagrams Fig.~\ref{fig.1.2.1.a} and Fig.~\ref{fig.1.2.1.b} respectively. Although the SU(3) flavor symmetry is not an exact symmetry~\cite{5}, since the $s$ quark is much heavier that the $u $ and $d$ quarks, it still describes fairly well the observed pattern of hadron spectrum.
+The ground state ($L=0$) nonets of mesons with spin 0 (pseudoscalar) and spin 1 (vector) are shown in diagrams Fig.~\ref{fig.1.2.1.a} and Fig.~\ref{fig.1.2.1.b} respectively.
+~\par An exact symmetry under SU(3), would imply that the $u$, $d$ and $s$ quarks were mass degenerate. The SU(3) flavor symmetry is not an exact symmetry~\cite{Zweig64}, due the heavy $s$ quark mass, of order 150 MeV/c$^{2}$, with respect to $u$ and $d$ quarks. Nevertheless, the SU(3) can still be considered as an approximate flavor symmetry, since this mass difference is very small on the hadronic mass scale of $\sim$ 1 GeV, and it still describes fairly well the observed pattern of hadron spectrum.
 
 \begin{figure}[H]
     \centering
@@ -69,11 +74,11 @@ The ground state ($L=0$) nonets of mesons with spin 0 (pseudoscalar) and spin 1 
         \label{fig.1.2.1.b}
         % \vspace{1pt}
     \end{subfigure}
-    \caption{Weight diagrams of light mesons ground state nonets for Pseudoscalars (a) and vetrors (b), classified by the strong isospin $I_3$ and strangeness $S$ quantum numbers.}
+    \caption{Diagrams of light mesons ground state nonets for pseudoscalars (a) and vectors (b), classified by the strong isospin $I_3$ and strangeness $S$ quantum numbers.}
     \label{fig.1.2.1}
 \end{figure}
 
-The lowest lying sates of mesons built in the quark model are shown in Tab.~\ref{tab.1.1}.
+The lowest lying states of mesons built in the quark model are shown in Tab.~\ref{tab.1.1}.
 % \begin{table}[H]
 %     \centering
 %     \caption{Quantum numbers of the lowest lying meson states}
@@ -86,15 +91,15 @@ The lowest lying sates of mesons built in the quark model are shown in Tab.~\ref
 %         \hline
 %     \end{tabular}
 % \end{table}
-The above quantum numbers are repeated for the radial excitations, labelled with the radial number $n$ = 1, 2,..., where the first $P$ state is labelled $2P$, the first $D$ state $3D$, etc.
+The above quantum numbers are repeated for the radial excitations, labelled with the radial number $n$ = 1, 2,...,$etc$.
 
 \begin{table}[H]
     \centering
-    \caption{The light meson spectrum, with their quantum numbers. Reproduced from~\cite{8}}
+    \caption{The light meson spectrum, with their quantum numbers. Reproduced from~\cite{Tanabashi18}}
     \label{tab.1.1}
     \begin{tabular}{cccccccccc}
         \hline
-        $L$\qquad & $S$\qquad & $J$\qquad & $n$\qquad & $I=1$\qquad & $I=1/2$ \qquad & $I=0$\qquad & $I=0$\qquad & $J^{PC}$\qquad & $n^{2s+1}L_J$\qquad \\
+        $L$\qquad & $S$\qquad & $J$\qquad & $n$\qquad & $I=1$\qquad & $I=1/2$ \qquad & $I=0$\qquad & $I=0$\qquad & $J^{PC}$\qquad & $n^{2S+1}L_J$\qquad \\
         \hline
         0 & 0 & 0 & 1 & $\pi$ & K & $\eta$ & $\eta^{\prime}(958)$ & $0^{-+}$ & $\rm 1^1S_0$ \\
         0 & 1 & 1 & 1 & $\rho$(770) & $K^{\star}(892)$ & $\phi(1020)$ & $\omega(782)$ & $1^{--}$ & $\rm 1^3S_1$ \\
@@ -115,18 +120,17 @@ The above quantum numbers are repeated for the radial excitations, labelled with
     \end{tabular}
 \end{table}
 
-From Tab.~\ref{tab.1.1}, we can see that some $J^{PC}$ quantum numbers are absent from the list of the multiplets. For instance, a state with $J^{PC}$ = $1^{-+}$, would be exotic, and would not be allowed by the quark model. Although, QCD allows only overall colour-neutral configurations, additional colorless states, other than $q\bar{q}$, are also possible, and are called exotic mesons.
+From Tab.~\ref{tab.1.1}, we can see that some $J^{PC}$ quantum numbers are absent from the list of the multiplets. For instance, a state with the quantum numbers $J^{PC}$ = $1^{-+}$, cannot be generated by a quark-antiquark state based on the rules specified above for $P$ and $C$ and thus is called 'exotic'. Although, QCD allows any kind of color-neutral configurations, additional colorless states other than $q\bar{q}$ or $qqq$, are called exotic hadrons.
 
 \subsection{Multiquarks}
-Multiquark mesons are color-singlet states objects such as, $Tetraquarks$ that are formed by a color-octet diquark and a color-octet anti-diquark bound by gluon exchanges (Fig.~\ref{fig.1.2.2.a}), $Molecules$ which are configurations that include two color-singlet $q\bar{q}$ pairs bound by long-range meson exchanges (Fig.~\ref{fig.1.2.2.b}). Another multiquark states is the $hadroquarkonia$, which is a compact, colorless quarkonia core, surrounded by a light quark cloud sticking together thanks to the QCD analogue of the van der Waals force (Fig.~\ref{fig.1.2.2.c}). Several examples exist of multiquark states, an extensively debated states are the $f_0$(980) and $a_0$(980), which were discussed to be a compact $q\bar{q}$$q\bar{q}$ object or an extended $K\bar{K}$ molecule. There is also speculations that the $Y(2175)$ is a good tetraquark candidate.
+Multiquark mesons are color-singlet state objects consisting of more than two or three (anti-)quarks, like, $tetraquarks$ that are formed by a color-octet diquark and a color-octet anti-diquark bound by gluon exchanges (Fig.~\ref{fig.1.2.2.a}), or $molecules$ which are configurations that include two color-singlet $q\bar{q}$ pairs bound by long-range meson exchanges (Fig.~\ref{fig.1.2.2.b}). Another form is named $hadroquarkonium$, which is a compact, colorless quarkonium core, surrounded by a light quark cloud sticking together thanks to the QCD analogue of the van der Waals force (Fig.~\ref{fig.1.2.2.c}). Several candidates for multiquark states exist, an extensively debated states are the $f_0$(980) and $a_0$(980), which were discussed to be a compact $q\bar{q}$$q\bar{q}$ object or an extended $K\bar{K}$ molecule. There are also speculations that the $Y(2175)$ is a good tetraquark candidate.
 
 \subsection{Glueballs}
-Due to the gluons self-interaction, color-singlet states composed entirely of multiple gluonic excitations without valence quarks; are possible and called glueballs (Fig.~\ref{fig.1.2.2.d}). Among the signatures naively expected for glueballs is the isoscalar states that do not fit into $q\bar{q}$ nonets. The lightest glueballs have quantum numbers
-$J^{PC}$ = $0^{++}$ and $2^{++}$. Lattice calculations predict for the ground state $0^{++}$ a mass around 1600 – 1700 MeV, while the first excited state $2^{++}$ has a mass of about 2300 MeV. Hence, the low-mass glueballs lie in the same mass region as ordinary isoscalar $q\bar{q}$ states. Candidates for glueballs are: $f_0$(500) (or $\sigma$), the $f_0$(980), the broad $f_0$(1370),...,etc.
+Due to the gluons self-interaction, color-singlet states composed entirely of multiple gluonic excitations without valence quarks are possible and called glueballs (Fig.~\ref{fig.1.2.2.d}). Some of the supernumerary isoscalar $f_0$ states not fitting into the corresponding nonet are discussed to have a significant fraction of glueball. The lightest glueballs have quantum numbers $J^{PC}$ = $0^{++}$ and $2^{++}$. Lattice calculations predict for the ground state $0^{++}$ a mass around 1600 – 1700 MeV, while the first excited state $2^{++}$ has a mass of about 2300 MeV. Hence, the low-mass glueballs lie in the same mass region as ordinary isoscalar $q\bar{q}$ states.
 
 \subsection{Hybrids}
-QCD predict also additional configurations, in which an excited gluonic field contributes to the quantum numbers of the quarks in the meson, termed hybrids (Fig.~\ref{fig.1.2.2.e}).\\
-Two cases arise from these quantum numbers, the first is the $0^{+-}$, $1^{-+}$ and $2^{+-}$ which could not be formed by the conventional $q\bar{q}$, and are called spin-exotic hybrid mesons. Hence the discovery of mesons with such quantum numbers would prove unambiguously the existence of exotic (non-$q\bar{q}$) mesons~\cite{13}. The second case, is all the sates with $J^{PC}$ quantum numbers similar to the $q\bar{q}$, with the gluonic degrees of freedom included, called hybrid mesons (also known as $cryptoexotic$ mesons)~\cite{9}. These sates are observed as an overpopulation of states in the spectrum of mesons, and are hard to distinguish form the conventional $q\bar{q}$ states. The hybrid meson sates with $J^{PC}$ quantum numbers ~\ref{eq.1.2.2} are then formed:
+QCD predicts also additional configurations, in which an excited gluonic field contributes to the quantum numbers of the quarks in the meson, termed hybrids (Fig.~\ref{fig.1.2.2.e}).\\
+Arising from the gluonic contribution to the spin-parity $J^{PC}$ of the hybrid states, this quantum number is not anymore subject to the limitations holding for quark-antiquark systems, such states are called spin-exotic hybrid mesons. In case of experimental evidence of a state with a 'forbidden' $J^{PC}$ = $0^{+-}$, $1^{-+}$ and $2^{+-}$ would prove unambiguously the existence of exotic (non-$q\bar{q}$) mesons~\cite{Isgur85}. The second case, is all the states with $J^{PC}$ quantum numbers similar to the $q\bar{q}$, including the gluonic degrees of freedom, also known as $cryptoexotic$ mesons~\cite{Meyer18}. These latter should be observed as an overpopulation of states in the meson spectrum, and are hard to distinguish form the conventional $q\bar{q}$ states. The hybrid meson states with $J^{PC}$ quantum numbers are then formed:
 
 \begin{equation}
     \label{eq.1.2.2}
@@ -135,8 +139,7 @@ Two cases arise from these quantum numbers, the first is the $0^{+-}$, $1^{-+}$ 
     \end{aligned}
 \end{equation}
 
-A candidate for the $1^{--}$ hybrid mesons is the Y(2175) state, which will be our focussed in this thesis. Its experimental status is discussed in Sec.~\ref{p.1.3}.
-Lattice calculations predict that the lightest hybrid with exotic quantum numbers lies in the mass 1.7 - 1.9 GeV. The experiments have reported two different hybrid candidates with spin-exotic signature, $\pi_{1}(1400)$ and $\pi_{1}(1600)$, which couple separately to $\eta\pi$ and $\eta \prime \pi$~\cite{8}. This picture is not compatible with recent Lattice QCD estimates for hybrid states, which predicts that the lightest hybrid with exotic quantum numbers lies in the mass 1.7 - 1.9 GeV. For the lightest $1^{--}$ Hybrid meson candidates, we find the $Y(2175)$, $Y(4260)$ and $\Upsilon$(10860). More details about the $Y(2175)$ state are discussed in section~\ref{p.1.4}, and the reference to all these exotic mesons measurements mentioned above are described in Ref~\cite{8}.
+The Y(2175) meson is a strong candidate for the $1^{--}$ hybrid states~\cite{Gui07}, which will be the focus of this thesis. Its experimental status and photoproduction search are discussed in detail in Sec.~\ref{p.1.3} and~\ref{p.1.4}, respectively. Experiments have reported two different hybrid candidates with spin-exotic signature, $\pi_{1}(1400)$ and $\pi_{1}(1600)$, which couple separately to $\eta\pi$ and $\eta \prime \pi$. While the $\pi_{1}(1600)$ is close to the expectation for a hybrid, The $\pi_{1}(1400)$ candidate is not compatible with recent Lattice QCD estimates for hybrid states, which predicts that the lightest hybrid with exotic quantum numbers lies in the mass 1.7 - 1.9 GeV. For the $1^{--}$ Hybrid meson candidates, we find the $Y(2175)$, $Y(4260)$ and $\Upsilon$(10860). The reference to all these exotic mesons measurements mentioned above are described in Ref~\cite{Tanabashi18}.
 
 \begin{figure}[H]
     \centering
@@ -165,20 +168,20 @@ Lattice calculations predict that the lightest hybrid with exotic quantum number
         \caption{}
         \label{fig.1.2.2.e}
     \end{subfigure}    
-    \caption{An illustration of the various exotic mesons configurations. The Blue and red colors represent the quarks and antiquarks respectively, with the size of the balls representing the light and heavy quarks.}
+    \caption{An illustration of the various exotic mesons configurations. The blue and red colors represent the quarks and antiquarks respectively, with the size of the spheres representing the light and heavy quarks.}
     \label{fig.1.2.2}
 \end{figure}
 
 \section{Meson Production Mechanisms}
 \label{p.1.3}
 
-Searching and understanding the nature of the exotic states has been and still a central goal of hadron spectroscopy. In recent years, many new and unexpected resonance-like signals have been observed in the heavy-quark sector~\cite{8}. Many of these so-called $XYZ$ states are candidates for exotic configurations of mesons. Similar studies are also led in the light-quark sector~\cite{8}, Due to the short lifetime of light mesons, the resonances are broad, leading to states overlapping with each other, hence their very challenging detection. In order to settle the fundamental question, whether the existence of sates beyond the quark model and hence a solid test for QCD or whether they are not realized in nature as expected, large data sets with high statistical precision are needed. The unambiguous identification of exotic states requires experiments with complementary production mechanisms and the analysis of different final states~\cite{14}.
+Searching for and understanding the nature of the exotic states has been and still is a central goal of hadron spectroscopy. In recent years, many new and unexpected resonance-like signals have been observed in the heavy-quark sector~\cite{Tanabashi18}. Many of these so-called $XYZ$ states are candidates for exotic configurations of mesons. Similar studies are also led in the light-quark sector. Due to the short lifetime of light mesons, the resonances are broad, leading to states overlapping with each other, hence their very challenging detection. In order to settle the fundamental question, whether the existence of states beyond the quark model and hence a solid test for QCD or whether they are not realized in nature as expected, large data sets with high statistical precision are needed. The unambiguous identification of exotic states requires experiments with complementary production mechanisms and the analysis of different final states~\cite{Szczepaniak01}.
  
 \subsection{$e^{+}e^{-}$ Production}
 
-Since the 1960s, the $e^{+}e^{-}$ colliders evolved from low center-of-mass energies $\sqrt{s}$ $\sim$ 1 GeV with modest luminosity to the Large Electron Positron (LEP) collider with $\sqrt{s}$ up to 209 GeV and a higher luminosity. Along the way, the $e^{+}e^{-}$ colliders PETRA (at DESY) and PEP (at SLAC) saw the first three-jet events, which was the clear signature of a quark-antiquark pairs accompanied by hard gluons. The presence of the gluon, the mediator of the strong interaction, had been discovered in the summer of 1979. Major discoveries also happened later on with the upcoming B-factories at KEK and SLAC, and at high-intensity colliders in Beijing, Cornell, Frascati and Novosibirsk. Experiment at the electron-positron colliders are particularly good for studies of quarkonium physics and decays of open charm and bottom mesons.
+Since early $e^{+}e^{-}$ colliders, important measurements were conducted, including the discovery of the $J/\psi$ meson at SLAC. These colliders kept evolving to higher center-of-mass energies reaching a $\sqrt{s}$ $\sim$ 209 GeV at the Large Electron Positron (LEP) collider. Along the way, the $e^{+}e^{-}$ colliders PETRA (at DESY) and PEP (at SLAC) saw the first three-jet event, which was the clear signature of a quark-antiquark pairs accompanied by hard gluons. The presence of the gluon, the mediator of the strong interaction, had been discovered in 1979. Major discoveries also happened later on with the upcoming B-factories at KEK and SLAC, and at high-intensity colliders in Beijing, Cornell, Frascati and Novosibirsk. Experiments at the electron-positron colliders are particularly good for studies of quarkonium physics and decays of open charm and bottom mesons.
 
-~\par The $e^{+}e^{-}$ annihilation process is mediated by a single virtual photon with the quantum numbers $J^{PC} = 1^{--}$, or via the Initial State Radiation (ISR), by the reaction $e^{+}e^{-} \rightarrow e^{+}e^{-}X$ where the state $X$ is produced by the collision of two photons radiated from the beam electron and positron (Fig.~\ref{fig.1.3.1}). This latter process is very fruitful source of data on meson spectroscopy, and by varying the $e^{\pm}$ beam energy, experiments scan through the center of mass energy and trace out the resonance shape, modified by interferences with overlapping states. Large data continues to be acquired and analyzed at operating $e^{+}e^{-}$ storage ring facilities.
+~\par The $e^{+}e^{-}$ annihilation process in the leading order is mediated by a single virtual photon with the quantum numbers $J^{PC} = 1^{--}$, with the possibility to produce hadrons via the Initial State Radiation (ISR) in the process $e^{+}e^{-} \rightarrow hadrons + n\gamma$, where the photon $\gamma$ is emitted from one of the incoming particles, reducing the beam energy prior to the momentum transfer (Fig.~\ref{fig.1.3.1}). This technique allows to measure hadronic cross sections from threshold up to the maximum energy of the colliders running at fixed energy, which is a very fruitful source of data on meson spectroscopy. Varying the $e^{\pm}$ beam energy, experiments scan through the center of mass energy and trace out the resonance shape, modified by interferences with overlapping states. Large data continues to be acquired and analyzed at operating $e^{+}e^{-}$ storage ring facilities.
 
 \begin{figure}[H]
     \centering
@@ -189,21 +192,21 @@ Since the 1960s, the $e^{+}e^{-}$ colliders evolved from low center-of-mass ener
  
  \subsection{Hadronic Diffractive Production}
 
- Most of the data on light meson spectroscopy has come from pion and kaon beams on nuclear targets, where the beam particle moving forward, is exchanging momentum and quantum numbers with a recoiling nucleon. Meson-nucleon scattering reactions at high energy are strongly forward peaked, in the direction of the incoming meson. Mostly, the produced meson state is moving forward, eventually decaying into more stable particles, and the baryon is recoiling at large angle. This mechanism is shown schematically in Fig.~\ref{fig.1.3.2}. The excited meson state $X$ has quantum numbers determined by the exchange, hence, the importance of studying carefully the production mechanism for different reactions. An example of experiments using these technics are: $K^{-}p \rightarrow Xp$ by LASS collaboration, and $\pi^{-}p \rightarrow Xp$ by COMPASS, E852 and VES experiments.
+ Most of the data on light meson spectroscopy has come from pion beam on nuclear targets, where the beam particle moving forward, is exchanging momentum and quantum numbers with a recoiling nucleon. Meson-nucleon scattering reactions at high energy are strongly forward peaked, in the direction of the incoming meson. Mostly, the produced meson state is moving forward, eventually decaying into more stable particles, and the baryon is recoiling at large angle. This mechanism is shown schematically in Fig.~\ref{fig.1.3.2}. The excited meson state $X$ has quantum numbers determined by the exchange, hence, the importance of studying carefully the production mechanism for different reactions. Some examples of experiments using these technics are: $K^{-}p \rightarrow Xp$ by LASS collaboration, and $\pi^{-}p \rightarrow Xp$ by COMPASS, E852 and VES experiments.
 
- ~\par Diffractive reactions are characterized by the four-momentum exchange, $t = (p_{Beam}-p_{X})^{2}<~0$, with the typical cross section falling exponentially in $t$, i.e. $e^{bt}$ with the slope $b$ $\sim$ 3 - 8 $GeV^{-2}$. For example, in charge exchange reactions at small values of $-t$, one pion exchange (OPE) dominates and is fairly well understood. It provides access only to states with $J^{PC} = even^{++}$ and $odd^{--}$, the so called $natural parity$ states. Other states such as $J^{PC} = 0^{-+}$ can be produced by neutral $J^{PC} = 0^{++}$ $Pomeron$ exchange, or $\rho^{+}$ exchange but these are not as well understood. Often the analysis is performed independently for several ranges of $t$, to try to understand the nature of the production mechanism.\\
-The generality of this production mechanism and the high statistics available result in several advantages, this opens up a large number of final states that can be studied, by comparing decay branches of these states, as well as searching for decay modes that were not previously accessible.
+ ~\par Diffractive reactions are characterized by the four-momentum exchange, $t = (p_{Beam}-p_{X})^{2}<~0$, with the typical cross section falling exponentially in $-t$, i.e. $e^{bt}$ with the slope $b$ $\sim$ 3 - 8 $GeV^{-2}$. For example, in charge exchange reactions at small values of $-t$, one pion exchange (OPE) dominates and is fairly well understood. It provides access only to states with $P = (-1)^{J}$, the so called $natural$ parity states. Other states such as $J^{PC} = 0^{-+}$ can be produced by neutral $J^{PC} = 0^{++}$ $Pomeron$ exchange, or $\rho^{+}$ exchange but these are not as well understood. Often the analysis is performed independently for several ranges of $t$, to investigate the nature of the production mechanism.\\
+The generality of this production mechanism and the high statistics available result in several advantages, opening a large number of final states that can be studied, by comparing decay branches of these states, as well as searching for decay modes that were not previously accessible.
 
 \begin{figure}[H]
     \centering
         \includegraphics[width=0.8\textwidth]{plots/hadronic_diffractive_production.png}
-        \caption{Schematic diagram of a hadronic diffractive production process. Momentum is exchanged through an off-mass-shell particle, which may or may not be charged.}
+        \caption{Schematic diagram of a hadronic diffractive production process. Momentum is exchanged through an off-mass-shell particle.}
         \label{fig.1.3.2}
 \end{figure}
 
  \subsection{Photoproduction}
 
- A very promising mechanism to produce hybrid meson states, is through a diffractive scattering with a photon beam. Since the photon is a virtual $q\bar{q}$ with aligned spins ($S$ = 1) (Fig.~\ref{fig.1.3.3.1.a}), whereas in diffractive hadroproduction with $\pi$ or $K$ beam, the meson is a $q\bar{q}$ with anti-aligned spins ($S$ = 0) (Fig.~\ref{fig.1.3.3.1.b}), it is expected that the exotic quantum number states will be enhanced in photoproduction, compared to the $\pi$ produced interactions, due to the more complicated spin-flip and quantum-number exchange mechanisms in which the hybrid is produced~\cite{13, 14}.
+ A very promising mechanism to produce hybrid meson states, is through a diffractive scattering with a photon beam. Since the photon according to the vector dominance model (VDM)~\cite{Bauer78} can be considered as a virtual $q\bar{q}$ with aligned spins ($S$ = 1) (Fig.~\ref{fig.1.3.3.1.a}), in contrast to diffractive hadroproduction with pions or kaons ($S$=0) (Fig.~\ref{fig.1.3.3.1.b}), it is expected that the exotic quantum number states will be enhanced in photoproduction. In $\pi$ produced interactions, spin-flip and quantum-number exchange mechanisms are expected to suppress the production of hadrons with spin-exotic quantum numbers.~\cite{Isgur85, Szczepaniak01}.
 
  \begin{figure}[H]
     \centering
@@ -217,35 +220,43 @@ The generality of this production mechanism and the high statistics available re
         \caption{}
         \label{fig.1.3.3.1.b}
     \end{subfigure}
-    \caption{With a $\pi$ probe the incoming quarks have $L$ = 0 and $S$ = 0. The excited flux-tube (a model for chromodynamics) from the scattering results in hybrid mesons with non-exotic quantum numbers (a). With a photon probe the incoming quarks have $L$ = 0 and $S$ = 1. When the flux-tube is excited, hybrid mesons with exotic quantum numbers are possible.}
+    \caption{With a $\pi$ probe the incoming quarks have $L$ = 0 and $S$ = 0. The excited flux-tube (a model for chromodynamics) from the scattering results in hybrid mesons with non-exotic quantum numbers (a). With a photon probe the incoming photon behaves according to VDM as a meson, with $L$ = 0 and $S$ = 1. When the flux-tube is excited, hybrid mesons with exotic quantum numbers are possible.}
     \label{fig.1.3.3.1}
 \end{figure}
 
-Similar to hadron diffractive reactions, the photoproduction is also characterized by the four-momentum exchange, $-t$. Understanding the mechanisms of meson photoproduction is critical for disentangling the $J^{PC}$ quantum numbers of the observed states in the exotic hybrid mesons search. Theoretical models predict that the beam asymmetry, $\Sigma$ defined in~\ref{eq.1.3.3}, is sensitive to the relative contributions from vector $1^{-}$ ($\rho^{0}/\omega$) and axial-vector $1^{+}$ ($b_{1}^{0}/h_{1}$) exchanges in $\pi^{0}$ and $\eta$ photoproduction Ref.~\cite{11}.
-~\par The GlueX experiment have studied two exclusive reactions, $\gamma p \rightarrow p \pi^{0}$ and $\gamma p \rightarrow p \eta$ with $\pi^{0}/\eta\rightarrow \gamma\gamma$. After extracting the $-t$ beam asymmetry dependence, they concluded that GlueX data strongly suggests the dominance of vector meson exchange at the beam energy 8.4 - 9 GeV (Fig.~\ref{fig.1.3.3.2}).
+Similar to hadron diffractive reactions, the photoproduction is also characterized by the four-momentum exchange, $-t$. Understanding the mechanisms of meson photoproduction is critical for disentangling the $J^{PC}$ quantum numbers of the observed states in the exotic hybrid mesons search. Theoretical models predict that the beam asymmetry, $\Sigma$ extracted from fitting the yield asymmetry in Fig.~\ref{fig.1.3.3.2} with the Eq.~\ref{eq.1.3.3}, is sensitive to the relative contributions from vector $1^{-}$ ($\rho^{0}/\omega$) and axial-vector $1^{+}$ ($b_{1}^{0}/h_{1}$) exchanges in $\pi^{0}$ and $\eta$ photoproduction Ref.~\cite{Ghoul17}.
 
 \begin{align}
-    Y_{\parallel/\perp} \propto N_{\parallel/\perp}[\sigma_{0}A(\phi)(1 \mp P \Sigma \cos 2\phi_{p})],
+    \frac{Y_{\perp}-F_{R}Y_{\parallel}}{Y_{\perp}+F_{R}Y_{\parallel}} = \frac{(P_{\perp}+P_{\parallel})\Sigma \cos 2\phi_{p}}{2+(P_{\perp}-P_{\parallel})\Sigma \cos 2\phi_{p}},
     \label{eq.1.3.3}
 \end{align}
 
-\noindent where $\Sigma$ is the beam asymmetry, $N_{\parallel/\perp}$ is the flux of photons in two orthogonal orientations, $\sigma_{0}$ is the unpolarized cross section, $A(\phi)$ is an arbitrary function describing the $\phi$-dependent detector acceptance and efficiency, $P$ is magnitude of the beam polarization and $\phi_{p}$ is the azimuthal angle of the production plane defined by the final-state proton. The orthogonality of the parallel and perpendicular polarization configurations cancels out the $\phi$-dependent detector acceptance effects.
-~\par Diffractive photoproduction has further advantages. The vector dominance model allows non-OZI suppressed excitation of heavy quark states, such as $s\bar{s}$ and $c\bar{c}$, through production of the associated vector meson(s), the $\phi$ and $\psi$ states respectively. Unfortunately, there are very few data from photoproduction. This is mainly due to the lack of high quality, high intensity photon beams and associated experimental apparatus, although this situation is starting to change, since the GlueX experiment, using a high energy photon beam of $\sim$ 12 GeV, started taking data since 2016.
+\noindent where $F_{R} = N_{\perp}/N_{\parallel}$ is the ratio of the integrated photon flux between the perpendicular and parallel beam polarizations. $P_{\perp}$ and $P_{\parallel}$ are the magnitudes of the two beam polarization and $\phi_{p}$ is the azimuthal angle of the production plane defined by the final-state proton. The yield asymmetry ration between the two polarization configurations cancels out the $\phi$-dependent detector acceptance effects.
+
+\begin{figure}[H]
+    \centering
+        \includegraphics[width=0.6\textwidth]{plots/yield_asymmetry.pdf}
+        \caption{The yield asymmetry of the process $\gamma p \rightarrow p \pi^{0}$ as a function of the azimuthal angle of the proton, fit with Eq.~\ref{eq.1.3.3} to extract $\Sigma$.}
+    \label{fig.1.3.3.2}
+\end{figure}
+
+The GlueX experiment have studied two exclusive reactions, $\gamma p \rightarrow p \pi^{0}$ and $\gamma p \rightarrow p \eta$ with $\pi^{0}/\eta\rightarrow \gamma\gamma$. After extracting the $-t$ beam asymmetry dependence, the GlueX data strongly suggests the dominance of vector meson exchange at the beam energy 8.4 - 9 GeV (Fig.~\ref{fig.1.3.3.3}).
+~\par Diffractive photoproduction has further advantages. The vector dominance model allows non-OZI suppressed excitation of heavy quark states, such as $s\bar{s}$ and $c\bar{c}$, through production of the associated vector meson(s), the $\phi$ and $\psi$ states respectively. Unfortunately, there are only very few data available from photoproduction. This is mainly due to the lack of high quality, high intensity photon beams and associated experimental apparatus. This situation is starting to change, since the GlueX experiment, using a high energy photon beam of $\sim$ 12 GeV, started taking data since 2016.
 
 \begin{figure}[H]
     \centering
     \begin{subfigure}[b]{0.65\textwidth}
         \includegraphics[width=\textwidth]{plots/pi0_sigma.png}
         \caption{}
-        \label{fig.1.3.3.2.a}
+        \label{fig.1.3.3.3.a}
     \end{subfigure}\hfill
     \begin{subfigure}[b]{0.65\textwidth}
         \includegraphics[width=\textwidth]{plots/eta_sigma.png}
         \caption{}
-        \label{fig.1.3.3.2.b}
+        \label{fig.1.3.3.3.b}
     \end{subfigure}
-    \caption{ Beam asymmetry $\Sigma$ for (a) $\gamma p \rightarrow p \pi^{0}$ and (b) $\gamma p \rightarrow p \eta$ (black filled circles) determined in bins of momentum transfer ($-t$). Uncorrelated systematic errors are indicated by the height of gray bars, whereas the combined statistical and systematic uncertainties are given by the black error bars. The previous SLAC results from data collected at $\overline{{E}}_{\gamma}$ = 10 GeV (blue open circles) are also shown along with various Regge theory calculations (see ref.~\cite{11} and references therein).}
-    \label{fig.1.3.3.2}
+    \caption{ Beam asymmetry $\Sigma$ for (a) $\gamma p \rightarrow p \pi^{0}$ and (b) $\gamma p \rightarrow p \eta$ (black filled circles) determined in bins of momentum transfer ($-t$). Uncorrelated systematic errors are indicated by the height of gray bars, whereas the combined statistical and systematic uncertainties are given by the black error bars. The previous SLAC results from data collected at $\overline{{E}}_{\gamma}$ = 10 GeV (blue open circles) are also shown along with various Regge theory calculations (see ref.~\cite{Ghoul17} and references therein).}
+    \label{fig.1.3.3.3}
 \end{figure}
 
 \begin{landscape}
@@ -255,21 +266,21 @@ Similar to hadron diffractive reactions, the photoproduction is also characteriz
     \centering
     \small
     \setlength{\tabcolsep}{3pt}
-    \caption{Some of particle physics experiments that have contributed significantly to knowledge of the exotic hadron spectrum. Future experiments that are expected to have a major impact are also included. The Tevatron and LHC accelerators provide symmetric beam collisions, as do CESR and BEPC. At BaBar, Belle and Belle II asymmetric electron and positron beam energies are used. At PANDA an antiproton beam impinges on one of several possible fixed targets. A photon beam striking fixed targets is used for experiments at JLab.}
+    \caption{Some of particle physics experiments that have contributed significantly to knowledge of the exotic hadron spectrum. Future experiments that are expected to have a major impact are also included.}
     \label{tab.1.3}
-    \begin{tabular}{ccccc}
+    \begin{tabular}{cccccc}
         \hline
-        Experiments & Laboratory & Accelerator facility & \pbox{20cm}{Production process\\(centre-of-mass energy)} & Operational period \\
+        Experiments & Laboratory & \thead{Accelerator \\ facility} & Production process & \thead{Centre-of-mass\\energy (GeV)} & \thead{Operational \\ period} \\
         \hline
-        CDF/D0 & Fermilab, USA & Tevatron & $p\bar{p} \rightarrow b\bar{b}X$ (2 TeV) & 1987 - 2011 \\
-        BaBar & SLAC, USA & PEP-II & $e^{+}e^{-} \rightarrow \Upsilon(4S) \rightarrow B\bar{B}$ (10.6 GeV) & 1999 - 2008 \\
-        Belle & KEK, Japan & KEKB & $e^{+}e^{-} \rightarrow \Upsilon(4S) \rightarrow B\bar{B}$ (10.6 GeV) & 1999 - 2010 \\
-        CLEO-c & Cornell, USA & CESR & $e^{+}e^{-} \rightarrow c\bar{c}$ (3.7 - 4.2 GeV) & 2003 - 2008 \\
-        BESIII & IHEP, China & BEPC & $e^{+}e^{-} \rightarrow  c\bar{c}$ (3 - 4.6 GeV) & 2008 - ongoing \\
-        LHCb & CERN, Switzerland & LHC & $pp \rightarrow b\bar{b}X$ (7 - 13 TeV) & 2010 - ongoing \\
-        Belle II & KEK, Japan & Super-KEKB & $e^{+}e^{-} \rightarrow \Upsilon(4S) \rightarrow B\bar{B}$ (10.6 GeV) & 2018 - 2025 \\
-        GlueX/CLAS12/E12-16-007 & JLab, USA & CEBAF & $\gamma p \rightarrow c\bar{c} X$ (4 - 5 GeV) & 2016 - ongoing \\
-        PANDA & GSI, Germany & FAIR & $p\bar{p} \rightarrow c\bar{c} X$ (2.9 - 5.5 GeV) & 2025 -  \\
+        CDF/D0 & Fermilab, USA & Tevatron & $p\bar{p} \rightarrow b\bar{b}X$ & 2000 & 1987 - 2011 \\
+        BaBar & SLAC, USA & PEP-II & $e^{+}e^{-} \rightarrow \Upsilon(4S) \rightarrow B\bar{B}$ & 10.6 & 1999 - 2008 \\
+        Belle & KEK, Japan & KEKB & $e^{+}e^{-} \rightarrow \Upsilon(4S) \rightarrow B\bar{B}$ & 10.6 & 1999 - 2010 \\
+        CLEO-c & Cornell, USA & CESR & $e^{+}e^{-} \rightarrow c\bar{c}$ & 3.7 - 4.2 & 2003 - 2008 \\
+        BESIII & IHEP, China & BEPC & $e^{+}e^{-} \rightarrow  c\bar{c}$ & 3 - 4.6 & 2008 - ongoing \\
+        LHCb & CERN, Switzerland & LHC & $pp \rightarrow b\bar{b}X$ & 7000 - 13000 & 2010 - ongoing \\
+        Belle II & KEK, Japan & Super-KEKB & $e^{+}e^{-} \rightarrow \Upsilon(4S) \rightarrow B\bar{B}$ & 10.6 & 2018 - 2025 \\
+        GlueX/CLAS12/E12-16-007 & JLab, USA & CEBAF & $\gamma p \rightarrow c\bar{c} X$ & 4 - 5 & 2016 - ongoing \\
+        PANDA & GSI, Germany & FAIR & $p\bar{p} \rightarrow c\bar{c} X$ & 2.9 - 5.5 & 2025 -  \\
         \hline
     \end{tabular}
 \end{table}
@@ -279,30 +290,74 @@ Similar to hadron diffractive reactions, the photoproduction is also characteriz
 \section{Experimental status of the $Y(2175)$}
 \label{p.1.4}
 
-The $Y(2175)$, also denoted as $\phi(2170)$ in Particle Data Group (PDG)~\cite{8}, was first observed in 2006 by the BaBar collaboration~\cite{16} in the $e^{+}e^{-}\rightarrow \phi(1020)f_0(980)$ process with a mass of ($2175 \pm 10 \pm 15$) MeV/c$^2$ and a width of ($58 \pm 16 \pm 20$) MeV/c$^2$, and later updated their analysis~\cite{17} with twice the integrated luminosity (compared to Ref.~\cite{16}) (Fig.~\ref{fig.1.4.1}). By fitting the observed cross section with the vector-meson-dominance model assuming $\phi(1020)f_0(980)$ decay, they confirmed the presence of the $Y(2175)$ in the data, as well as the presence of the $\phi(1680)$ resonance.
-~\par It was subsequently confirmed by the Belle collaboration~\cite{18} in both the $e^{+}e^{-}\rightarrow \phi(1020)\pi^{+}\pi^{-}$ and $e^{+}e^{-}\rightarrow \phi f_0(980)$ processes (Fig.~\ref{fig.1.4.2}). In order to obtain the parameters of these two resonances, a least squares fit is applied to the cross section distribution. They performed an incoherent Breit-Wigner fits for the  $Y(2175)$ and $f_0(980)$, with an additional function centered near 2.4 GeV/c$^2$, where the statistical significance were 10$\sigma$ for the first two resonances, and only 1.5$\sigma$ for the structure around 2.4 GeV/c$^2$. The cross sections were measured from threshold to $\sqrt{s}$ = 3 GeV using initial-state radiation. The analysis is based on a data sample of 673 fb$^{-1}$ collected on and below the $\Upsilon(4S)$ resonance.
-~\par The $Y(2175)$ was also confirmed by the BESII~\cite{19} and BESIII~\cite{20}, both in $J/\psi$ hadronic decays (Fig.~\ref{fig.1.4.3}), with a sample of 5.8 x 10$^7$ and 2.25 x 10$^8$ $J/\psi$ events, respectively. The mass and width of the $Y(2175)$ are determined to be 2200$\pm$6 MeV/c$^2$ and 104$\pm$15 MeV/c$^2$, respectively. The fit yielded 471$\pm$54 $Y(2175)$ events with a statistical significance of greater than 10$\sigma$. The fit results show that the significance of the structure around 2.35 GeV/c$^2$ is only 3.8$\sigma$. The resonance was also measured for the first time in $e^{+}e^{-}\rightarrow \eta Y(2175)$ process with BESIII~\cite{21}.
-~\par Since it is produced in $e^+e^-$ mechanism, the quantum numbers are $J^{PC} = 1^{--}$. The observation of the $Y(2175)$ stimulated many theoretical explanations of its nature. There are no known meson resonances with $I = 0$ near this mass, therefore it is likely not a standard meson but rather an exotic. Since the similarity in production mechanism and decay patterns to the $Y(4260)$ in the charm sector and the $\Upsilon$(10860) in the bottom sector, the $Y$(2175) is regarded as a candidate for a strangeonium hybrid state ($s\bar{s}g$)~\cite{10}, a tetraquark state ($s\bar{s}s\bar{s}$)~\cite{22}, a $\Lambda \bar{\Lambda}$ bound state~\cite{23}, an excited $\phi$ state~\cite{24}, or an ordinary $\phi f_0(980)$ resonance produced by interactions between the final state particles~\cite{25}. The quark model predicts two conventional $s\bar{s}$ states near 2175 MeV/$c^2$, ${3}^{3}\!S_{1}$ and ${2}^{3}\!D_{1}$~\cite{26, 27}, but both of them are significantly broader than the $Y(2175)$~\cite{28, 29}.
-~\par Despite all previous experimental and theoretical effort, our knowledge of the $Y(2175)$ is still very poor. This state has so far been observed only in direct $e^{+}e^{-}$ annihilation and $J/\psi \rightarrow \eta Y(2175)$ decay. Fortunately, the characteristic decay modes of $Y(2175)$ as either a $s\bar{s}g$ or $s\bar{s}$ state are quite different~\cite{10, 13}, which may be used to distinguish the hybrid and conventional quarkonium schemes. Decay modes and rates will be crucial to determining the nature of the Y(2175). A search for this state for the first time in photoproduction will be conducted with the GlueX experiment, details are discussed in Sec.~\ref{p.4}, this will shed some light on the nature of this resonance, and eventually will provide a new opportunity for a deeper understanding of low energy QCD.
+The $Y(2175)$, also denoted as $\phi(2170)$ by the Particle Data Group (PDG)~\cite{Tanabashi18}, was first observed in 2006 by the BaBar collaboration~\cite{Aubert06} in the $e^{+}e^{-}\rightarrow \phi(1020)f_0(980)$ process. Later the analysis was updated~\cite{Aubert12} with twice the integrated luminosity (compared to Ref.~\cite{Aubert06}). By fitting the observed cross section for both $e^{+}e^{-}\rightarrow \phi \pi^{+} \pi^{-}$ (Fig.~\ref{fig.1.4.1.a}) and $e^{+}e^{-}\rightarrow \phi f_0(980)$ (Fig.~\ref{fig.1.4.1.b}), they confirmed the presence of the $Y(2175)$ in the data, as well as the presence of the $\phi(1680)$ resonance.
+~\par It was subsequently confirmed by the Belle collaboration~\cite{Shen09} in both the reactions $e^{+}e^{-}\rightarrow \phi(1020)\pi^{+}\pi^{-}$ (Fig.~\ref{fig.1.4.2.a}) and $e^{+}e^{-}\rightarrow \phi f_0(980)$ (Fig.~\ref{fig.1.4.2.b}). The analysis is based on a data sample of 673 fb$^{-1}$ collected on and below the $\Upsilon(4S)$ resonance. In order to obtain the parameters of $Y(2175)$ and $\phi(1680)$ resonances, a least squares fit is applied to the cross section distribution. An incoherent Breit-Wigner fit for the $Y(2175)$ and $f_0(980)$ was performed, with an additional function centered near 2.4 GeV/c$^2$, where the statistical significance were 10$\sigma$ for the first two resonances, and only 1.5$\sigma$ for the structure around 2.4 GeV/c$^2$. The cross section were measured from threshold to $\sqrt{s}$ = 3 GeV using initial-state radiation.
+~\par The $Y(2175)$ was also confirmed by the BESII~\cite{Ablikim08} and BESIII~\cite{Ablikim15}, both in $J/\psi$ hadronic decays (Fig.~\ref{fig.1.4.3}), based on samples of 5.8 x 10$^7$ and 2.25 x 10$^8$ $J/\psi$ events, respectively. The fit yields 471$\pm$54 $Y(2175)$ events with a statistical significance of greater than 10$\sigma$. The fit results show that the significance of the structure around 2.35 GeV/c$^2$ is only 3.8$\sigma$. The resonance was also measured for the first time in $e^{+}e^{-}\rightarrow \eta Y(2175)$ process with BESIII~\cite{Ablikim19}. The mass and width of the Y(2175) resonance, in different experiments, are summarized in Tab.~\ref{tab.1.4}.
+~\par Since it is produced in $e^+e^-$ mechanism, the quantum numbers are $J^{PC} = 1^{--}$. The observation of the $Y(2175)$ stimulated many theoretical explanations of its nature. There are very few known meson resonances with $I = 0$ near this mass, therefore it is likely not a standard meson but rather an exotic. Since the similarity in production mechanism and decay patterns to the $Y(4260)$ in the charm sector and the $\Upsilon$(10860) in the bottom sector, the $Y$(2175) is regarded as a candidate for a strangeonium hybrid state ($s\bar{s}g$)~\cite{Gui07}, a tetraquark state ($s\bar{s}s\bar{s}$)~\cite{Chen08}, a $\Lambda \bar{\Lambda}$ bound state~\cite{Klempt07}, an excited $\phi$ state~\cite{Coito09}, or an ordinary $\phi f_0(980)$ resonance produced by interactions between the final state particles~\cite{Alvarez09}. The quark model predicts two conventional $s\bar{s}$ states near 2175 MeV/$c^2$, ${3}^{3}\!S_{1}$ and ${2}^{3}\!D_{1}$~\cite{Godfrey85, Barnes97}, but both of them are predicted to be significantly broader than the $Y(2175)$~\cite{Barnes03, Ding07}.
+~\par Despite all previous experimental and theoretical effort, our knowledge of the $Y(2175)$ is still limited. This state has so far been observed only in direct $e^{+}e^{-}$ annihilation and $J/\psi \rightarrow \eta Y(2175)$ decay. Nevertheless, the characteristic decay modes of $Y(2175)$ as either a $s\bar{s}g$ or $s\bar{s}$ state are quite different~\cite{Gui07, Isgur85}, which may be used to distinguish the hybrid and conventional quarkonium configurations. Decay modes and rates will be crucial to determine the nature of the Y(2175). A search for this state for the first time in photoproduction data will be conducted with the GlueX experiment,~\ref{p.4}, which will shed some light on the nature of this resonance, and eventually will provide a new opportunity for a deeper understanding of low energy QCD.
+
+\begin{table}[H]
+    \centering
+    \small
+    \setlength{\tabcolsep}{3pt}
+    \caption{Mass and width of the $Y(2175)$ resonance in different experiments. Reproduced from~\cite{Aubert06, Aubert12, Shen09, Ablikim08, Ablikim15, Ablikim19}}
+    \label{tab.1.4}
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        Experiments & Reactions & \thead{$Y(2175)$ mass\\(GeV/c$^2$)} & \thead{$Y(2175)$ width \\(GeV/c$^2$)} \\
+        \hline
+        \multirow{3}{*}{BaBar} 
+        & $e^{+}e^{-}\rightarrow \phi(1020)f_0(980)$ & $2.175 \pm 0.010 \pm 0.015$ & $0.058 \pm 0.016 \pm 0.020$ \\ 
+        & $e^{+}e^{-}\rightarrow \phi(1020)f_0(980)$ & $2.180 \pm 0.008 \pm 0.008$ & $0.077 \pm 0.015 \pm 0.010$ \\ 
+        & $e^{+}e^{-}\rightarrow \phi(1020)\pi^{+}\pi^{-}$ & $2.176 \pm 0.014 \pm 0.004$ & $0.090 \pm 0.022 \pm 0.010$ \\ 
+        \hline
+        \multirow{2}{*}{Belle}
+        & $e^{+}e^{-}\rightarrow \phi(1020)f_0(980)$ & $2.163 \pm 0.032$ & $0.125 \pm 0.040$ \\ 
+        & $e^{+}e^{-}\rightarrow \phi(1020)\pi^{+}\pi^{-}$ & $2.079 \pm 0.013$ & $0.192 \pm 0.023$ \\
+        \hline
+        \multirow{2}{*}{BESII/BESIII}
+        & $J/\psi \rightarrow \eta \phi f_0(980)$ & $2.186 \pm 0.010 \pm 0.006$ & $0.065 \pm 0.023 \pm 0.017$ \\ 
+        & $J/\psi \rightarrow \eta \phi \pi^{+}\pi^{-}$ & $2.200 \pm 0.006 \pm 0.005$ & $0.104 \pm 0.015 \pm 0.015$ \\ 
+        & $e^{+}e^{-}\rightarrow \eta Y(2175)$ & $2.135 \pm 0.008 \pm 0.009$ & $0.104 \pm 0.024 \pm 0.012$ \\ 
+        \hline
+    \end{tabular}
+\end{table}
 
 \begin{figure}[H]
     \centering
-        \includegraphics[width=0.6\textwidth]{plots/babar_y2175.png}
-        \caption{The $e^+e^- \rightarrow \phi f_0$(980) cross section measured in the $K^{+}K^{-}\pi^{+}\pi^{-}$ (solid dots) and $K^{+}K^{-}\pi^{0}\pi^{0}$ (open squares) final states. The solid (dashed) curve represents the result of the two-resonance fit. Taken from BaBar~\cite{16}.}
-        \label{fig.1.4.1}
+    \begin{subfigure}[b]{0.5\textwidth}
+        \includegraphics[width=\textwidth]{plots/babar_y2175_2.png}
+        \caption{}
+        \label{fig.1.4.1.a}
+    \end{subfigure}\hfill
+    \begin{subfigure}[b]{0.5\textwidth}
+        \includegraphics[width=\textwidth]{plots/babar_y2175.png}
+        \caption{}
+        \label{fig.1.4.1.b}
+     \end{subfigure}
+     \caption{(a) The fit to the $e^{+}e^{-}\rightarrow \phi \pi^{+} \pi^{-}$ cross section using the model described in Ref.~\cite{Aubert12}, the entire contribution due to the $\phi(1680)$ is shown by the dashed curve. The dotted curve shows the contribution for only the $\phi f_0$ decay. (b) The $e^+e^- \rightarrow \phi f_0$(980) cross section measured in the $K^{+}K^{-}\pi^{+}\pi^{-}$ (solid dots) and $K^{+}K^{-}\pi^{0}\pi^{0}$ (open squares) final states. The solid and dashed curve represents the result of $Y(2175)$ and $\phi(1680)$ resonance fits, respectively. The hatched area and dotted curve show the $Y(2175)$ contribution for two solutions described in Ref.~\cite{Aubert12}. }
+    \label{fig.1.4.1}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-        \includegraphics[width=0.6\textwidth]{plots/belle_y2175.png}
-        \caption{The fit to $e^+e^- \rightarrow \phi \pi^+\pi^-$ cross section with two incoherent Breit-Wigner functions, one for the $\phi$(1680) and the other for the $Y$(2175). The curves show the projections from the best fit and the contribution from each component. Taken from Belle~\cite{18}}
-        \label{fig.1.4.2}
+    \begin{subfigure}[b]{0.51\textwidth}
+        \includegraphics[width=\textwidth]{plots/belle_y2175.png}
+        \caption{}
+        \label{fig.1.4.2.a}
+    \end{subfigure}\hfill
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{plots/belle_y2175_2.png}
+        \caption{}
+        \label{fig.1.4.2.b}
+     \end{subfigure}
+     \caption{(a) The fit to $e^+e^- \rightarrow \phi \pi^+\pi^-$ cross section with two incoherent Breit-Wigner functions, one for the $\phi$(1680) (red dashed line) and the other for the $Y$(2175) (green dashed line). (b) $e^+e^- \rightarrow \phi f_0$(980) cross section with a single Breit-Wigner function that interferes with a nonresonant component. In (b), the dashed and dot-dashed curves are for the destructive and constructive interference solutions described in~\cite{Shen09}, respectively.}
+     \label{fig.1.4.2}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-        \includegraphics[width=0.6\textwidth]{plots/bes3_y2175.png}
-        \caption{The $\phi f_0$(980) invariant mass spectrum, including a incoherent Breit-Wigner fit. The circular dots with error bars show the distribution in the signal region; the triangular dots with error bars show the backgrounds estimated using sideband regions; the solid curve shows the overall fit projection; the dotted curve shows the fit for the backgrounds; and the dashed curve is for the sum of the direct decay of $J/\psi \rightarrow \eta \phi f_0(980)$ and the backgrounds.
-         Taken from BESIII~\cite{20}.}
+        \includegraphics[width=0.45\textwidth]{plots/bes3_y2175.png}
+        \caption{$\phi f_0$(980) invariant mass spectrum, with an unbinned maximum likelihood fit. The circular and triangular dots show the distribution in the signal and background region, with the backgrounds estimated using sideband regions. The green dashed line represents the direct decay of $J/\psi \rightarrow \eta \phi f_0(980)$. Ref.~\cite{Ablikim15}.}
         \label{fig.1.4.3}
 \end{figure}
