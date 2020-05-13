@@ -1,3 +1,182 @@
-\section{Summary and Outlook}
-\label{p5}
+\chapter{Systematic Uncertainties}
+\label{chap.syserr}
 
+In order to determine the systematic errors, multiple variations in the analysis chain are tested, resulting in a different cross section measurements around the nominal value. The relative amount of deviation from the nominal cross section measurement are identified using the standard deviation as
+
+\begin{equation}
+    \label{eq.syserr.1}
+    \begin{aligned}
+        \delta_{i} = \frac{1}{\sigma_{mean}} \sqrt{\frac{\sum\limits_{i=1}^{N} (\sigma_{i} - \sigma_{mean})^2}{N}}~,\\
+    \end{aligned}
+\end{equation}
+
+\noindent where $N$ is the total number of variations of the measured cross section ($\sigma_{i}$), with respect to the nominal value ($\sigma_{mean}$). The main sources of systematic errors associated with the cross section measurements in Ch.~\ref{chap.y2175}, and their estimation are discussed in this chapter.
+
+\section{Background Polynomial Order}
+
+The background model described by the Chebyshev polynomial of degree $n$ as defined in Eq.~\ref{eq.y2175.evt_sel.kin_fit.4}, is varied around the nominal degree by $\mbox{n-1}$ and $\mbox{n+1}$ in order to estimate the uncertainty due to background parameterization. The cross section measured for every background order is then used as input to Eq.~\ref{eq.syserr.1}, and the resulted relative errors are listed in Tab.~\ref{tab.syserr.5.1.1} and Tab.~\ref{tab.syserr.5.1.2}.
+
+\begin{table}[!htbp]
+    \centering
+    \caption{$\gamma p \rightarrow \phi \pi^{+} \pi^{-} p$ cross section relative errors due to background polynomial order variation in $E_{\gamma}$.}
+    \label{tab.syserr.5.1.1}
+    \begin{tabular}{|c|c|c|c|c|}
+        \hline
+        $E_{\gamma}$ (GeV) & 2016 & 2017 & Spring 2018 & Fall 2018 \\
+        \hline
+        6.50 - 7.01 & 0.81 & 0.17 & 0.19 & 0.14 \\
+        7.01 - 7.52 & 2.52 & 0.13 & 0.17 & 0.11 \\
+        7.52 - 8.03 & 1.87 & 0.25 & 0.18 & 0.18 \\
+        8.03 - 8.54 & 1.92 & 0.11 & 0.31 & 0.19 \\
+        8.54 - 9.05 & 0.18 & 0.09 & 0.22 & 0.17 \\
+        9.05 - 9.56 & 1.93 & 0.32 & 0.19 & 0.13 \\
+        9.56 - 10.07 & 0.23 & 0.14 & 0.37 & 0.16 \\
+        10.07 - 10.58 & 2.40 & 0.09 & 0.37 & 0.20 \\
+        10.58 - 11.09 & 2.41 & 0.35 & 0.30 & 0.27 \\
+        11.09 - 11.60 & 0.30 & 0.12 & 0.47 & 0.23 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\begin{table}[!htbp]
+    \centering
+    \caption{$\gamma p \rightarrow \phi \pi^{+} \pi^{-} p$ cross section relative errors due to background polynomial order variation in $\mbox{-t}$.}
+    \label{tab.syserr.5.1.2}
+    \begin{tabular}{|c|c|c|c|c|}
+        \hline
+        $\mbox{-t}$ $(GeV/c)^{2}$ & 2016 & 2017 & Spring 2018 & Fall 2018 \\
+        \hline
+        0.00 - 0.40 & 0.18 & 0.26 & 0.39 & 0.25 \\ 
+        0.40 - 0.80 & 0.14 & 0.11 & 0.18 & 0.17 \\ 
+        0.80 - 1.20 & 0.23 & 0.09 & 0.26 & 0.15 \\ 
+        1.20 - 1.60 & 0.18 & 0.23 & 0.16 & 0.13 \\ 
+        1.60 - 2.00 & 1.16 & 0.31 & 0.14 & 0.16 \\ 
+        2.00 - 2.40 & 2.21 & 0.33 & 0.14 & 0.08 \\ 
+        2.40 - 2.80 & 2.74 & 0.81 & 0.19 & 0.12 \\  
+        2.80 - 3.20 & 1.85 & 1.77 & 0.29 & 0.14 \\ 
+        3.20 - 3.60 & 5.88 & 1.11 & 0.93 & 0.21 \\ 
+        3.60 - 4.00 & 6.12 & 1.90 & 0.28 & 0.15 \\ 
+        \hline
+    \end{tabular}
+\end{table}
+
+\section{Fitting region}
+
+To study the impact of the fit window on the cross section measurement, the $\phi(1020)$, $f_{0}(980)$, and the $Y(2175)$  resonances fit regions are varied around their nominal range of [0.99, 1.2 GeV/c$^2$], [0.99, 1.2 GeV/c$^2$], and [2, 3 GeV/c$^2$], respectively. The $\phi(1020)$ fit range was varied to [0.99, 1.15 GeV/c$^2$] and [0.99, 1.25 GeV/c$^2$], the $f_{0}(980)$ was varied to [0.99, 1.15 GeV/c$^2$] and [0.99, 1.25 GeV/c$^2$], and finally the $Y(2175)$ fit rage to [1.9, 3.1 GeV/c$^2$] and [2.1, 2.9 GeV/c$^2$]. The cross section is measured for each range, and the estimated relative errors are summarized in Tab~\ref{tab.syserr.5.2.1}.
+
+\begin{table}[!htbp]
+    \centering
+    \caption{$\gamma p \rightarrow \phi \pi^{+} \pi^{-} p$ cross section relative errors due to $\phi(1020)$ fit range variation in $E_{\gamma}$.}
+    \label{tab.syserr.5.2.1}
+    \begin{tabular}{|c|c|c|c|c|}
+        \hline
+        $E_{\gamma}$ (GeV) & 2016 & 2017 & Spring 2018 & Fall 2018 \\
+        \hline
+        6.50 - 7.01 & 0.58 & 0.83 & 0.61 & 0.64 \\
+        7.01 - 7.52 & 2.09 & 0.96 & 0.81 & 0.50 \\
+        7.52 - 8.03 & 0.80 & 1.31 & 0.75 & 0.42 \\
+        8.03 - 8.54 & 1.18 & 1.13 & 0.97 & 0.50 \\
+        8.54 - 9.05 & 1.28 & 0.98 & 0.53 & 0.59 \\
+        9.05 - 9.56 & 0.57 & 1.23 & 0.73 & 1.33 \\
+        9.56 - 10.07 & 1.72 & 1.78 & 1.36 & 1.30 \\
+        10.07 - 10.58 & 1.42 & 1.65 & 1.48 & 1.49 \\
+        10.58 - 11.09 & 1.61 & 2.25 & 1.49 & 1.52 \\
+        11.09 - 11.60 & 3.08 & 1.99 & 2.30 & 2.25 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\begin{table}[!htbp]
+    \centering
+    \caption{$\gamma p \rightarrow \phi \pi^{+} \pi^{-} p$ cross section relative errors due to $\phi(1020)$ fit range variation in $\mbox{-t}$.}
+    \label{tab.syserr.5.2.2}
+    \begin{tabular}{|c|c|c|c|c|}
+        \hline
+        $\mbox{-t}$ $(GeV/c)^{2}$ & 2016 & 2017 & Spring 2018 & Fall 2018 \\
+        \hline
+        0.00 - 0.40 & 2.05 & 2.06 & 1.44 & 1.83 \\
+        0.40 - 0.80 & 1.10 & 1.03 & 0.81 & 0.55 \\ 
+        0.80 - 1.20 & 1.48 & 1.12 & 0.84 & 0.58 \\
+        1.20 - 1.60 & 1.66 & 1.12 & 1.16 & 0.59 \\
+        1.60 - 2.00 & 1.06 & 1.66 & 1.21 & 0.56 \\
+        2.00 - 2.40 & 1.42 & 0.82 & 1.20 & 1.17 \\
+        2.40 - 2.80 & 1.10 & 1.02 & 1.27 & 0.50 \\
+        2.80 - 3.20 & 1.06 & 2.12 & 2.24 & 1.52 \\
+        3.20 - 3.60 & 3.33 & 0.89 & 1.76 & 1.86 \\
+        3.60 - 4.00 & 5.96 & 1.20 & 4.91 & 1.73 \\ 
+        \hline
+    \end{tabular}
+\end{table}
+
+\section{Finite binning}
+
+To study the impact of number of data point on the quality of the $\phi(1020)$ model fit, the number of bins in the $K^+K^-$ invariant mass are varied from the nominal value of 100, to 90 and 110 bins. The effect of these modifications on the nominal cross section is then estimated by Eq.~\ref{eq.syserr.1}, and summarized in Tab.\ref{tab.syserr.5.3.1} and Tab.\ref{tab.syserr.5.3.2}
+
+\begin{table}[!htbp]
+    \centering
+    \caption{$\gamma p \rightarrow \phi \pi^{+} \pi^{-} p$ cross section relative errors due to binning variation in $E_{\gamma}$.}
+    \label{tab.syserr.5.3.1}
+    \begin{tabular}{|c|c|c|c|c|}
+        \hline
+        $E_{\gamma}$ (GeV) & 2016 & 2017 & Spring 2018 & Fall 2018 \\
+        \hline
+        6.50 - 7.01 & 0.58 &  &  &  \\
+        7.01 - 7.52 & 0.92 &  &  &  \\
+        7.52 - 8.03 & 0.03 &  &  &  \\
+        8.03 - 8.54 & 0.33 &  &  &  \\
+        8.54 - 9.05 &  &  &  &  \\
+        9.05 - 9.56 &  &  &  &  \\
+        9.56 - 10.07 &  &  &  &  \\
+        10.07 - 10.58 &  &  &  &  \\
+        10.58 - 11.09  &  &  &  &  \\
+        11.09 - 11.60 &  &  &  &  \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\begin{table}[!htbp]
+    \centering
+    \caption{$\gamma p \rightarrow \phi \pi^{+} \pi^{-} p$ cross section relative errors due to binning variation in $\mbox{-t}$.}
+    \label{tab.syserr.5.3.2}
+    \begin{tabular}{|c|c|c|c|c|}
+        \hline
+        $\mbox{-t}$ $(GeV/c)^{2}$ & 2016 & 2017 & Spring 2018 & Fall 2018 \\
+        \hline
+        0.00 - 0.40 &  &  &  &  \\
+        0.40 - 0.80 &  &  &  &  \\
+        0.80 - 1.20 &  &  &  &  \\
+        1.20 - 1.60 &  &  &  &  \\
+        1.60 - 2.00 &  &  &  &  \\
+        2.00 - 2.40 &  &  &  &  \\
+        2.40 - 2.80 &  &  &  &  \\
+        2.80 - 3.20 &  &  &  &  \\
+        3.20 - 3.60 &  &  &  &  \\
+        3.60 - 4.00 &  &  &  &  \\
+        \hline
+    \end{tabular}
+\end{table}
+
+
+\section{Signal width and mean}
+
+The Y(2175) signal mean and width used in data are extracted from MC samples. A variation of these parameters around their nominal value between [2.183, 2.205 GeV/c$^2$] and [0.065, 0.093 GeV/c$^2$] for the mean and width respectively, to study the stability of the signal model.
+
+Finally, the RMS of the above potential systematic errors, which are treated independently of each other, are added in quadrature to calculate the total systematic errors. The latter is quoted in the cross section measurements above. A summary f these systematic errors are displayed in ab.~\ref{tab.4.6}.
+
+\begin{table}[!htbp]
+    \centering
+    \caption{Systematic errors summary}
+    \label{tab.4.6}
+    \begin{tabular}{|c|c|c|c|c|}
+        \hline
+        Polynomial degrees [ $\%$ ] & Fit Range [$\%$] & $\phi$-mass bins [$\%$]  & Y Mean [$\%$] & Y width [$\%$] \\
+        \hline
+        4.56 & 17.34 & 12.49 & 1.65 & 16.24 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\section{Conclusions}
+\label{chap.syserr.conc}
+
+A first measurement of the Y(2175) in photo-production in the $\gamma p \rightarrow Y(2175) p \rightarrow \phi \mathrm{f}_0 p$ reaction is successfully achieved with a 6$\sigma$ and 12$\sigma$ significance, for 2017 and 2018 data sets respectively. The observed Y(2175) resonance parameters are consistent with previous measurements. The production of this resonance with the photon beam is a confirmation that it is a $1^{--}$ state, and a detail study of its production mechanism may lead to unravel its true nature. Also the cross section for both the non-resonant $\phi \pi^+\pi^-$ and $\phi \mathrm{f}_0$ channels were measured. A strong dependence of the $\phi \pi^+\pi^-$ efficiency and cross section on the momentum transfer was observed, which could be explained by the presence of target fragmentation sources in the reaction, like $\Delta^{++} \rightarrow \pi^+ p$ rather than ${f}_0 \rightarrow \pi^+\pi^-$, and this leads to different final state particles phase-space occupation, and with the detector asymmetric acceptance, this will be translated in the efficiency and eventually in the cross section measurements. The Y(2175) was not observed in the $\phi \pi^+\pi^-$ channel, and an upper limit on the cross section was established. The non observation of the resonance in this latter reaction may be an indication of presence of other sources of background, like $\Delta^{++}$, in the reaction. While in the $\phi \mathrm{f}_0$ channel an extra constrain on the $\pi^+\pi^-$ invariant mass was applied, that efficiently improved the Y(2175) signal selection.

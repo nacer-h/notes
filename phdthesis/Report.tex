@@ -10,20 +10,24 @@
 \usepackage{tabularx,array,multirow,blkarray,booktabs} %\multirow{number rows}{width}{text},\multicolumn{number cols}{align}{text},align: l,c,r,blkarray:matrix
 \usepackage[makeroom]{cancel} % cross out caracters
 % \usepackage{tikz} \newcommand*\circled[1]{\tikz[baseline=(char.base)]{\node[shape=circle,draw,inner sep=2pt](char){#1};}} % circle
+
 \usepackage{setspace,hyperref,url}
 \usepackage{geometry}
+\usepackage{bookmark}
 \usepackage{graphicx}  %\usepackage[dvips][pdftex]{graphicx}
 \usepackage{subcaption}
+% \usepackage{microtype}
+\usepackage{comment} % comment a whole section
 % \usepackage{cite} % shrink multiple references (1/2)
 % \usepackage[square, comma, sort&amp;compress]{natbib} % shrink multiple references (2/2)
 % \usepackage[numbers]{natbib}
 % \usepackage{notoccite}
 \usepackage[nottoc,numbib]{tocbibind}
 \usepackage{csquotes}
-\usepackage[style=nature,sorting=none]{biblatex} %style=numeric-comp
+\usepackage[backend=biber,sorting=none]{biblatex} %style=numeric-comp, nature
 \bibliography{xampl}
-\renewbibmacro{in:}{}
-\addbibresource{reference.bib}
+% \renewbibmacro{in:}{}
+\addbibresource{references.bib}
 \usepackage{float}
 \usepackage{bm}
 \usepackage{titlesec} % allows to do Start new page with each section (1/2)
@@ -35,6 +39,10 @@
 \usepackage{caption}
 \usepackage{setspace}
 \renewcommand{\baselinestretch}{1.5}
+\usepackage{tocloft} % Table of Contents package 
+\setcounter{tocdepth}{3} % show subsubsection numbering
+\setcounter{secnumdepth}{3}
+\addto{\captionsenglish}{\renewcommand*{\contentsname}{Table of Contents}}
 % \usepackage{feynman}
 % \usepackage[belowskip=0pt,aboveskip=0pt]{caption}
 % \setlength{\intextsep}{10pt plus 2pt minus 2pt}
@@ -52,7 +60,7 @@
 % \parskip=5pt %% distance entre Â§ (paragraphe)
 % \sloppy %% respecter toujours la marge de droite
 
-% Pour les pénalités :
+% Pour les penalites :
 % \interfootnotelinepenalty=150 %note de bas de page
 % \widowpenalty=150 %% veuves et orphelines
 % \clubpenalty=150
@@ -71,7 +79,7 @@
 %   pdftitle={\reporttitle},%
 %   pdfauthor={\reportauthor},%
 %   pdfsubject={\reportsubject},%
-%   pdfkeywords={rapport} {vos} {mots} {clés}
+%   pdfkeywords={rapport} {vos} {mots} {cles}
 % }
 
 \hypersetup{
@@ -83,15 +91,24 @@
 \begin{document}
 \include{title}
 \cleardoublepage % Dans le cas du recto verso, ajoute une page blanche si besoin
+\pagenumbering{roman}
+% \setcounter{secnumdepth}{-1}
+% \setcounter{tocdepth}{-1}
 \include{abstract}
 \clearpage
-\include{remerciements}
+\include{acknowledgments}
 \clearpage
-\tableofcontents % Table des matières
-\sloppy          % Justification moins stricte : des mots ne dépasseront pas des paragraphes
+% \setcounter{secnumdepth}{3} % Reenable the numbering of sections etc. 
+\tableofcontents % Table des matiere
+\sloppy          % Justification moins stricte
+\clearpage
+\listoftables
+\clearpage
+\listoffigures
+\clearpage
 \cleardoublepage
-% \include{intro}
-% \clearpage
+\pagenumbering{arabic}
+\clearpage
 \include{part1}
 \clearpage
 \include{part2}
@@ -100,17 +117,10 @@
 \clearpage
 \include{part4}
 \clearpage
-% \include{part5}
-% \clearpage
-% \include{part6}
-% \clearpage
-% \include{part7}
-% \clearpage
 \include{concl}
 \clearpage
 \include{zusammenfassung}
 \clearpage
 \printbibliography[heading=bibintoc, title={Bibliography}]
-% \include{bibliography}
-% \cleardoublepage
+\cleardoublepage
 \end{document}
