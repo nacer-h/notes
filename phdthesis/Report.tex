@@ -3,20 +3,21 @@
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
 % \usepackage[english]{varioref}
-% \usepackage[T1]{fontenc}
+\usepackage[T1]{fontenc}
 \usepackage{amsmath,amssymb} % extensions pour écrire des mathématiques, mathrsfs: pour les lettres calligraphiée
 % \usepackage{times,mathptmx,textcomp} % Times New Roman, textcomp: create a symbol with both serif and sans-serif
 \usepackage{epsfig,lscape,float,pbox} % float: [H] to force figure placement, pbox: Pour saut de ligne dans une cellule
 \usepackage{tabularx,array,multirow,blkarray,booktabs} %\multirow{number rows}{width}{text},\multicolumn{number cols}{align}{text},align: l,c,r,blkarray:matrix
 \usepackage[makeroom]{cancel} % cross out caracters
 % \usepackage{tikz} \newcommand*\circled[1]{\tikz[baseline=(char.base)]{\node[shape=circle,draw,inner sep=2pt](char){#1};}} % circle
-
+% \usepackage{cleveref} % for multiple Ref 
 \usepackage{setspace,hyperref,url}
 \usepackage{geometry}
 \usepackage{bookmark}
+\usepackage{dblfloatfix} % move table to bottom
 \usepackage{graphicx}  %\usepackage[dvips][pdftex]{graphicx}
 \usepackage{subcaption}
-% \usepackage{microtype}
+\usepackage{microtype} % allows TeX to get acceptable whitespace
 \usepackage{comment} % comment a whole section
 % \usepackage{cite} % shrink multiple references (1/2)
 % \usepackage[square, comma, sort&amp;compress]{natbib} % shrink multiple references (2/2)
@@ -26,7 +27,7 @@
 \usepackage{csquotes}
 \usepackage[backend=biber,sorting=none]{biblatex} %style=numeric-comp, nature
 \bibliography{xampl}
-% \renewbibmacro{in:}{}
+\renewbibmacro{in:}{}
 \addbibresource{references.bib}
 \usepackage{float}
 \usepackage{bm}
@@ -43,6 +44,10 @@
 \setcounter{tocdepth}{3} % show subsubsection numbering
 \setcounter{secnumdepth}{3}
 \addto{\captionsenglish}{\renewcommand*{\contentsname}{Table of Contents}}
+% the threshold for printing its annoying
+% \hfuzz=\maxdimen
+% \tolerance=10000
+% \hbadness=10000
 % \usepackage{feynman}
 % \usepackage[belowskip=0pt,aboveskip=0pt]{caption}
 % \setlength{\intextsep}{10pt plus 2pt minus 2pt}
