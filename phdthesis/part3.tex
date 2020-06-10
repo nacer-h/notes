@@ -44,12 +44,12 @@ where $s = m_e/M$ and $\eta = \beta \gamma$.
 \end{equation}
 
 \noindent where the transverse momentum, $p_{\perp}$, and the angle, $\lambda$, are measured from the curvature of the tracks in the magnetic field, with the polar angle, $\theta$, covering a range between $29^{\circ}$ and $123^{\circ}$ in the CDC.
-~\par By measuring the momentum of the particle as well as the energy loss, the mass of the particle can be determined. The Figure~\ref{fig.3.1} shows the energy loss as a function of reconstructed particle momentum. We see two distinguished bands, one for protons at higher $dE/dx$ values, and for other lighter particles, pions and kaons, in the horizontal band, for momenta of up to $\sim$ 1 GeV/$c$. At higher momenta the bands overlap and the PID capabilities for hadrons get rather limited.
+~\par By measuring the momentum of the particle as well as the energy loss, the mass of the particle can be determined. The Figure~\ref{fig.3.1} shows the energy loss as a function of reconstructed particle momentum. We see two distinguished bands, one for protons at higher $dE/dx$ values, and one horizontal band for other lighter particles, namely pions and kaons. These two bands are clearly separated in Fig.~\ref{fig.3.1} for momenta of up to $\sim$ 1 GeV/$c$. At higher momenta the bands overlap and the PID capabilities for hadrons get rather limited.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.7\textwidth]{plots/dedxp_all.eps}
-    \caption{\label{fig.3.1}Measured specific energy loss $dE/dx$ of reconstructed tracks as a function of particle momentum from experimental data in the CDC . At values of $p<0.5$ GeV/$c$, the protons are in the upper $dE/dx$ band, and the kaons and pions are at the lower $dE/dx$ band.}
+    \caption{\label{fig.3.1}Measured specific energy loss $dE/dx$ of reconstructed tracks as a function of particle momentum as obtained from experimental data in the CDC . At values of $p \leq 1$ GeV/$c$, the protons are in the upper $dE/dx$ band, and the kaons and pions are at the lower $dE/dx$ band.}
 \end{figure}
 
 \section{Mean Energy Loss Estimation}
@@ -68,7 +68,7 @@ Before the mean energy loss of a track can be calculated, many corrections were 
 ~\par The $dE/dx$ distribution compiled from all straw tube signals along the trajectory has a long tail that follows a Landau-like distribution. The high energy losses are mainly caused by particles having direct collisions with electrons~\cite{Leo94}. Due to the high-energy tail, the arithmetic mean moves towards higher energy loss, and the mean energy loss value is higher than the most probable value see (Fig.~\ref{fig.3.3}, left). This makes it necessary to measure many samples along each track in order to determine the mean energy loss with sufficient accuracy. Reduction of the fluctuations of the energy loss can also be achieved by using thicker samples, for example by increasing the gas pressure. However, increasing the thickness results in a lower Fermi plateau and a different slope of the relativistic rise, and therefore resulting in a smaller differences in the energy loss of different particle species.
 ~\par For a better estimate of the mean Energy loss, we use the truncated mean method, due to its simplicity and very good accuracy~\cite{Blum08,Cao10,Hauschild96}. This method rejects a certain percentage of the lowest and highest $dE/dx$ measurements from the calculation of the mean energy loss. Fig.~\ref{fig.3.3} shows the energy loss for one track in the CDC. We observe that the $dE/dx$ distribution before the truncation (Fig.~\ref{fig.3.3.a}) has a mean of about 6 keV/cm, while the most probable $dE/dx$ value is around 4 keV/cm. After a 40$\%$ truncation at high $dE/dx$ (Fig.~\ref{fig.3.3.b}), a better mean energy loss accuracy is achieved.
 
-\begin{figure}[H]
+\begin{figure}[htbp]
     \centering
     \begin{subfigure}[b]{0.5\textwidth}
         \includegraphics[width=\textwidth]{plots/dedxav_onetrack_pretrunc.eps}
@@ -226,5 +226,5 @@ Averaging over all the polar angles of the tracks, which are represented by the 
 \section{Summary and outlook}
 \label{p.3.4}
 
-For a better mean energy loss estimation in the CDC, an optimal truncation of the average $dE/dx$ for pions and protons was studied. By optimizing the mis-PID, separation power and the $dE/dx$ resolution, an optimal truncation is achieved, and estimated to be between 20$\%$ and 40$\%$ on the high $dE/dx$ values. A more conservative truncation of 20$\%$ is now included in the GlueX reconstruction software.
+For a better mean energy loss estimation in the CDC, an optimal truncation of the average $dE/dx$ for pions and protons has been studied. By optimizing the mis-PID, separation power and the $dE/dx$ resolution, an optimal truncation is achieved, and estimated to be between 20$\%$ and 40$\%$ on the high $dE/dx$ values. A more conservative truncation of 20$\%$ is now included in the GlueX reconstruction software.
 ~\par Next to the double truncated mean method used in this study, various other methods exist to calculate the average $dE/dx$ of a track, that treat the Landau tail differently. The most commonly used method is the truncated mean method in one side only of the $dE/dx$ distribution, where a percentage of hits are discarded at the highest or lowest $dE/dx$ values before the mean is calculated. With the increasing computing power, another method tries to fit the $dE/dx$ spectrum for each track. A classification that uses the information contained in the individual measurement, by building a likelihood function for each particle type hypothesis. Here, the challenge is to find the correct description of the distribution.

@@ -4,8 +4,8 @@
 \section{Introduction}
 \label{chap.y2175.intro}
 
-The discovered structure at 2175 MeV in e$^+$e$^{-}$ collider experiment, is claimed as an isospin singlet, and its spin-parity is determined to be $J^{PC}$ = 1$^{--}$. While the PDG meanwhile introduced the notation $\phi(2170)$, within this work the state will be still denoted $Y(2175)$. The observation of this resonance, with its peculiar width and mass, besides a seemingly preferential decay modes, has triggered many theoretical interpretations, most of which propose exotic solutions. 
-~\par Despite all previous experimental efforts, our knowledge of the $Y(2175)$ is not enough to confirm or suppress one of the theoretical interpretations. So far, all the experimental information about the $Y(2175)$ are limited to the e$^+$e$^{-}$ annihilation and $J/\psi$ hadronic decay. The $Y(2175)$ production in other processes will be helpful to shed light on its nature.
+The discovered structure at 2175 MeV in e$^+$e$^{-}$ collider experiments is claimed as an isospin singlet, and its spin-parity is determined to be $J^{PC}$ = 1$^{--}$. While the PDG meanwhile introduced the notation $\phi(2170)$, within this work the state will still be denoted $Y(2175)$. The observation of this resonance, with its peculiar width and mass, besides a seemingly preferential decay modes, has triggered many theoretical interpretations, most of which propose exotic solutions. 
+~\par Despite all previous experimental efforts, our knowledge of the $Y(2175)$ is not sufficient to confirm or suppress one of the theoretical interpretations. So far, all the experimental information about the $Y(2175)$ are limited to the e$^+$e$^{-}$ annihilation and $J/\psi$ hadronic decay. The $Y(2175)$ production in other processes will help to understand its nature.
 ~\par Hadron production induced by photons has been largely studied since it provides an excellent tool to probe the hadron spectrum~\cite{Ballam68, Meyer70, Wang14, Wang17}. The strong affinity of photons for $s\bar{s}$ allows to use photon beams to study the strangeonium-like states, like the observation of the $\phi(1019)$~\cite{Mibe05} and $\phi(1680)$~\cite{Aston81} in $\gamma p \rightarrow K^{+}K^{-}p$ reaction. Since the $Y(2175)$ was observed in the $\phi \pi^{+}\pi^{-}$ and $\phi f_{0}(980)$ channels, indicating a substantial $s\bar{s}$ component in the $Y(2175)$, it would be straightforward to search for the resonance $Y(2175)$ in the reaction of $\gamma p \rightarrow \phi f_{0}(980)p$ and $\gamma p \rightarrow \phi \pi^{+}\pi^{-}p$.
 ~\par In this chapter, we will search for the $Y(2175)$ resonance in photoproduction, in both $\phi \pi^{+}\pi^{-}$ and $\phi f_{0}(980)$ decay modes, while studying the $\gamma p \rightarrow K^{+}K^{-} \pi^{+}\pi^{-} p$ final state. Thus, we measure cross sections for the $\gamma p \rightarrow Y(2175) p \rightarrow \phi \pi^+ \pi^{-} p$ and $\gamma p \rightarrow Y(2175) p \rightarrow \phi f_{0}(980) p$ resonant and non-resonant (without the $Y(2175)$ state) modes. To achieve that, we start by an event selection to reduce the background, that is followed by a description of the Monte Carlo samples and the real data used in the analysis. We finally report the cross section measurements for the different channels, and discuss the systematic uncertainties associated with theses measurements.
 
@@ -14,7 +14,7 @@ The discovered structure at 2175 MeV in e$^+$e$^{-}$ collider experiment, is cla
 
 \subsection{Data}
 
-The first phase running of the GlueX experiment was completed at the end of 2018. It has started collecting data since 2016, with four run periods. Theses data sets are used in this study.
+The first phase running of the GlueX experiment, GlueX Phase-I, was completed at the end of 2018. It has started collecting data since 2016, with four run periods. Theses data sets are used in this study.
 
 \subsubsection{Data Samples}
 \label{chap.y2175.data_mc.data_samples}
@@ -26,7 +26,7 @@ The data are organized into a number of "runs" that correspond to $\sim$ 2 hours
 \begin{table}[H]
     \centering
     % \small
-    \caption{GlueX phase-I selected datasets Summary}
+    \caption{Summary of GlueX Phase-I selected dataset}
     \label{tab.y2175.data_mc.data_samples}
     \begin{tabular}{|c|c|c|c|c|c|}%|c|c|c|c|c|c|
         \hline
@@ -49,7 +49,7 @@ The data are organized into a number of "runs" that correspond to $\sim$ 2 hours
 \subsubsection{Data Processing}
 \label{chap.y2175.data_mc.data_process_comb}
 
-The triggered events are stored in a raw format, witch is then processed and used to reconstruct the four-momentum vectors, positions of the tracks and showers, and many other important quantities, like particle identification information. After every improvement in reconstruction and calibration the data is processed again to produce the above quantities with a better precision. The latest reconstruction versions are used in this analysis.
+The triggered events are stored in a raw format, which is then processed and used to reconstruct the four-momentum vectors, positions of the tracks and showers, and many other important quantities, like particle identification information. After every improvement in reconstruction and calibration the data is processed again to produce the above quantities with a better precision. The latest reconstruction versions are used in this analysis.
 
 \subsubsection{Tagged Photon Flux}
 \label{chap.y2175.data_mc.data_tag_flux}
@@ -128,12 +128,12 @@ In an event, one or more tagged photons could arrive in the same time window of 
 \subsection{Track Energy Loss Selection}
 \label{chap.y2175.evt_sel.pid_dedx_sel}
 
-As discussed in chapter~\ref{p.3}, we isolate the recoiled protons from the pions and kaons detected in the CDC, by applying a cut on the dE/dx. To select between the different mass hypotheses for charged tracks, we use an exponential function to select proton candidates described by Eq.~\ref{eq.y2175.evt_sel.pid_dedx_sel.1} and lighter particle candidates (pions and kaons) by the Eq.~\ref{eq.y2175.evt_sel.pid_dedx_sel.2}
+As discussed in chapter~\ref{p.3}, we isolate the recoiled protons from the pions and kaons detected in the CDC, by applying a cut on the dE/dx. To select between the different mass hypotheses for charged tracks, we use an exponential function to select proton candidates as described by Eq.~\ref{eq.y2175.evt_sel.pid_dedx_sel.1} and lighter particle candidates (pions and kaons) as given by Eq.~\ref{eq.y2175.evt_sel.pid_dedx_sel.2}:
 
 \begin{equation}
     \begin{aligned}
         \label{eq.y2175.evt_sel.pid_dedx_sel.1}
-        \frac{dE}{dx}~>~e^{(-4.0~p + 2.25)} + 1.0~,
+        \frac{dE}{dx}~>~e^{(-4.0~p + 2.25)} + 1.0~,~\mathrm{and}
     \end{aligned}
 \end{equation}
 \begin{equation}
@@ -144,11 +144,11 @@ As discussed in chapter~\ref{p.3}, we isolate the recoiled protons from the pion
 \end{equation}
 
 where $p$ is the momentum of the particles.
-Fig.~\ref{fig.y2175.evt_sel.pid_dedx_sel} shows the energy loss of positively charged particles as a function of their momentum. According to the Bethe-Bloch formula, lower momentum protons deposit more energy (curved band in Fig.~\ref{fig.y2175.evt_sel.pid_dedx_sel}) than lighter particles (horizontal band in Fig.~\ref{fig.y2175.evt_sel.pid_dedx_sel}) for the same momentum. A good separation between the particles is seen up to $\sim$ 1 GeV/$c^{2}$ momentum.
+Fig.~\ref{fig.y2175.evt_sel.pid_dedx_sel} shows the energy loss of positively charged particles as a function of their momentum. According to the Bethe-Bloch formula, lower momentum protons deposit more energy (curved band in Fig.~\ref{fig.y2175.evt_sel.pid_dedx_sel}) than lighter particles (horizontal band in Fig.~\ref{fig.y2175.evt_sel.pid_dedx_sel}) for the same momentum. A good separation between the particles is seen up to $\sim$ 1 GeV/$c^{2}$ momentum. A more conservative cut is applied on the $dE/dx$ to avoid throwing potential good events that are closer to the region where the two bands merge.
 
 \begin{figure}[H]
     \centering
-        \includegraphics[width=0.7\textwidth]{plots/c_dedx_cdc.eps}
+        \includegraphics[width=0.65\textwidth]{plots/c_dedx_cdc.eps}
         \caption{dE/dx of positively charged particle as a function of their momentum in the CDC. The curved and horizontal bands represent protons and lighter particles (kaons and pions) candidates, respectively. The proton candidates above the red curve (Eq.~\ref{eq.y2175.evt_sel.pid_dedx_sel.1}) are kept.}
         \label{fig.y2175.evt_sel.pid_dedx_sel}
 \end{figure}
@@ -213,8 +213,8 @@ Comparing the RF beam bunch time and the track vertex time for every final state
 \subsection{Kinematic Fitting}
 \label{chap.y2175.evt_sel.kin_fit}
 
-Kinematic fitting is a mathematical procedure in which we rely on physics principles governing the particles in the reaction or decay process to improve the measured quantities, $e.g.$: energy, momentum, position,...,$etc$. For instance, considering the reaction, $\gamma p \rightarrow K^+ K^- \pi^+ \pi^- p$. The fact that the five final state particles are coming from a common vertex position can be used to improve the measured position and momentum vectors. The total four-momentum of the final states must equal to the initial beam four-momentum, thus improving the energy and momentum resolution measured of these particles. The fit takes a fully specified reaction 4-momenta and covariance matrices for all initial and final state particles, and the results of this fit can be used to  provide criteria for rejecting background events that does not satisfy the fit constrains and to improve measured quantities.
-~\par The kinematic fitting is performed on the measured parameters $y$ (4-momenta, position), together with their errors and correlations with each other, represented by the covariance matrix $V_{y}^{-1}$. The estimated fit quantities are obtained after minimizing the $\chi^{2}$ of the overall kinematic fit satisfying each of the different constrains. The $\chi^{2}$ is defined as
+Kinematic fitting is a mathematical procedure in which we rely on physics principles governing the particles in the reaction or decay process to improve the measured quantities, $e.g.$: energy, momentum, position,..., $etc$. For instance, considering the reaction, $\gamma p \rightarrow K^+ K^- \pi^+ \pi^- p$. The fact that the five final state particles are coming from a common vertex position can be used to improve the measured position and momentum vectors. The total four-momentum of the final states must equal to the initial beam four-momentum, thus improving the energy and momentum resolution measured of these particles. The fit takes a fully specified reaction 4-momenta and covariance matrices for all initial and final state particles, and the results of this fit can be used to  provide criteria for rejecting background events that does not satisfy the fit constrains and to improve measured quantities.
+~\par The kinematic fitting is performed on the measured parameters $y$ (4-momenta, position), together with the errors and correlations among each other, represented by the covariance matrix $V_{y}^{-1}$. The estimated fit quantities are obtained after minimizing the $\chi^{2}$ of the overall kinematic fit, satisfying each of the different constrains. The $\chi^{2}$ is defined as
 
 \begin{equation}
     \label{eq.y2175.evt_sel.kin_fit.1}
@@ -244,7 +244,7 @@ Where $S$ and $B$ are the number of $\phi \pi^{+}\pi^{-}$ data signal and backgr
     \end{aligned}
 \end{equation}
 
-\noindent Here $\Gamma$ is the Full-width at half-maximum (FWHM) of the Breit-Wigner profile and $\sigma$ is the standard deviation of the Gaussian profile. The amplitude ($A$), mean ($\mu$),  $\sigma$, and $\Gamma$ are the fit parameters. The background shape is described by the Chebyshev polynomial $T_n(x)$ of second degree. For any degree $n$ the Chebyshev polynomial is defined as
+\noindent Here, $\Gamma$ is the Full-width at half-maximum (FWHM) of the Breit-Wigner profile and $\sigma$ is the standard deviation of the Gaussian profile. The amplitude ($A$), mean ($\mu$),  $\sigma$, and $\Gamma$ are the fit parameters. The background shape is described by the Chebyshev polynomial $T_n(x)$ of second degree. For any degree $n$ the Chebyshev polynomial is defined as
  
 \begin{equation}
     \label{eq.y2175.evt_sel.kin_fit.4}
@@ -253,7 +253,7 @@ Where $S$ and $B$ are the number of $\phi \pi^{+}\pi^{-}$ data signal and backgr
     \end{aligned}
 \end{equation}
 
-After extracting the signal and background events, the significance is calculated for each $\chi^{2}$ cut using Eq.~\ref{eq.y2175.evt_sel.kin_fit.2}. The resulted significance as a function of the selection variable is displayed in Fig.~\ref{fig.y2175.evt_sel.kin_fit.3}. The optimal significance is realized at a cut of $\sim$ $\chi^2<55$, and this selection is used through all the following analysis. The optimal $\chi^{2}$ cut is indicated by the vertical red line in Fig.~\ref{fig.y2175.evt_sel.kin_fit.1}.
+After extracting the signal and background events, the significance is calculated for each $\chi^{2}$ cut using Eq.~\ref{eq.y2175.evt_sel.kin_fit.2}. The resulting significance as a function of the selection variable is displayed in Fig.~\ref{fig.y2175.evt_sel.kin_fit.3}. The optimal significance is realized by a cut of $\sim$ $\chi^2<55$, and this selection is used through all the following analysis. The optimal $\chi^{2}$ cut is indicated by the vertical red line in Fig.~\ref{fig.y2175.evt_sel.kin_fit.1}.
 
 %~ add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc. (or a blank line to force the subfigure onto a new line)
 \begin{figure}[H]
@@ -289,7 +289,7 @@ After extracting the signal and background events, the significance is calculate
 \subsection{Missing Mass Squared}
 \label{chap.y2175.evt_sel.mis_mass_sqrt}
 
-The conservation of the four-momentum in the exclusive reaction is required, and since all the final state particles were reconstructed, the missing mass, defined in Eq.~\ref{eq.y2175.evt_sel.mis_mass_sqrt}, should be negligible. However, the missing mass is not vanishing due to the detection uncertainty in identification of the particle masses, which represents a source of background. The normalized missing mass squared distributions for the different datasets, both in data and MC simulation are shown in Fig.~\ref{fig.y2175.evt_sel.mis_mass_sqrt.1.a} and Fig.~\ref{fig.y2175.evt_sel.mis_mass_sqrt.1.b}, respectively. The distributions are very consistent between the datasets in data, with a small variations in the missing mass resolution in MC. To reduce this background, we select events with a missing mass squared ($MM$) close to 0, and the $MM^{2}$ cut will be determined again based on the optimal significance defined previously in Eq.~\ref{eq.y2175.evt_sel.kin_fit.2}. The significance is calculated after every $MM^{2}$ symmetric cut, from $\pm 0.1$ (GeV/$c^2$)$^2$ down to 0 in 20 steps of 0.005 (GeV/$c^2$)$^2$, a subset is shown in Fig.~\ref{fig.y2175.evt_sel.mis_mass_sqrt.2}. The maximum significance is reached at a $MM^{2}$ cut in the range [-0.035,+0.035] (GeV/$c^2$)$^2$, indicated by the vertical red dashed line both in Fig.\ref{fig.y2175.evt_sel.mis_mass_sqrt.3} and \ref{fig.y2175.evt_sel.mis_mass_sqrt.1}.
+The conservation of the four-momentum in the exclusive reaction is required, and since all the final state particles were reconstructed, the missing mass, defined in Eq.~\ref{eq.y2175.evt_sel.mis_mass_sqrt}, should be negligible. However, the missing mass is not vanishing due to the detection uncertainty in identification of the particle masses, which represents a source of background. The normalized missing mass squared distributions for the different datasets, both in data and MC simulation are shown in Fig.~\ref{fig.y2175.evt_sel.mis_mass_sqrt.1.a} and Fig.~\ref{fig.y2175.evt_sel.mis_mass_sqrt.1.b}, respectively. The distributions are very consistent between the datasets in data, with a small variations in the missing mass resolution in MC. To reduce this background, we select events with a missing mass squared ($MM$) close to 0, and the $MM^{2}$ cut will be determined again based on the optimal significance defined previously in Eq.~\ref{eq.y2175.evt_sel.kin_fit.2}. The significance is calculated after every $MM^{2}$ symmetric cut, from $\pm 0.1$ (GeV/$c^2$)$^2$ down to 0 in 20 steps of 0.005 (GeV/$c^2$)$^2$, a subset is shown in Fig.~\ref{fig.y2175.evt_sel.mis_mass_sqrt.2}. The maximum significance is reached for a $MM^{2}$ cut in the range [-0.035,+0.035] (GeV/$c^2$)$^2$, indicated by the vertical red dashed line both, in Fig.\ref{fig.y2175.evt_sel.mis_mass_sqrt.3} and \ref{fig.y2175.evt_sel.mis_mass_sqrt.1}.
 % \setlength{\belowdisplayskip}{15pt}
 % \setlength{\abovedisplayskip}{15pt}
 \begin{equation}
@@ -325,116 +325,29 @@ The conservation of the four-momentum in the exclusive reaction is required, and
         \label{fig.y2175.evt_sel.mis_mass_sqrt.2}
 \end{figure}
 
-\begin{center}
-\null
-\vfill
 \begin{figure}[htbp]
     \centering
         \includegraphics[width=0.7\textwidth]{plots/cgrdata_PhiMass_17_mm2cut.eps}
         \caption{Significance as a function of cuts on the missing mass squared. The red vertical line shows the optimal significance and the corresponding best cut.}
         \label{fig.y2175.evt_sel.mis_mass_sqrt.3}
 \end{figure}
-\null
-\vfill
-\end{center}
-
-\begin{comment}
-
-\subsection{\texorpdfstring{$\bm{\phi \pi^+ \pi^-}$}{} Events Selection}
-\label{chap.y2175.evt_sel.evt_sel_phi2pi}
-
-% event selection MC
-The invariant mass spectrums can be seen in Fig.~\ref{fig.4.3.1}. The f$_0$(980) resonance in Fig.~\ref{fig.4.3.1.b} is fitted with a Breit-Wigner model. The $\phi$(1020) in Fig.~\ref{fig.4.3.1.a} and the Y(2175) in Fig.~\ref{fig.4.3.1.c} resonances are fitted with a Voigtian model defined in Eq.~\ref{eq.4.3.1}. The widths and masses are extracted from the PDG data. The backgrounds are described by a polynomial function.
-
-\begin{equation}
-    \label{eq.4.3.2}
-    BW(x;\Gamma) =  \frac{A}{2\pi}\frac{\Gamma}{(x-\mu)^2+(\frac{\Gamma}{2})^2}~,
-\end{equation}
-
-where the amplitude ($A$), mean ($\mu$) and the width $\Gamma$ are the fit parameters.
-
-\begin{equation}
-\label{eq.4.3.1}
-    \begin{aligned}
-        V(x;\sigma,\gamma) = \int_{-\infty}^{+\infty} G(x';\sigma) BW(x-x';\Gamma)dx'~,~\mathrm{where}~~~G(x;\sigma) = \frac{1}{\sigma \sqrt{2\pi}}e^{-\frac{1}{2}(\frac{x-\mu}{\sigma})^2}
-    \end{aligned}
-\end{equation}
-
-Here $\Gamma$ is the half-width at half-maximum (HWHM) of the Breit-Wigner profile ($BW$) and $\sigma$ is the standard deviation of the Gaussian profile ($G$). With the mean $\mu$, these are the fit parameters.
-\par In addition to all the precedent event selection, both the $\pi^+ \pi^-$ and $K^+ K^- \pi^+ \pi^-$ invariant masses are plotted after a $K^+ K^-$ invariant mass cut between [1.005, 1.035 GeV/c$^2$], to reduce the background from the non-$\phi$(1020) events.
-
-\begin{figure}[H]
-    \centering
-    \begin{subfigure}[b]{0.45\textwidth}
-        \includegraphics[width=\textwidth]{plots/cmc_PhiMass_postcuts_fitted_17.eps}
-        \caption{}
-        \label{fig.4.3.1.a}
-    \end{subfigure}
-    \begin{subfigure}[b]{0.45\textwidth}
-        \includegraphics[width=\textwidth]{plots/cmc_foMass_postcuts_fitted_17.eps}
-        \caption{}
-        \label{fig.4.3.1.b}
-    \end{subfigure}
-    \begin{subfigure}[b]{0.45\textwidth}
-        \includegraphics[width=\textwidth]{plots/cmc_YMass_postcuts_fitted_17.eps}
-        \caption{}
-        \label{fig.4.3.1.c}
-    \end{subfigure}
-    \caption{Invariant mass of $K^+ K^-$ (a), $\pi^+ \pi^-$ (b) and $\phi \pi^+ \pi^-$ (c) in simulation.}
-    \label{fig.4.3.1}
-\end{figure}
-
-%event selection data
-The Data sets go through the same selection criteria as the MC samples. A clear $\phi$(1020) peak is seen in the $K^+K^-$ invariant mass Fig.~\ref{fig.4.4.1.a}. After selecting the $\phi$(1020) signal region, shown between the two red vertical lines in Fig.~\ref{fig.4.4.1.a}, we measure the invariant masses of $\pi^+ \pi^-$ seen in in Fig.~\ref{fig.4.4.1.b} and $\phi \pi^+ \pi^-$ in Fig.~\ref{fig.4.4.1.c}. No clear f$_0$(980) or Y(2175) peaks are seen in these distributions, although an important backgrounds is present, as the $\rho$(770) peak in the $\pi^+ \pi^-$ invariant mass.
-
-\begin{figure}[H]
-    \centering
-    \begin{subfigure}[b]{0.45\textwidth}
-        \includegraphics[width=\textwidth]{plots/c_pippimkpkm_17_PhiMass_postcuts.eps}
-        \caption{}
-        \label{fig.4.4.1.a}
-    \end{subfigure}
-    \begin{subfigure}[b]{0.45\textwidth}
-        \includegraphics[width=\textwidth]{plots/c_pippimkpkm_17_foMass_postcuts.eps}
-        \caption{}
-        \label{fig.4.4.1.b}
-    \end{subfigure}
-    \begin{subfigure}[b]{0.45\textwidth}
-        \includegraphics[width=\textwidth]{plots/c_pippimkpkm_17_YMass_postcuts.eps}
-        \caption{}
-        \label{fig.4.4.1.c}
-    \end{subfigure}
-    \caption{Invariant mass of $K^+K^-$ (a), $\pi^+\pi^-$ (b) and $\phi \pi^+ \pi^-$ (c) in data.}
-    \label{fig:4.4.1}
-\end{figure}
-
-\par In the following we will try to subtract the background underneath the $\phi$ peak. Due to the asymmetry of the background shape on the sides of the $\phi$ peak, the simple side band subtraction will not be appropriate, because it could include an over- or underestimation of the background events.\\
-An efficient method will be to study the $K^+K^-$ and $\pi^+\pi^-$ or $\phi \pi^+ \pi^-$ correlations. As an example we will apply the technique on the $\pi^+\pi^-$ invariant mass. The $K^+K^-$ and $\pi^+\pi^-$ correlation is shown on Fig.~\ref{fig.4.4.2}a, we notice the horizontal and vertical bands of the $\phi$(1020) and $\rho$(770) respectively. We project every bin of the $K^+K^-$ invariant mass shown in Fig.~\ref{fig.4.4.2}b, we describe the signal and background shapes, the signal fit parameters used are extracted from the corresponding MC sample. Finally, we look at $\pi^+\pi^-$ invariant mass for the events that contain the $\phi$(1020) signal only. The extracted $\phi$(1020) signal yield (N$_{\phi}$) as a function of the $\pi^+\pi^-$ invariant mass is shown in Fig.~\ref{fig.4.4.2}c, where a small enhancement around 980 GeV/c$^2$ is seen, a detail study of this enhancement will discussed in sections \ref{p.4.5.3} and \ref{p.4.5.4}.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1.0\textwidth]{plots/phi_scan.png}
-    \caption{\label{fig.4.4.2}$K^+K^-$ versus $\pi^+\pi^-$ invariant mass (a), $K^+K^-$ invariant mass projection in $\pi^+\pi^-$ bins (b) and $\pi^+\pi^-$ $\phi$-mass dependent invariant mass (c).}
-\end{figure}
-
-\end{comment}
 
 \section{Cross Section and Upper Limit}
 \label{chap.y2175.xsec_ul}
 
-In this section, the measurement of the cross sections for the exclusive $\gamma p \rightarrow \phi \pi^+ \pi^- p$, $\gamma p \rightarrow \phi f_0 p$ and $\gamma p \rightarrow Y(2175) p \rightarrow \phi f_0 p$ reactions will be discussed, as well as the determination of an upper limit on the $\gamma p \rightarrow Y(2175) p \rightarrow \phi \pi^+ \pi^- p$ reaction.
+In this section, the measurement of the cross sections for the exclusive $\gamma p \rightarrow \phi \pi^+ \pi^- p$ and $\gamma p \rightarrow \phi f_0 p$ reactions is discussed, as well as the determination of an upper limit on the production cross section of the $Y(2175)$ in $\gamma p \rightarrow Y(2175) p \rightarrow \phi \pi^+ \pi^- p$ and $\gamma p \rightarrow Y(2175) p \rightarrow \phi f_0 p$ reactions.
 
 \subsection{Cross Section for \texorpdfstring{$\bm{\gamma p \rightarrow \phi \pi^{+} \pi^{-} p}$}{} }
 \label{chap.y2175.xsec_ul.phi2pi}
 
-To study the effect of the photon beam energy ($E_{\gamma}$) in both the coherent and incoherent region, as well as the momentum transfer (-$t$) dependence on the cross section, the total hadronic cross section for $\gamma p \rightarrow \phi \pi^{+} \pi^{-} p$ reaction in $t$-channel is studied as a function of both $E_{\gamma}$ and -$t$. The cross section is measured in the $E_{\gamma}$ region of 6.5 - 11.6 GeV, distributed equally into 10 bins of 0.51 GeV width, and in the 0 - 4 GeV$^2$ region of -$t$, divided into 10 intervals of 0.4 GeV$^2$ width. The total cross section for the $\gamma p \rightarrow \phi \pi^{+} \pi^{-} p$ reaction is defined as
+To study the effect of the photon beam energy ($E_{\gamma}$) in both, the coherent and incoherent region, as well as the momentum transfer (-$t$) dependence on the cross section, the total hadronic cross section for $\gamma p \rightarrow \phi \pi^{+} \pi^{-} p$ reaction in $t$-channel is studied as a function of both $E_{\gamma}$ and -$t$. The cross section is measured in the $E_{\gamma}$ region of 6.5 - 11.6 GeV, distributed equally into 10 bins of 0.51 GeV width, and in the 0 - 4 GeV$^2$ region of -$t$, divided into 10 intervals of 0.4 GeV$^2$ width. The total cross section for the $\gamma p \rightarrow \phi \pi^{+} \pi^{-} p$ reaction is defined as
 
 \begin{equation}
     \label{eq.y2175.xsec_ul.phi2pi}
     \sigma_{\gamma p \rightarrow \phi \pi^{+} \pi^{-} p} = \frac{N_{\phi\pi^+\pi^-}^{Data}}{\varepsilon~\mathcal{L}~BR(\phi\rightarrow K^{+}K^{-})},\\
 \end{equation}
 
-\noindent The numerator is the number of $\phi\pi^+\pi^-$ signal events observed in data. The reconstruction efficiency ($\varepsilon$) is ratio of the number of $\phi\pi^+\pi^-$ reconstructed signal events in MC simulation and the total number of generated events. The luminosity ($\mathcal{L}$) is the product of the integrated flux extracted from Fig.~\ref{fig.y2175.data_mc.data_tag_flux} and the target thickness of 1.273 b$^{-1}$. The last term is the branching ratio of $\phi\rightarrow K^{+}K^{-}$ taken from~\cite{Tanabashi18}, with $BR(\phi\rightarrow K^{+}K^{-})$ = $0.492 \pm 0.005$.
+\noindent The numerator is the number of $\phi\pi^+\pi^-$ signal events observed in real data. The reconstruction efficiency ($\varepsilon$) is ratio of the number of $\phi\pi^+\pi^-$ reconstructed signal events in MC simulation and the total number of generated events. The luminosity ($\mathcal{L}$) is the product of the integrated flux extracted from Fig.~\ref{fig.y2175.data_mc.data_tag_flux} and the target thickness of 1.273 b$^{-1}$. The last term is the branching ratio of $\phi\rightarrow K^{+}K^{-}$ taken from~\cite{Tanabashi18}, with $BR(\phi\rightarrow K^{+}K^{-})$ = $0.492 \pm 0.005$.
 \par The number of generated events are extracted in bins of $E_{\gamma}$ and -$t$, from the total generated events in the MC samples. The total generated events are distributed over the selected region of $E_{\gamma}$ and -$t$, as shown in Fig.~\ref{fig.y2175.xsec_ul.phi2pi.1}.
 
 \begin{figure}[H]
@@ -539,9 +452,9 @@ The number of $\phi \pi^{+} \pi^{-}$ signal events in both MC and data are extra
     \caption{\label{fig.y2175.xsec_ul.phi2pi.8}$\phi \pi^+ \pi^-$ yields versus -$t$ in (a) MC and (b) data. The yield for the 2016 (black), 2017 (blue), Spring 2018 (red), and Fall 2018 (magenta) are displayed. The low yields in 2016 reflects the low number of events generated and the low number of triggers in MC and data, respectively.}
 \end{figure}
 
-The efficiency is then calculated as the ratio of the $\phi \pi^+ \pi^-$ MC yields and the number of generated MC events. The results are plotted in Fig.~\ref{fig.y2175.xsec_ul.phi2pi.7}, showing the efficiencies versus $E_{\gamma}$ and -$t$ for the different MC samples. The 2017 and Spring 2018 efficiencies are very close, and almost $\sim$ $50\%$ lower then the 2016 and Fall 2018 sets, this is mainly due to the different running conditions and random trigger rates included in the different MC sets.
+The efficiency is then calculated as the ratio of the $\phi \pi^+ \pi^-$ MC yields and the tptal number of generated MC events. The results are plotted in Fig.~\ref{fig.y2175.xsec_ul.phi2pi.7}, showing the efficiencies versus $E_{\gamma}$ and -$t$ for the different MC samples. The 2017 and Spring 2018 efficiencies are very comparable to each other, and almost $\sim$ $50\%$ lower then for the 2016 and Fall 2018 datasets. This is mainly due to the different running conditions and random trigger rates included in the different MC sets.
 
-\begin{figure}[H]
+\begin{figure}[t]
     \centering
     \begin{subfigure}[b]{0.5\textwidth}
         \includegraphics[width=\textwidth]{plots/cmgeeff.eps}
@@ -553,10 +466,10 @@ The efficiency is then calculated as the ratio of the $\phi \pi^+ \pi^-$ MC yiel
         \caption{}
         \label{fig.y2175.xsec_ul.phi2pi.9.b}
     \end{subfigure}
-    \caption{\label{fig.y2175.xsec_ul.phi2pi.9}The reconstruction efficiency versus (a) $E_{\gamma}$ and (b) -$t$, for $\phi \pi^+ \pi^-$ MC samples of 2016 (black), 2017 (blue), Spring 2018 (red), and Fall 2018 (magenta). The relative ratio of 2017 (blue), Spring 2018 (red), and Fall 2018 (magenta), w.r.t to 2016 are shown in the bottom plot.}
+    \caption{\label{fig.y2175.xsec_ul.phi2pi.9}The reconstruction efficiency versus (a) $E_{\gamma}$ and (b) -$t$, for $\phi \pi^+ \pi^-$ MC samples of 2016 (black), 2017 (blue), Spring 2018 (red), and Fall 2018 (magenta). The relative ratio of 2017 (blue), Spring 2018 (red), and Fall 2018 (magenta), w.r.t to 2016 datasets are shown in the bottom plot.}
 \end{figure}
 
-Finally, having gathered all the ingredients, the cross section is then calculated using Eq.~\ref{eq.y2175.xsec_ul.phi2pi}. The yields, efficiencies and cross sections for the datasets are summarized in Tab.~\ref{tab.y2175.xsec_ul.phi2pi.1.1} -~\ref{tab.y2175.xsec_ul.phi2pi.4.2}. The resulted cross sections versus $E_{\gamma}$ and -$t$ for the different datasets is shown in Fig.~\ref{fig.y2175.xsec_ul.phi2pi.10}. The total cross section for the different datasets are very close and in some points are consistent within errors, except for the 2107 data that is systematically higher then the rest data. This effect is still under investigation. The total errors are a quadratic sum of the statistical and systematic uncertainties, the estimation of systematic errors will be discussed in Sec.~\ref{chap.y2175.syserr}.
+Finally, having gathered all the ingredients, the cross section is then calculated using Eq.~\ref{eq.y2175.xsec_ul.phi2pi}. The yields, efficiencies and cross sections for the datasets are summarized in Tab.~\ref{tab.y2175.xsec_ul.phi2pi.1.1} -~\ref{tab.y2175.xsec_ul.phi2pi.4.2}. The resultant cross sections versus $E_{\gamma}$ and -$t$ for the different datasets are shown in Fig.~\ref{fig.y2175.xsec_ul.phi2pi.10}. The total cross section for the different datasets are very close and in some points are consistent within errors, except for the 2107 data that is systematically higher then the other datasets. This effect is still under investigation. The total errors are a quadratic sum of the statistical and systematic uncertainties, the estimation of systematic errors will be discussed in Sec.~\ref{chap.y2175.syserr}.
 ~\par In order to check the consistency of the cross section shape also for 2017 data, the cross section measurements for the 2016, Spring and Fall 2018 are used to produce an average total cross section for every $E_{\gamma}$ and -$t$. The method used to average the cross sections is a standard weighted least-squares procedure~\cite{Tanabashi18}. Since the datasets are independent, the cross section measurements are uncorrelated, and the weighted average and error are then calculated by
 
 \begin{equation}
@@ -575,7 +488,7 @@ Finally, having gathered all the ingredients, the cross section is then calculat
     \chi^{2} = \sum w_{i}(\bar{\sigma}-\sigma_{i})^2
 \end{equation}
 
-If this ratio is smaller or equal to 1, then the final average cross section is as defined in Eq.~\ref{eq.y2175.xsec_ul.phi2pi.2}. But if the ratio is larger then 1, but not greatly so, then we increase our average errors $\delta\bar{\sigma}$ in Eq.~\ref{eq.y2175.xsec_ul.phi2pi.2}, by a scale factor $S$ defined as
+If this ratio is smaller or equal to 1, then the final average cross section is as defined in Eq.~\ref{eq.y2175.xsec_ul.phi2pi.2}. But if the ratio is slightly larger then 1, then we increase our average errors $\delta\bar{\sigma}$ in Eq.~\ref{eq.y2175.xsec_ul.phi2pi.2}, by a scale factor $S$ defined as
 
 \begin{equation}
     \label{eq.y2175.xsec_ul.phi2pi.4}
@@ -583,7 +496,7 @@ If this ratio is smaller or equal to 1, then the final average cross section is 
 \end{equation}
 
 The idea here is that large value of the $\chi^{2}$ is likely due to underestimation of errors in at least one of the cross section measurements. Since the measurement with the underestimated error is not known, we assume they are all underestimated by the same factor $S$. Scaling up all the cross section errors by this factor, the ratio gets closer to unity, and consequently the average error $\delta\bar{\sigma}$ scales up by the same factor.
-~\par After the calculations of the average cross section for the 2016, Spring and Fall 2018, as seen in Fig.~\ref{fig.y2175.xsec_ul.phi2pi.11}, the 2017 cross section is scaled by an empirical constant factor of $0.76$ and $0.63$ in $E_{\gamma}$ and -$t$, respectively. The resulted 2017 corrected cross sections are now consistent within errors with the average cross sections, except at low -$t$, where the difference between the measurements have increased. These scaling factors will help to quantify the sources under investigation of the cross section measurements discrepancy between the different datasets.
+~\par After the calculations of the average cross section for the 2016, Spring and Fall 2018 data, as seen in Fig.~\ref{fig.y2175.xsec_ul.phi2pi.11}, the 2017 cross section is scaled by an empirical constant factor of $0.76$ and $0.63$ in $E_{\gamma}$ and -$t$, respectively. The resultant 2017 corrected cross sections are now consistent within errors with the average cross sections, except at low -$t$, where the difference between the measurements have increased. These scaling factors will help to quantify the sources of the cross section measurement discrepancies between the different datasets.
 
 \begin{center}
 \null
@@ -621,7 +534,7 @@ The idea here is that large value of the $\chi^{2}$ is likely due to underestima
         \caption{}
         \label{fig.y2175.xsec_ul.phi2pi.11.b}
     \end{subfigure}
-    \caption{\label{fig.y2175.xsec_ul.phi2pi.11}$\gamma p \rightarrow \phi \pi^{+} \pi^{-} p$ average cross section (Brown) for the 2016, Spring and Fall 2018 datasets, versus (a) $E_{\gamma}$ and (b) -$t$. The 2017 before (blue full circles) and after correction (open circles) cross sections are shown.}
+    \caption{\label{fig.y2175.xsec_ul.phi2pi.11}$\gamma p \rightarrow \phi \pi^{+} \pi^{-} p$ average cross section (Brown) for the 2016, Spring and Fall 2018 datasets, versus (a) $E_{\gamma}$ and (b) -$t$. The 2017 results before (blue full circles) and after correction (open circles) cross sections are shown.}
 \end{figure}
 \end{center}
 
@@ -935,13 +848,13 @@ Dividing the momentum transfer distribution into 10 equidistant bins, and using 
 \subsection{Upper Limit for \texorpdfstring{$\bm{\gamma p \rightarrow Y(2175) p \rightarrow \phi \pi^{+} \pi^{-} p}$}{}}
 \label{chap.y2175.xsec_ul.yphi2pi}
 
-In the following we will study the resonant mode of the previous reaction, with the $Y(2175) \rightarrow \phi \pi^{+} \pi^{-}$. First, we select $\phi \pi^+ \pi^-$ signal, by subtracting non-$\phi$(1020) background. To achieve that we study the invariant mass correlation between $K^{+}K^{-}$ and $K^{+}K^{-} \pi^+ \pi^-$, seen in Fig.~\ref{fig.y2175.xsec_ul.yphi2pi.1}. Next to the clear horizontal band of the $\phi(1020)$, we see another diagonal band of correlated events. The latter is investigated by performing a one dimensional projection of 50 intervals of $K^{+}K^{-} \pi^+ \pi^-$ on the $K^{+}K^{-}$ invariant mass. The yields of $\phi \pi^+ \pi^-$ are then extracted after fitting the signal and background shapes as seen in Fig.~\ref{fig.y2175.xsec_ul.yphi2pi.2}. The resulting $K^{+}K^{-} \pi^+ \pi^-$ invariant mass after background subtraction seen in Fig.~\ref{fig.y2175.xsec_ul.yphi2pi.3} shows no enhancement around 2175 GeV/c$^2$, leading to the non observation of $Y(2175)$ resonance in the $\phi \pi^+ \pi^-$ channel. 
-~\par In the absence of the signal, limits can be set on the the $\gamma p \rightarrow Y(2175) p \rightarrow \phi \pi^{+} \pi^{-} p$ cross section. We define an upper limit at 90$\%$ Confidence Level (CL) using the maximum likelihood method. For $n$ independent measurements of the cross section $\sigma_{i}$ following a probability density function $f(\sigma_{i};\sigma)$ with the cross section ($\sigma$) as a parameter, the likelihood function is obtained from the probability of the data under assumption of the parameters defined as
+In the following, we will study the resonant mode of the previous reaction, with the $Y(2175) \rightarrow \phi \pi^{+} \pi^{-}$ being produced as an intermediate resonance. First, we select $\phi \pi^+ \pi^-$ signal, by subtracting non-$\phi$(1020) background. To achieve this, we study the invariant mass correlation between $K^{+}K^{-}$ and $K^{+}K^{-} \pi^+ \pi^-$, seen in Fig.~\ref{fig.y2175.xsec_ul.yphi2pi.1}. Next to the clear horizontal band of the $\phi(1020)$, we see another diagonal band of correlated events. The latter is investigated by performing a one dimensional projection of 50 intervals of $K^{+}K^{-} \pi^+ \pi^-$ on the $K^{+}K^{-}$ invariant mass. The yields of $\phi \pi^+ \pi^-$ are then extracted after fitting the signal and background shapes as shown in Fig.~\ref{fig.y2175.xsec_ul.yphi2pi.2}. The resulting $K^{+}K^{-} \pi^+ \pi^-$ invariant mass after background subtraction (Fig.~\ref{fig.y2175.xsec_ul.yphi2pi.3}) shows no enhancement around 2175 GeV/c$^2$, leading to the non observation of $Y(2175)$ resonance in the $\phi \pi^+ \pi^-$ channel. 
+~\par In absence of a signal, limits can be set on the the $\gamma p \rightarrow Y(2175) p \rightarrow \phi \pi^{+} \pi^{-} p$ production cross section. We define an upper limit at 90$\%$ Confidence Level (CL) using the maximum likelihood method. For $n$ independent measurements of the cross section $\sigma_{i}$, following a probability density function $f(\sigma_{i};\sigma)$ with the cross section ($\sigma$) as a parameter, the likelihood function is obtained from the probability of the data under assumption of the parameters defined as
 
 \begin{equation}
     \label{eq.y2175.xsec_ul.yphi2pi.1}
     \begin{aligned}
-        \mathcal{L(\sigma)} = \prod_{n}^{i=1} f(\sigma_{i};\sigma) \\
+        \mathcal{L(\sigma)} = \prod_{n}^{i=1} f(\sigma_{i};\sigma)~.\\
     \end{aligned}
 \end{equation}
 
@@ -954,8 +867,8 @@ In the following we will study the resonant mode of the previous reaction, with 
     \end{aligned}
 \end{equation}
 
-\noindent In this case, the Bayesian approach is used, where a prior knowledge on the signal cross section is expressed, such as the probability for a negative cross section is negligible for real physics processes.
-~\par After fixing the $Y(2175)$ signal shape from MC simulation as seen in Fig.~\ref{fig.y2175.xsec_ul.yphi2pi.4}, we use the same fit parameters to fit the data, see Fig.~\ref{fig.y2175.xsec_ul.yphi2pi.5}. The negative yield extracted from these plots are due to the dips around the Y(2175) mass, which may be due to simple statistical fluctuations or even destructive interference between the resonances participating in this process. We perform multiple fits varying the signal amplitude parameter around its nominal value by five times the statistical uncertainty on the yield, and extract the profile likelihoods for each variation, shown in Fig~\ref{fig.y2175.xsec_ul.yphi2pi.6}. In this case, the Likelihood profiles essentially follow Gaussian distributions, with the mean as the nominal cross section that maximizes the likelihood, and a standard deviation as the error on the cross section measurement. To take into account the effect of the cross section systematic errors, discussed in Sec.~\ref{chap.y2175.syserr}, on the upper limit determination, we convolute the obtained likelihood profile distribution with a gaussian function with the same mean and the systematic uncertainties as the standard deviation. The resulting convolution (Fig~\ref{fig.y2175.xsec_ul.yphi2pi.7}) is a gaussian with the the nominal cross section as the mean and the quadratic sum of the statistical and systematic errors as the standard deviation. The CL is corresponding to the 90th percentile of the convoluted distribution above zero. The constructed Bayesian credible interval should represent a $90\%$ probability to cover the true value of the cross section. This technique is applied for the different datasets, and the results are summarized in the Tab.~\ref{tab.y2175.xsec_ul.yphi2pi.1}.
+\noindent In this case, the Bayesian approach is used, for which a prior knowledge on the signal cross section is expressed in the sense that a probability for a negative cross section is negligible for real physics processes.
+~\par After fixing the $Y(2175)$ signal shape from MC simulation as shown in Fig.~\ref{fig.y2175.xsec_ul.yphi2pi.4}, we use the same fit parameters to fit the data, see Fig.~\ref{fig.y2175.xsec_ul.yphi2pi.5}. The negative yield extracted from these plots are due to the dips around the Y(2175) mass, which may be due to simple statistical fluctuations or even destructive interference between the resonances participating in this process. We perform multiple fits, varying the signal amplitude parameter around the nominal value by five times the statistical uncertainty on the yield, and extract the profile likelihoods for each variation, as displayed in Fig~\ref{fig.y2175.xsec_ul.yphi2pi.6}. In this case, the Likelihood profiles essentially follow Gaussian distributions, so that the mean can be taken as the nominal cross section that maximizes the likelihood, and the standard deviation as the error on the cross section measurement. To take into account the effect of the cross section systematic errors on the upper limit determination, discussed in Sec.~\ref{chap.y2175.syserr}, we convolute the obtained likelihood profile distribution with a gaussian function of the same mean and the standard deviation corresponding to the systematic uncertainty. The resulting convolution (Fig~\ref{fig.y2175.xsec_ul.yphi2pi.7}) is a gaussian with the nominal cross section given by the mean and the total error (quadratic sum of the statistical and systematic error) given by the standard deviation. The CL corresponds to 90th percentile of the convoluted distribution above zero. The constructed Bayesian Confidence interval should represent a $90\%$ probability to cover the true value of the cross section. This technique is applied for the different datasets, and the results are summarized in the Tab.~\ref{tab.y2175.xsec_ul.yphi2pi.1}.
 % this means that the $Y(2175)$ has only $10\%$ probability of being observed, and therefore we are 90$\%$ confident that the true measured cross section is lower than this upper limit and and any measurement outside this 90$\%$ interval is excluded.
 
 \begin{figure}[H]
@@ -1133,8 +1046,8 @@ In the following we will study the resonant mode of the previous reaction, with 
 \subsection{Cross Section for \texorpdfstring{$\bm{\gamma p \rightarrow \phi f_0 p}$}{}}
 \label{chap.y2175.xsec_ul.phifo}
 
-In the section, we will study the non-resonant (without the $Y(2175)$) $\phi f_0 p$ final state. The $\phi(1020)\pi^{+}\pi^{-}$ signal yields is extracted by fitting the $K^{+}K^{-}$ invariant-mass projections in each 0.018 GeV/c$^{2}$ interval of $\pi^{+}\pi^{-}$ invariant mass. The invariant mass correlation between the $K^{+}K^{-}$ and $\pi^{+}\pi^{-}$ pairs is shown in Fig.~\ref{fig.y2175.xsec_ul.phifo.1}. The $f_{0}(980)$ signal shape is well described by the Breit-Wigner model in MC simulation (Fig.~\ref{fig.y2175.xsec_ul.phifo.2}), and the signal yield obtained is used for the reconstruction efficiency calculation.
-~\par An observation of the $f_{0}(980)$ resonance in clearly seen in the data (Fig.~\ref{fig.y2175.xsec_ul.phifo.3}), with the parameters consistent with the PDG data values for this meson. Furthermore, an enhancement near the $\rho(770)$ and $K_{s}^{0}$ mesons are seen near their nominal masses. The $K_{s}^{0}$ is produced in a displaced vertex, leading to its yield reduction due to the primary vertex constraint in the kinematic fitting procedure. The cross section of the $\gamma p \rightarrow \phi f_0 p$ is calculated using Eq.~\ref{eq.y2175.xsec_ul.phi2pi}, and the results are summarized in Tab.~\ref{tab.y2175.xsec_ul.phifo}. The cross sections for all the datasets are consistent within errors.
+This section summarizes the study of the non-resonant ($i.e.$ without the $Y(2175)$) production of the $\phi f_0 p$ final state. The $\phi(1020)\pi^{+}\pi^{-}$ signal yields are extracted by fitting the $K^{+}K^{-}$ invariant-mass projections in each 0.018 GeV/c$^{2}$ interval of $\pi^{+}\pi^{-}$ invariant mass. The invariant mass correlation between the $K^{+}K^{-}$ and the $\pi^{+}\pi^{-}$ pairs is shown in Fig.~\ref{fig.y2175.xsec_ul.phifo.1}. The $f_{0}(980)$ signal shape is well described by the Breit-Wigner model in MC simulation (Fig.~\ref{fig.y2175.xsec_ul.phifo.2}), and the signal yield obtained is used for the reconstruction efficiency calculation.
+~\par An observation of the $f_{0}(980)$ resonance is clearly seen in the data (Fig.~\ref{fig.y2175.xsec_ul.phifo.3}), with the parameters consistent with the PDG data values for this meson. Furthermore, an enhancement near the $\rho(770)$ and $K_{s}^{0}$ mesons are seen near the nominal masses. The $K_{s}^{0}$ is produced in a displaced vertex, leading to yield reductions due to the primary vertex constraint in the kinematic fitting procedure. The cross section of the $\gamma p \rightarrow \phi f_0 p$ is calculated using Eq.~\ref{eq.y2175.xsec_ul.phi2pi}, and the results are summarized in Tab.~\ref{tab.y2175.xsec_ul.phifo}. The cross sections for all the datasets are consistent within errors.
 
 \begin{table*}[!b]
     \centering
@@ -1174,7 +1087,7 @@ In the section, we will study the non-resonant (without the $Y(2175)$) $\phi f_0
         \caption{}
         \label{fig.y2175.xsec_ul.phifo.1.d}
     \end{subfigure}
-    \caption{$K^{+}K^{-}$ versus $\pi^+ \pi^-$ invariant mass for (a) 2016, (b) 2017, (c) Spring 2018 and (d) Fall 2018 datasets. Horizontal band is the $\phi(1020)$ and the vertical two bands are the $\rho(770)$ and $K_{s}^{0}$.}
+    \caption{$K^{+}K^{-}$ versus $\pi^+ \pi^-$ invariant mass for (a) 2016, (b) 2017, (c) Spring 2018 and (d) Fall 2018 datasets. The horizontal band corresponds to the $\phi(1020)$ and the vertical two bands to the $\rho(770)$ and $K_{s}^{0}$.}
     \label{fig.y2175.xsec_ul.phifo.1}
 \end{figure}
 
@@ -1209,7 +1122,7 @@ In the section, we will study the non-resonant (without the $Y(2175)$) $\phi f_0
         \caption{}
         \label{fig.y2175.xsec_ul.phifo.3.d}
     \end{subfigure}
-    \caption{The yields of $\phi \pi^+ \pi^-$ versus $\pi^+ \pi^-$ invariant mass for (a) 2016, (b) 2017, (c) Spring 2018 and (d) Fall 2018 datasets. The total fit (blue) is composed of the signal (red) described by a Breit-Wigner and the background (dashed) with second order polynomial.}
+    \caption{The yields of $\phi \pi^+ \pi^-$ versus $\pi^+ \pi^-$ invariant mass for (a) 2016, (b) 2017, (c) Spring 2018 and (d) Fall 2018 datasets. The total fit (blue) is composed of the signal (red) described by a Breit-Wigner and the background (dashed) described by a second order polynomial.}
     \label{fig.y2175.xsec_ul.phifo.3}
 \end{figure}
 \null
@@ -1220,8 +1133,8 @@ In the section, we will study the non-resonant (without the $Y(2175)$) $\phi f_0
 \subsection{Upper Limit for \texorpdfstring{$\bm{\gamma p \rightarrow Y(2175) p \rightarrow \phi f_0 p}$}{}}
 \label{chap.y2175.xsec_ul.yphifo}
 
-Following a similar procedure as in Sec.~\ref{chap.y2175.xsec_ul.yphi2pi} to reduce the non-$\phi$(1020) background, we obtain the $\phi f_{0}$ yields by fitting the $K^{+}K^{-}$ invariant-mass projections in each 0.02 GeV/c$^{2}$ interval of $K^{+}K^{-}\pi^{+}\pi^{-}$ invariant mass, while requiring the di-pion mass pair within 2.5 times the PDG average mass error of $f_0(980)$. The resulted $K^{+}K^{-}\pi^{+}\pi^{-}$ invariant-mass distribution for $\phi f_{0}$ candidate events is shown in Fig.~\ref{fig.y2175.xsec_ul.yphifo.1}. To estimate the $Y(2175)$ contribution amount the multiple fluctuation in the invariant mass distribution, the likelihood ratio test~\cite{Cow11} is used to determine the significance of the $Y(2175)$ signal. The binned maximum likelihood fits are used for this test.
-~\par We define the null hypothesis $H_{0}$ as the condition in which only the background is observed in the data, and the alternative hypotheses $H_{1}$ in which both signal and background are modeled in data. According to Wilks theorem~\cite{Wil01}, the significance ($Z$) adopted as the test statistics is asymptotically distributed according to the $\chi^{2}$ function, with degrees of freedom equal to the difference between the number of fit parameters. The goal of the profile likelihood ratio in this study is to define the degree of compatibility or not of the data with the hypothesis of the $Y(2175)$ signal presence, which would lead to an observation ($Z \geq 5\sigma$), evidence ($3\sigma < Z < 5\sigma$) or none of both ($Z < 3\sigma$). In the case of one degree of freedom difference between the two hypothesis, the significance is defined as
+Following a similar procedure as in Sec.~\ref{chap.y2175.xsec_ul.yphi2pi} to reduce the non-$\phi$(1020) background, we obtain the $\phi f_{0}$ yields by fitting the $K^{+}K^{-}$ invariant-mass projections in each 0.02 GeV/c$^{2}$ interval of $K^{+}K^{-}\pi^{+}\pi^{-}$ invariant mass, while requiring the di-pion mass pair within 2.5 times the PDG average mass error of $f_0(980)$. The resulting $K^{+}K^{-}\pi^{+}\pi^{-}$ invariant-mass distribution for $\phi f_{0}$ candidate events is shown in Fig.~\ref{fig.y2175.xsec_ul.yphifo.1}. To estimate the $Y(2175)$ contribution within multiple fluctuations in the invariant mass distribution, the likelihood ratio test~\cite{Cow11} is used to determine the significance of the $Y(2175)$ signal. The binned maximum likelihood fits are used for this test.
+~\par We define the null hypothesis $H_{0}$ as the condition, in which only the background is observed in the data, and the alternative hypotheses $H_{1}$, in which both signal and background are modeled in data. According to Wilks theorem~\cite{Wil01}, the significance ($Z$) adopted as the test statistics is asymptotically distributed according to the $\chi^{2}$ function, with degrees of freedom equal to the difference between the number of fit parameters. The goal of the profile likelihood ratio in this study is to quantify degree of compatibility (or not) of the data with the hypothesis of the $Y(2175)$ signal being present, which would lead to an observation ($Z \geq 5\sigma$), evidence ($3\sigma < Z < 5\sigma$) or none of both ($Z < 3\sigma$). In the case of one degree of freedom difference between the two hypothesis, the significance is defined as
 
 \begin{equation}
     \label{eq.y2175.xsec_ul.yphifo}
@@ -1230,7 +1143,7 @@ Following a similar procedure as in Sec.~\ref{chap.y2175.xsec_ul.yphi2pi} to red
     \end{aligned}
 \end{equation}
 
-After describing the $Y(2175)$ signal shape in in MC simulation, the same parameters are fixed in the data and the signal amplitude is set as a free parameter, once with the signal and background fit to obtain the likelihood $\mathcal{L}(H_{1})$, and the second with only the background to obtain $\mathcal{L}(H_{0})$. The significance is then calculated using Eq.~\ref{eq.y2175.xsec_ul.yphifo}, and is displayed next to the fit parameterization in Fig.~\ref{fig.y2175.xsec_ul.yphifo.1}. To estimate the goodness of the fit model to the data, we use the pull distribution which is defined as the difference between the data and the fit values divided on the data errors. The pull histogram is distributed as a standard Gaussian with mean zero and unit width, if the mean is not centered at zero than there is a bias in the fit model (Fig.~\ref{fig.y2175.xsec_ul.yphifo.1}). An enhancement around 2.191 GeV/c$^2$ is observed, with mean and width consistent with the PDG data for the $Y(2175)$. This resonance is seen in both the largest data samples of Spring and Fall 2018 datasets, with a significance above 3$\sigma$. Despite the enhancement around the mass of interest, we could not claim an observation of the $Y(2175)$ due to systematic and statistical limitations, and to the strong bias in the fits especially at region of interest. For this reason we set a $90\%$ CL upper limit on the $\gamma p \rightarrow Y(2175) p \rightarrow \phi f_0 p$ cross section, using the method in Sec.~\ref{chap.y2175.xsec_ul.yphi2pi}. The resulting profile likelihoods indicating the upper limits are shown in Fig.~\ref{fig.y2175.xsec_ul.yphifo.2}. The summary of the efficiency, cross section and the upper limit are listed in Tab.\ref{tab.y2175.xsec_ul.yphifo}.
+After describing the $Y(2175)$ signal shape in in MC simulation, the same parameters are fixed in the data and the signal amplitude is set as a free parameter, once with the signal and background fit to obtain the likelihood $\mathcal{L}(H_{1})$, and the second with only the background to obtain $\mathcal{L}(H_{0})$. The significance is then calculated using Eq.~\ref{eq.y2175.xsec_ul.yphifo}; it is displayed next to the fit parameterization in Fig.~\ref{fig.y2175.xsec_ul.yphifo.1}. To estimate the goodness of the fit model to the data, we use the pull distribution, which is defined as the difference between the data and the fit values divided by the data errors. The pull histogram is distributed as a standard Gaussian with a mean of zero and a unit width. If the mean is not centered at zero than there is a bias in the fit model (Fig.~\ref{fig.y2175.xsec_ul.yphifo.1}). An enhancement around 2.191 GeV/c$^2$ is observed, with mean and width consistent with the PDG data for the $Y(2175)$. This resonance is seen in both, the largest data samples of Spring and Fall 2018 datasets, with a significance above 3$\sigma$. Despite the enhancement around the mass of interest, we could not claim an observation of the $Y(2175)$ due to systematic and statistical limitations, and to the strong bias in the fits especially at the region of interest. For this reason, we set a $90\%$ CL upper limit on the $\gamma p \rightarrow Y(2175) p \rightarrow \phi f_0 p$ cross section, using the method in Sec.~\ref{chap.y2175.xsec_ul.yphi2pi}. The resulting profile likelihoods indicating the upper limits are shown in Fig.~\ref{fig.y2175.xsec_ul.yphifo.2}. The summary of the efficiency, cross section and the upper limit values are listed in Tab.\ref{tab.y2175.xsec_ul.yphifo}.
 
 \begin{center}
     \null
@@ -1279,7 +1192,7 @@ After describing the $Y(2175)$ signal shape in in MC simulation, the same parame
         \caption{}
         \label{fig.y2175.xsec_ul.yphifo.1.d}
     \end{subfigure}
-    \caption{The invariant mass distribution for $\phi f_0$ candidates for (a) 2016, (b) 2017, (c) Spring 2018 and (d) Fall 2018 datasets. The total fit (blue) is composed of the signal (red) described by a voigtian and the background (dashed) with a third degree Chebyshev polynomial. The total fit (magenta) is performed with only the background. A pull distribution is shown in the bottom of each plot.}
+    \caption{The invariant mass distribution for $\phi f_0$ candidates for (a) 2016, (b) 2017, (c) Spring 2018 and (d) Fall 2018 datasets. The total fit (blue) is composed of the signal (red) described by a Voigtian and the background (dashed) with a third degree Chebyshev polynomial. The total fit (magenta) is performed with only the background. A pull distribution is shown in the bottom of each plot.}
     \label{fig.y2175.xsec_ul.yphifo.1}
 \end{figure}
 \null
@@ -1340,7 +1253,7 @@ Alterations in the signal resonance shape could be introduced by the detector re
 \subsection{Background Polynomial Order}
 \label{chap.y2175.syserr.bkg}
 
-The background model described by the Chebyshev polynomial of degree $n$ as defined in Eq.~\ref{eq.y2175.evt_sel.kin_fit.4}, is varied around the nominal degree by $\mbox{n-1}$ and $\mbox{n+1}$ in order to estimate the uncertainty due to background parameterization. Similar variations are also allowed for the other background polynomials. The cross section measured for every background order is then used as input to Eq.~\ref{eq.y2175.syserr.4.5}, and the resulted relative errors are listed in Tab.~\ref{tab.y2175.syserr.phi2pi.1.1} - \ref{tab.y2175.syserr.yphifo.1.1}.
+The background model described by the Chebyshev polynomial of degree $n$ as defined in Eq.~\ref{eq.y2175.evt_sel.kin_fit.4}, is varied around the nominal degree by $n$-1 and $n$+1 in order to estimate the uncertainty due to background parameterization. Similar variations are also allowed for the other background polynomials. The cross section measured for every background order is then used as input to Eq.~\ref{eq.y2175.syserr.4.5}, and the resulting relative errors are listed in Tab.~\ref{tab.y2175.syserr.phi2pi.1.1} - \ref{tab.y2175.syserr.yphifo.1.1}.
 
 \subsection{Fitting region}
 \label{chap.y2175.syserr.range}
@@ -1357,7 +1270,7 @@ To study the impact of number of data point on the quality of the $\phi(1020)$ m
 
 The variables with stronger effect on the event selection are varied around their nominal cut, to estimate the errors on the final measured cross section.
 \par The accidental subtraction using four out-of-time beam bunches on each sides of the prompt beam bunch for the nominal cut is varied to two and one beam bunches. The symmetric timing cut used to select protons in the TOF detector is also varied from $\pm 0.3$ ns to $\pm 0.2$ and $\pm 0.4$ ns. The $\chi^2$ of the kinematic fit as well was varied from $\chi^{2}<55$ to $\chi^{2}<45$ and $\chi^{2}<65$. Finally, the missing mass squared symmetric cut was varied from $\pm 0.035$ to $\pm 0.025$ and $\pm 0.045$. The cross section is measured after every variation and the relative errors for each source is estimated and summarized in Tab.~\ref{tab.y2175.syserr.phi2pi.1.1} - \ref{tab.y2175.syserr.yphifo.1.1}.
-~\par Finally, the above potential systematic errors, which are treated independently from each other, are added in quadrature to calculate the total systematic errors. The latter is quoted in the cross section measurements in Sec.~\ref{chap.y2175.xsec_ul}. The individual systematic uncertainties for the non-resonant $\phi \pi^{+} \pi^{-}$ and $\phi f_0$ final states are reasonably small, and the total systematic uncertainties are comparable and in some cases smaller than the statistical ones. We conclude that the cross section measurements for the non-resonant channels are statistically limited and a collection of a larger data sample in the future will improve the measurements precision. However, the statistic and systematic uncertainties in the resonant modes $Y(2175) \rightarrow \phi \pi^{+} \pi^{-}$ and $Y(2175) \rightarrow \phi f_0$ are large, due to the multiple fluctuations around the $Y(2175)$ and a bigger sensitivity to the small parameter variations. Therefore these measurements are considered statistically and systematically limited, and a carefully detailed analysis of a larger data sample is required to improve theses measurements.
+~\par Finally, the above potential systematic errors treated independently from each other, are added in quadrature to calculate the total systematic errors. The latter is quoted in the cross section measurements in Sec.~\ref{chap.y2175.xsec_ul}. The individual systematic uncertainties for the non-resonant $\phi \pi^{+} \pi^{-}$ and $\phi f_0$ final states are reasonably small, and the total systematic uncertainties are comparable and in some cases smaller than the statistical ones. We conclude that the cross section measurements for the non-resonant channels are statistically limited and a collection of a larger data sample in the future will improve the measurements precision. However, the statistic and systematic uncertainties in the resonant modes $Y(2175) \rightarrow \phi \pi^{+} \pi^{-}$ and $Y(2175) \rightarrow \phi f_0$ are large, due to the multiple fluctuations around the $Y(2175)$ and a bigger sensitivity to the small parameter variations. Therefore, these measurements are considered statistically and systematically limited, and a carefully detailed analysis of a larger data sample is required to improve theses measurements.
 
 \newpage
 \begin{center}
@@ -1649,6 +1562,6 @@ The variables with stronger effect on the event selection are varied around thei
 \section{Conclusion}
 \label{chap.y2175.conc}
 
-A preliminary first measurements of the photoproduction cross section for $\phi(1020) \pi^+\pi^-$ and $\phi(1020) f_0(980)$ channels in the GlueX experiment are presented, with the photon beam selected in the [6.5 - 11.6 GeV] energy region. The observed strong dependence of the $\phi \pi^+\pi^-$ cross section with the momentum transfer could be explained by the presence of intermediate sub-resonances, like the observed $\rho(770)$, or target fragmentation sources in the reaction, like $\Delta^{++} \rightarrow \pi^+ p$, leading to a different final state phase-space detector occupation, and with the detector asymmetric acceptance, this will be translated in the efficiency and eventually in the cross section measurements.
-~\par In the absence of the $Y(2175)$ in the $\phi(1020) \pi^+\pi^-$ and $\phi(1020) f_0(980)$ channels, an upper limit on the measured cross section at $90\%$ CL is established. We obtain an upper limit of 0.67 nb, 0.24 nb, 0.20 nb and 0.35 nb for $Y(2175)\rightarrow \phi(1020) \pi^+\pi^-$, and 0.33 nb, 0.48 nb, 0.43 nb, and 0.39 nb for $Y(2175)\rightarrow \phi(1020) f_0(980$, for the 2016, 2017, and Spring and Fall 2018 datasets, respectively. The non observation of $Y(2175)$ may be an indication of presence of other sources of background, like $\Delta^{++}$, in the reaction.
-~\par A detail study of the branching ratios of the $Y(2175)$ into different final states may indicate the nature of this resonance. For instance, if the $\phi(1020) f_0(980)$ decay mode is the dominant one, then the tetraquark picture is favored, with the $Y(2175)$ as an $ss\overline{ss}$, $s\bar{s}s\bar{s}$ or $su\overline{su}$ depending on the structure considered for the $f_0(980)$.
+First preliminary measurements of the photoproduction cross section for exclusive $\phi(1020) \pi^+\pi^-$ and $\phi(1020) f_0(980)$ final states with the GlueX experiment for a photon beam energy range [6.5 - 11.6 GeV] are presented. The observed strong dependence of the $\phi \pi^+\pi^-$ cross section on the momentum transfer could be explained by the presence of intermediate sub-resonances, like the observed $\rho(770)$, or target fragmentation sources in the reaction, like $\Delta^{++} \rightarrow \pi^+ p$. These can lead to a different final state phase-space detector occupation, and given an asymmetric detector acceptance, this could be translated to different efficiencies and thus also cross section measurements.
+~\par In the absence of the $Y(2175)$ in the $\phi(1020) \pi^+\pi^-$ and $\phi(1020) f_0(980)$ channels, an upper limit on the measured cross section has been established. We obtain an upper limit at $90\%$ CL of 0.67 nb, 0.24 nb, 0.20 nb and 0.35 nb for $Y(2175)\rightarrow \phi(1020) \pi^+\pi^-$, and 0.33 nb, 0.48 nb, 0.43 nb, and 0.39 nb for $Y(2175)\rightarrow \phi(1020) f_0(980$, for the 2016, 2017, and Spring and Fall 2018 datasets, respectively. The non-observation of the $Y(2175)$ may be an indication for presence of other sources of background, such as $e.g.$ $\Delta^{++}$ resonance in the reaction. The performed analysis is worth to be revisited with the improved PID capabilities and the higher statistics in GlueX Phase-II.
+~\par Detailed studies of the branching ratios of the $Y(2175)$ into different final states may then indicate the nature of this resonance. For instance, if the $\phi(1020) f_0(980)$ decay mode is the dominant one, then the tetraquark picture is favored, with the $Y(2175)$ as an $ss\overline{ss}$, $s\bar{s}s\bar{s}$ or $su\overline{su}$ depending on the structure considered for the $f_0(980)$.
