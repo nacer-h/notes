@@ -44,6 +44,7 @@
 \setcounter{tocdepth}{3} % show subsubsection numbering
 \setcounter{secnumdepth}{3}
 \addto{\captionsenglish}{\renewcommand*{\contentsname}{Table of Contents}}
+\usepackage{pdfpages}
 % the threshold for printing its annoying
 % \hfuzz=\maxdimen
 % \tolerance=10000
@@ -101,6 +102,8 @@
 % \setcounter{tocdepth}{-1}
 \include{abstract}
 \clearpage
+\include{kurzfassung}
+\clearpage
 \include{acknowledgments}
 \clearpage
 % \setcounter{secnumdepth}{3} % Reenable the numbering of sections etc. 
@@ -128,4 +131,5 @@
 \clearpage
 \printbibliography[heading=bibintoc, title={Bibliography}]
 \cleardoublepage
+\includepdf[pages=-]{Resume_Abdennacer_HAMDI.pdf}
 \end{document}

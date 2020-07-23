@@ -98,7 +98,7 @@ Before the mean energy loss of a track can be calculated, many corrections were 
     Z = \frac{\mathrm{separation}}{\mathrm{resolution}} = \frac{dE/dx_{1} - dE/dx_{2}}{\sqrt{\sigma_{1}^2 + \sigma_{2}^2}}~,
 \end{equation}
 
-\noindent where $Z$ is separation power, $(dE/dx)_{1/2}$ and $\sigma_{1/2}$ are the average energy loss and the resolution for particles 1/2, respectively. In general case, where the $dE/dx$ is randomly distributed (non-gauss), the separation power could be defined as 
+\noindent where $Z$ is separation power, $(dE/dx)_{1(2)}$ and $\sigma_{1(2)}$ are the average energy loss and the resolution for particles 1(2), respectively. In general case, where the $dE/dx$ is randomly distributed (non-gauss), the separation power could be defined as 
 
 \begin{equation}
     \label{eq.3.3.2.0.1}
@@ -119,7 +119,7 @@ Considering two $dE/dx$ Likelihood PDF's, $L_{1}(dE/dx)$ and $L_{2}(dE/dx)$, of 
     \epsilon = \int_{-\infty}^{x_{0}} L_{1}(dE/dx)~dx~,
 \end{equation}
 
-\noindent where $x_{0}$ is $dE/dx$ value at which we can reach a certain level of reconstruction efficiency of particle 1, as shown in Fig.~\ref{fig.3.2.3}, represented by the dashed vertical line around $\sim$ 2. The corresponding mis-PID is then the fraction of particle 2 that is incorrectly identified as the particle 1, due to the overlap of the two particle species $dE/dx$ distributions in this region. 
+\noindent where $x_{0}$ is the $dE/dx$ value at which we can reach a certain level of reconstruction efficiency of particle 1, as shown in Fig.~\ref{fig.3.2.3}, represented by the dashed vertical line around $\sim$ 2. The corresponding mis-PID is then the fraction of particle 2 that is incorrectly identified as the particle 1, due to the overlap of the two particle species $dE/dx$ distributions in this region. 
 
 \begin{equation}
     \label{eq.3.3.2}
@@ -156,7 +156,7 @@ The average energy loss for reconstructed tracks of protons and pions are shown 
     \caption{\label{fig.3.5}Average energy loss in the CDC for protons (Red) and Pions (blue), mis-PID (yellow). The vertical green line represent the minimum $dE/dx$ value at which the reconstruction efficiency of protons selected above is $95\%$.}
 \end{figure}
 
-Computing mis-PID fractions for different truncation combinations in every momentum and polar angle bin, seen in Fig.~\ref{fig.3.6}, shows that the mis-PID is largely reduced in the case of a removing only 20$\%$ hits at high $dE/dx$, without removing hits at low $dE/dx$ (0$\%$,20$\%$). For tracks with momentum $\sim$ 5 GeV/$c$ and polar angle of $\sim$ 100$^{\circ}$, the mis-PID is smaller in (0$\%$,20$\%$) than (20$\%$,20$\%$) truncation combination. After extracting the best truncation combination for every momentum and polar angle, a similar conclusion was deduced from studying the correlation between these optimal truncations between protons and pions, as seen in Fig.~\ref{fig.3.7}, showing a concentration of the optimal combination of truncations between 20$\%$ - 40$\%$ on the high tail of $dE/dx$. We also notice that a truncation on one side of the $dE/dx$ distribution, at high $dE/dx$ values, is efficient to deliver an optimal mean energy loss.
+Computing mis-PID fractions for different truncation combinations in every momentum and polar angle bin, seen in Fig.~\ref{fig.3.6}, shows that the mis-PID is largely reduced in the case of removing only 20$\%$ hits at high $dE/dx$, without removing hits at low $dE/dx$ (0$\%$,20$\%$). For tracks with momentum $\sim$ 5 GeV/$c$ and polar angle of $\sim$ 100$^{\circ}$, the mis-PID is smaller in (0$\%$,20$\%$) than (20$\%$,20$\%$) truncation combination. After extracting the best truncation combination for every momentum and polar angle, a similar conclusion was deduced from studying the correlation between these optimal truncations between protons and pions, as seen in Fig.~\ref{fig.3.7}, showing a concentration of the optimal combination of truncations between 20$\%$ - 40$\%$ on the high tail of $dE/dx$. We also notice that a truncation on one side of the $dE/dx$ distribution, at high $dE/dx$ values, is efficient to deliver an optimal mean energy loss.
 
 \begin{figure}[htbp]
     \centering
