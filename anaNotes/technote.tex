@@ -1,0 +1,77 @@
+\documentclass[a4paper,12pt,final]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{epsfig,lscape,float,pbox}
+\usepackage{tabularx,array,multirow,blkarray,booktabs}
+\usepackage[makeroom]{cancel}
+\usepackage{setspace,hyperref,url}
+\usepackage{geometry}
+\usepackage{bookmark}
+\usepackage{dblfloatfix} % move table to bottom
+\usepackage{graphicx}  %\usepackage[dvips][pdftex]{graphicx}
+\usepackage{subcaption}
+\usepackage{microtype} % allows acceptable whitespace
+\usepackage{comment} % comment a whole section
+\usepackage[nottoc,numbib]{tocbibind}
+\usepackage{csquotes}
+\usepackage[backend=biber,sorting=none]{biblatex}
+\bibliography{xampl}
+\renewbibmacro{in:}{}
+\addbibresource{references.bib}
+\usepackage{float}
+\usepackage{bm}
+\usepackage{enumitem} % personalize the itemize 
+\usepackage{tabulary}
+\usepackage{makecell}
+\usepackage{cellspace}
+\usepackage{caption}
+\usepackage{setspace}
+% \renewcommand{\baselinestretch}{1.5}
+\usepackage{tocloft} % Table of Contents package 
+\setcounter{tocdepth}{2} % show subsubsection numbering
+\setcounter{secnumdepth}{2}
+\addto{\captionsenglish}{\renewcommand*{\contentsname}{Table of Contents}}
+\usepackage{pdfpages}
+\usepackage{tikz}
+
+\hypersetup{
+    colorlinks=true, %set true if you want colored links
+    linktoc=all,     %set sections and subsections linked
+    linkcolor=blue,  % color if you want links to stand out
+    % citecolor=black
+}
+
+\begin{document}
+
+\include{title}
+\tableofcontents % Table des matiere
+% \sloppy          % Justification moins stricte
+\clearpage
+% \listoftables
+% \clearpage
+% \listoffigures
+% \clearpage
+% \cleardoublepage
+\pagenumbering{arabic}
+% \clearpage
+\include{intro}
+% \clearpage
+\include{sec1}
+% \clearpage
+\include{sec2}
+% \clearpage
+\include{sec3}
+% \clearpage
+\include{sec4}
+% \clearpage
+\include{concl}
+% \clearpage
+% \include{zusammenfassung}
+% \clearpage
+\printbibliography[heading=bibintoc, title={Bibliography}]
+\cleardoublepage
+% \includepdf[pages=-]{Resume_Abdennacer_HAMDI.pdf}
+
+\end{document}

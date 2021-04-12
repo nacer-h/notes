@@ -1,0 +1,199 @@
+\section{Event Selection}
+\label{sec.evt_sel}
+
+In order to search for $Y(2175)$ in $\phi \pi^+ \pi^-$ and $\phi f_0(980)$ decay modes, with $\phi \rightarrow K^+ K^- $ and $f_0 \rightarrow \pi^+ \pi^-$, we study the reactions of the form $\gamma p \rightarrow K^+ K^- \pi^+ \pi^- p$. The purpose of the event selection procedure is to subtract as much as possible the background events that mimics our signal, as well as keeping as much as possible the signal events. This is realized by cutting on different variables, then followed by selecting the exclusive $\phi \pi^+ \pi^-$ events, since the $\phi f_0(980)$ is a subsample of the $\phi \pi^+ \pi^-$.
+
+\subsection{Particle Combinations}
+\label{sec.evt_sel.par_com}
+
+We start selecting the candidates for the reaction $\gamma p \rightarrow K^+ K^- \pi^+ \pi^- p$ by requiring one tagged photon beam, three reconstructed positively charged tracks, and two reconstructed negatively charged track, which altogether create a single combination matching to the desired decay. Multiple combinations of the reconstructed particles lead to the possibility of multiple hypotheses for a single event. To prevent double counting of events, we keep track of the particles used in a combination. In addition, three extra "good" charged tracks are allowed in the event, that have a matching hit in one of the detectors besides the drift chambers.
+
+\subsection{Beam Photon Accidentals Subtraction}
+\label{sec.evt_sel.bea_pho_acc_sub}
+
+In an event, one or more tagged photons could arrive in the same time window of $4.008$ ns to the target. Using one of these wrong photons 'accidentally' arriving in the current time window to constrain momentum and energy for exclusive event reconstruction leads to indistinguishable peaking background in quantities of interest. Since the primary photon and the accidentals arrive in the same time, a selection of the beam bunch time alone will not be sufficient. For this reason, a statistical method is used to remove the contribution from the accidental photons. We estimate the number of events generated from photons outside the beam bunch time, since the behavior of these photons is similar to the accidental photons but that are for certain not part of the current reaction. This is achieved by estimating the accidental contribution as an average over 8 adjacent time windows (4 before and 4 after the current signal time window) and assigning a weight of $1.0$ and $-1/8$ to all the combinations inside and outside the main beam bunch time, respectively. Finally, these weights are used in the analysis to subtract the contribution from the accidental photons. The time difference between the time of the reconstructed tagged photons, and the Radio Frequency (RF) time, which is coming from the accelerator clock corresponding to the incoming beam photon time at the center of the target, is shown in Fig.~\ref{fig.sec.evt_sel.bea_pho_acc_sub}. The primary photon beam bunch appear centered near $\Delta t_{Beam-RF} = 0$. In addition to this main peak, four beam bunches in each side equally spaced in time period of 4.008 ns, since the accelerator delivers micro-pulses at 249.5 MHz. These eight peaks are mainly caused by real electron hits in other tagger channels near to the primary photon energy.
+
+\begin{figure}[H]
+    \centering
+        \includegraphics[width=0.8\textwidth]{plots/cpippimkpkm_17_chi100_TaggerAccidentals.eps}
+        \caption{Time difference between the tagged photons and the RF clock time. The primary photon beam is shown in the middle peak after accidental subtraction (red), and the near beam bunches are shown in each side of the main peak, separated by 4.008 ns.}
+        \label{fig.sec.evt_sel.bea_pho_acc_sub}
+\end{figure}
+
+\subsection{Track Energy Loss Selection}
+\label{sec.evt_sel.pid_dedx_sel}
+
+We isolate the recoiled protons from the pions and kaons detected in the CDC, by applying a cut on the dE/dx. To select between the different mass hypotheses for charged tracks, we use an exponential function to select proton candidates as described by Eq.~\ref{eq.evt_sel.pid_dedx_sel.1} and lighter particle candidates (pions and kaons) as given by Eq.~\ref{eq.evt_sel.pid_dedx_sel.2}:
+
+\begin{equation}
+    \begin{aligned}
+        \label{eq.evt_sel.pid_dedx_sel.1}
+        \frac{dE}{dx}~>~e^{(-4.0~p + 2.25)} + 1.0~,~\mathrm{and}
+    \end{aligned}
+\end{equation}
+\begin{equation}
+    \begin{aligned}
+        \label{eq.evt_sel.pid_dedx_sel.2}
+        \frac{dE}{dx}~<~e^{(-7.0~p + 3.0)} + 6.2~,
+    \end{aligned}
+\end{equation}
+
+where $p$ is the momentum of the particles.
+Fig.~\ref{fig.evt_sel.pid_dedx_sel} shows the energy loss of positively charged particles as a function of their momentum. According to the Bethe-Bloch formula, lower momentum protons deposit more energy (curved band in Fig.~\ref{fig.evt_sel.pid_dedx_sel}) than lighter particles (horizontal band in Fig.~\ref{fig.evt_sel.pid_dedx_sel}) for the same momentum. A good separation between the particles is seen up to $\sim$ 1 GeV/$c^{2}$ momentum. A more conservative cut is applied on the $dE/dx$ to avoid throwing potential good events that are closer to the region where the two bands merge.
+
+\begin{figure}[H]
+    \centering
+        \includegraphics[width=0.65\textwidth]{plots/c_dedx_cdc.eps}
+        \caption{dE/dx of positively charged particle as a function of their momentum in the CDC. The curved and horizontal bands represent protons and lighter particles (kaons and pions) candidates, respectively. The proton candidates above the red curve (Eq.~\ref{eq.evt_sel.pid_dedx_sel.1}) are kept.}
+        \label{fig.evt_sel.pid_dedx_sel}
+\end{figure}
+
+\subsection{Timing Selection}
+\label{sec.evt_sel.pid_tim_sel}
+
+Comparing the RF beam bunch time and the track vertex time for every final state particle candidate $K^{+}$, $K^{-}$, $\pi^{+}$, $\pi^{-}$ and proton candidates, provides a good PID, and a timing cut was made in each subdetector. The vertex time is the time of the matched hit, propagated to the point of closest approach to the beamline. Since the reference plane for timing is chosen to be at the center of the liquid hydrogen target, a correction is made to the vertex time to account for the distance between the vertex location and the reference plane. Fig.~\ref{fig.evt_sel.pid_tim_sel} shows this timing difference for the TOF detector for proton candidates both in data (fig.~\ref{fig.evt_sel.pid_tim_sel.a}) and MC simulation (fig.~\ref{fig.evt_sel.pid_tim_sel.b}), as a function of particle momentum. The protons appear in the range [-0.3,+0.3] (ns), corresponding to a 3$\sigma$ cut around the mean, where $\sigma \sim 100$ ps is the TOF detector time resolution. The other entries outside this time window are pions and/or kaons, which is the reason for their strong suppression in MC simulation. A loose selection is also applied on the rest af the particle candidates, due to the non trivial particle bands distinction. A summary of the timing cuts are listed in tab.~\ref{tab.evt_sel.pid_tim_sel}.
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.5\textwidth}
+        \includegraphics[width=\textwidth]{plots/c2_pippimkpkm_17_chi100_p_dttof.eps}
+        \caption{}
+        \label{fig.evt_sel.pid_tim_sel.a}
+    \end{subfigure}\hfill
+    \begin{subfigure}[b]{0.5\textwidth}
+        \includegraphics[width=\textwidth]{plots/c2_phi2pi_17_chi100_p_dttof.eps}
+        \caption{}
+        \label{fig.evt_sel.pid_tim_sel.b}
+    \end{subfigure}
+    \caption{The difference between the time measured by TOF after propagation to interaction vertex and the time delivered by the RF clock for protons as a function of particle momentum in (a) data and (b) MC simulation. The time window selected is shown between the two red lines, corresponding to the proton candidates. The curved time band is due to mis-identified protons with lighter particle (pions and kaons) arriving earlier in time to the TOF detector.}
+    \label{fig.evt_sel.pid_tim_sel}
+\end{figure}
+
+\begin{table}[H]
+    \centering
+    \small
+    \caption{Events selection using the difference between the RF and vertex time at each detector system.}
+    \label{tab.evt_sel.pid_tim_sel}
+    \begin{tabular}{|c|c|c|}
+        \hline
+        Candidate & Detector System & $\Delta T_{detector-RF}$ Cut (ns) \\
+        \hline
+        $\pi^{\pm}$ & TOF & $\pm$ 0.5 \\
+        \hline
+        $\pi^{\pm}$ & BCAL & $\pm$ 1.0 \\
+        \hline
+        $\pi^{\pm}$ & FCAL & $\pm$ 2.0 \\
+        \hline
+        $\pi^{\pm}$ & SC & $\pm$ 2.5 \\
+        \hline
+        $K^{\pm}$ & TOF &  $\pm$ 0.3 \\
+        \hline
+        $K^{\pm}$ & BCAL & $\pm$ 0.75 \\
+        \hline
+        $K^{\pm}$ & FCAL & $\pm$ 2.5 \\
+        \hline
+        $K^{\pm}$ & SC & $\pm$ 2.5 \\
+        \hline
+        proton & TOF & $\pm$ 0.3 \\
+        \hline
+        proton & BCAL & $\pm$ 1.0 \\
+        \hline
+        proton & FCAL & $\pm$ 2.0 \\
+        \hline
+        proton & SC & $\pm$ 2.5 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\subsection{Kinematic Fitting}
+\label{sec.evt_sel.kin_fit}
+
+Kinematic fitting is a mathematical procedure in which we rely on physics principles governing the particles in the reaction or decay process to improve the measured quantities, $e.g.$: energy, momentum, position,..., $etc$. Considering the reaction, $\gamma p \rightarrow K^+ K^- \pi^+ \pi^- p$, where the final state particles are coming from a common vertex position can be used to improve the measured position and momentum vectors. The total four-momentum of the final states must equal to the initial beam four-momentum, thus improving the energy and momentum resolution measured of these particles. The fit takes a fully specified reaction 4-momenta and covariance matrices for all initial and final state particles, and the results of this fit can be used to provide criteria for rejecting background events that does not satisfy the fit constrains and to improve measured quantities. The estimated fit quantities are obtained after minimizing the $\chi^{2}$ of the overall kinematic fit, satisfying each of the different constrains.
+~\par If the formulated hypothesis matches the true reaction then the kinematic fit $\chi^{2}/ndf \sim 1$ corresponding to $\chi^{2} \sim 11$ in our case, where the number of degrees of freedom, $ndf$ = number of observables - number of constrains = 11. In data, mainly the non-matching hypotheses ($i.e.$ no $K^{+}K^{-}\pi^{+}\pi^{-}$ event) make the distribution differ from MC, leading to higher tales in the kinematic fit $\chi^{2}$ distribution. The normalized distributions of kinematic fit $\chi^{2}$ for the different datasets in data and MC simulation are shown in Fig.~\ref{fig.evt_sel.kin_fit.1.a} and Fig.~\ref{fig.evt_sel.kin_fit.1.b}, respectively. The $\chi^{2}$ distributions are consistent between the different datasets, except for the 2018 Spring dataset, which shows a less converging $\chi^{2}$ in data, and is still under investigation. To insure the minimization of the $\chi^{2}$, the kinematic fit is required to converge. The $\chi^{2}$ cut is selected based on the optimal significance ($Z$) defined by
+
+\begin{equation}
+    \label{eq.evt_sel.kin_fit.2}
+    \begin{aligned}
+        Z = \frac{S}{\sqrt{S+B}}~,
+    \end{aligned}
+\end{equation}
+
+\noindent where $S$ and $B$ are the number of $\phi \pi^{+}\pi^{-}$ data signal and background events, respectively. The signal and background events are extracted by fitting the $K^+K^-$ invariant mass and integrating in the [1, 1.05 GeV/c$^2$] mass region. The $S$ and $B$ are obtained after different kinematic fit $\chi^2$ cuts, from a $\chi^2<100$ to $\chi^2<5$ in 20 steps, a subset is seen in Fig.~\ref{fig.evt_sel.kin_fit.2}. The signal shape is described by a Voigtian model. The background shape is described by the Chebyshev polynomial of second degree.
+~\par After extracting the signal and background events, the significance is calculated for each $\chi^{2}$ cut using Eq.~\ref{eq.evt_sel.kin_fit.2}. The resulting significance as a function of the selection variable is displayed in Fig.~\ref{fig.evt_sel.kin_fit.3}. The optimal significance is realized by a cut of $\sim$ $\chi^2<55$, and this selection is used through all the following analysis. The optimal $\chi^{2}$ cut is indicated by the vertical red line in Fig.~\ref{fig.evt_sel.kin_fit.1}.
+
+%~ add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc. (or a blank line to force the subfigure onto a new line)
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.5\textwidth}
+        \includegraphics[width=\textwidth]{plots/cpippimkpkm_kin_chisq_all.eps}
+        \caption{}
+        \label{fig.evt_sel.kin_fit.1.a}
+    \end{subfigure}\hfill
+    \begin{subfigure}[b]{0.5\textwidth}
+        \includegraphics[width=\textwidth]{plots/cphi2pi_kin_chisq_all.eps}
+        \caption{}
+        \label{fig.evt_sel.kin_fit.1.b}
+    \end{subfigure}
+    \caption{Kinematic fit $\chi^2$ normalized distributions in (a) data and (b) MC simulation, for the different datasets.}
+    \label{fig.evt_sel.kin_fit.1}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+        \includegraphics[width=1.0\textwidth]{plots/cdata_PhiMass_17_chi2cut.eps}
+        \caption{$K^+K^-$ invariant mass after each kinematic fit $\chi^2$ cut, as shown on the top of the histograms. The signal (red) and background (dashed line) fits are described by a Voigtian and a Chebyshev polynomial of second degree, respectively. The total fit is shown in blue. The number of signal ($N_{Sig}$) and background ($N_{Bkg}$) events are displayed for every cut.}
+        \label{fig.evt_sel.kin_fit.2}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+        \includegraphics[width=0.7\textwidth]{plots/cgrdata_PhiMass_17_chi2cut.eps}
+        \caption{Significance as a function of the kinematic fit $\chi^{2}$ cuts. The red vertical line shows the optimal significance and the corresponding best cut.}
+        \label{fig.evt_sel.kin_fit.3}
+\end{figure}
+
+\subsection{Missing Mass Squared}
+\label{sec.evt_sel.mis_mass_sqrt}
+
+The conservation of the four-momentum in the exclusive reaction is required, and since all the final state particles were reconstructed, the missing mass, defined in Eq.~\ref{eq.evt_sel.mis_mass_sqrt}, should be negligible. However, the missing mass is not vanishing due to the detection uncertainty in identification of the particle masses, which represents a source of background. The normalized missing mass squared distributions for the different datasets, both in data and MC simulation are shown in Fig.~\ref{fig.evt_sel.mis_mass_sqrt.1.a} and Fig.~\ref{fig.evt_sel.mis_mass_sqrt.1.b}, respectively. The distributions are very consistent between the datasets in data, with a small variations in the missing mass resolution in MC. To reduce this background, we select events with a missing mass squared ($MM$) close to 0, and the $MM^{2}$ cut will be determined again based on the optimal significance defined previously in Eq.~\ref{eq.evt_sel.kin_fit.2}. The significance is calculated after every $MM^{2}$ symmetric cut, from $\pm 0.1$ (GeV/$c^2$)$^2$ down to 0 in 20 steps of 0.005 (GeV/$c^2$)$^2$, a subset is shown in Fig.~\ref{fig.evt_sel.mis_mass_sqrt.2}. The maximum significance is reached for a $MM^{2}$ cut in the range [-0.035,+0.035] (GeV/$c^2$)$^2$, indicated by the vertical red dashed line both, in Fig.\ref{fig.evt_sel.mis_mass_sqrt.3} and Fig.\ref{fig.evt_sel.mis_mass_sqrt.1}.
+% \setlength{\belowdisplayskip}{15pt}
+% \setlength{\abovedisplayskip}{15pt}
+\begin{equation}
+    \label{eq.evt_sel.mis_mass_sqrt}
+    \begin{aligned}
+        MM^2 &= \left(\sum P_{i} - \sum P_{f}\right)^2 \\
+             &= [(P_{\gamma} + P_{proton}) - (P_{k^+} + P_{k^-} + P_{\pi^+} + P_{\pi^-} + P_{p^{\prime}})]^2~,
+    \end{aligned}    
+\end{equation}
+
+\noindent the $P_i$ and $P_f$ are the four-momenta of the initial and final particles, respectively. The $P_{p^{\prime}}$ is the four-momentum of the recoiling proton.
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.5\textwidth}
+        \includegraphics[width=\textwidth]{plots/cpippimkpkm_mm2_all.eps}
+        \caption{}
+        \label{fig.evt_sel.mis_mass_sqrt.1.a}
+    \end{subfigure}\hfill
+    \begin{subfigure}[b]{0.5\textwidth}
+        \includegraphics[width=\textwidth]{plots/cphi2pi_mm2_all.eps}
+        \caption{}
+        \label{fig.evt_sel.mis_mass_sqrt.1.b}
+    \end{subfigure}
+    \caption{The missing mass squared normalized distributions in (a) data and (b) MC simulation, for the different datasets.}
+    \label{fig.evt_sel.mis_mass_sqrt.1}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+        \includegraphics[width=1.0\textwidth]{plots/cdata_PhiMass_17_mm2cut.eps}
+        \caption{$K^+K^-$ invariant mass after each $MM^2$ cut, as shown on the top of the histograms. The signal (red) and background (dashed line) fits are described by a Voigtian and a Chebyshev polynomial of second degree, respectively. The total fit is shown in blue. The number of signal ($N_{Sig}$) and background ($N_{Bkg}$) events are displayed for every cut.}
+        \label{fig.evt_sel.mis_mass_sqrt.2}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+        \includegraphics[width=0.7\textwidth]{plots/cgrdata_PhiMass_17_mm2cut.eps}
+        \caption{Significance as a function of cuts on the missing mass squared. The red vertical line shows the optimal significance and the corresponding best cut.}
+        \label{fig.evt_sel.mis_mass_sqrt.3}
+\end{figure}

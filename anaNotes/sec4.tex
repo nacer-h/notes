@@ -1,0 +1,261 @@
+\section{Systematic Uncertainties}
+\label{sec.syserr}
+
+In order to determine the systematic errors, multiple variations in the analysis chain are tested, resulting in a different cross section measurements around the nominal value. The relative amount of deviation from the nominal cross section measurement are identified using the sample standard deviation defined as
+
+\begin{equation}
+    \label{eq.syserr.4.5}
+    \begin{aligned}
+        \delta_{i} = \frac{1}{\sigma_{nom}} \sqrt{\frac{\sum\limits_{i=1}^{N} (\sigma_{i} - \sigma_{mean})^2}{N-1}}~,\\
+    \end{aligned}
+\end{equation}
+
+\noindent where $N$ is the total number of variations of the measured cross section ($\sigma_{i}$), with respect to the mean value ($\sigma_{mean}$), and $\sigma_{nom}$ is the nominal cross section. The main sources of systematic errors associated with the cross section measurements in Sec.~\ref{sec.xsec_ul}, and their estimation are discussed in this section.
+
+\subsection{Signal width and Mean}
+\label{sec.syserr.sig}
+
+Alterations in the signal resonance shape could be introduced by the detector resolution and calibration effects. To account for this effect, variations in the signal shape are allowed around the nominal parameters. The $Y(2175)$ signal mean and width are allowed to vary around their nominal value by the PDG average errors, $\pm 0.01$ GeV/c$^2$ and $\pm 0.012$ GeV/c$^2$, respectively. The relative errors for the mean and width uncertainties are estimated and summarized in Tab.~\ref{tab.syserr.y}.
+
+\subsection{Background Polynomial Order}
+\label{sec.syserr.bkg}
+
+The background model described by the Chebyshev polynomial of degree $n$ is varied around the nominal degree by $n$-1 and $n$+1 in order to estimate the uncertainty due to background parameterization. Similar variations are also allowed for the other background polynomials. The cross section measured for every background order is then used as input to Eq.~\ref{eq.syserr.4.5}, and the resulting relative errors are listed in Tab.~\ref{tab.syserr.phi2pi.2.1} - \ref{tab.syserr.yphifo.1.1}.
+
+\subsection{Fitting region}
+\label{sec.syserr.range}
+
+To study the impact of the fit window on the cross section measurement, the $\phi(1020)$, $f_{0}(980)$, and the $Y(2175)$  resonances fit regions are varied around their nominal range of [0.99, 1.2 GeV/c$^2$], [0.83, 1.14 GeV/c$^2$], and [2, 3 GeV/c$^2$], respectively. The $\phi(1020)$ fit range was varied to [0.99, 1.15 GeV/c$^2$] and [0.99, 1.25 GeV/c$^2$], the $f_{0}(980)$ was varied to [0.83, 1.12 GeV/c$^2$] and [0.83, 1.16 GeV/c$^2$], and finally the $Y(2175)$ fit range to [2.0, 2.9 GeV/c$^2$] and [2.0, 3.1 GeV/c$^2$]. The cross section is measured for each range, and the estimated relative errors are summarized in Tab.~\ref{tab.syserr.phi2pi.2.1} - \ref{tab.syserr.yphifo.1.1}.
+
+\subsection{Finite binning}
+\label{sec.syserr.bin}
+
+To study the impact of number of data point on the quality of the $\phi(1020)$ model fit, the number of bins in the $K^+K^-$ invariant mass are varied from the nominal value of 100, to 90 and 110 bins. The effect of these modifications on the nominal cross section is then estimated by Eq.~\ref{eq.syserr.4.5}, and summarized in Tab.~\ref{tab.syserr.phi2pi.2.1} - \ref{tab.syserr.yphifo.1.1}.
+
+\subsection{Event Selection Variation}
+\label{sec.syserr.evt}
+
+The variables with stronger effect on the event selection are varied around their nominal cut, to estimate the errors on the final measured cross section.
+\par The accidental subtraction using four out-of-time beam bunches on each sides of the prompt beam bunch for the nominal cut is varied to two and one beam bunches. The symmetric timing cut used to select protons in the TOF detector is also varied from $\pm 0.3$ ns to $\pm 0.2$ and $\pm 0.4$ ns. The $\chi^2$ of the kinematic fit as well was varied from $\chi^{2}<55$ to $\chi^{2}<45$ and $\chi^{2}<65$. Finally, the missing mass squared symmetric cut was varied from $\pm 0.035$ to $\pm 0.025$ and $\pm 0.045$. The cross section is measured after every variation and the relative errors for each source is estimated and summarized in Tab.~\ref{tab.syserr.phi2pi.2.1} - \ref{tab.syserr.yphifo.1.1}.\\
+~\par Finally, the above potential systematic errors, treated independently from each other, are added in quadrature to calculate the total systematic errors. The latter is quoted in the cross section measurements in Sec.~\ref{sec.xsec_ul}. The individual systematic uncertainties for the non-resonant $\phi \pi^{+} \pi^{-}$ and $\phi f_0$ final states are reasonably small, and the total systematic uncertainties are comparable and in some cases smaller than the statistical ones. We conclude that the cross section measurements for the non-resonant channels are statistically limited and a collection of a larger data sample in the future will improve the measurements precision. However, the statistic and systematic uncertainties in the resonant modes $Y(2175) \rightarrow \phi \pi^{+} \pi^{-}$ and $Y(2175) \rightarrow \phi f_0$ are large, due to the multiple fluctuations around the $Y(2175)$ and a bigger sensitivity to the small parameter variations. Therefore, these measurements are considered statistically and systematically limited, and a carefully detailed analysis of a larger data sample is required to improve theses measurements.
+
+\newpage
+
+\begin{table}[!htbp]
+    \small
+    \centering
+    \caption{Summary of systematic uncertainties for the $\gamma p \rightarrow \phi \pi^{+} \pi^{-} p$ cross section measurements for the 2017 dataset in $E_{\gamma}$.}
+    \label{tab.syserr.phi2pi.2.1}
+    \begin{tabular}{|c|c|c|c|c|c|c|c|}
+        \hline
+        $E_{\gamma}$ (GeV)&\thead{Bkg deg\\(\%)}&\thead{Fit range\\(\%)}&\thead{binning\\(\%)}&\thead{Accidental\\Subtraction\\(\%)}&\thead{Timing\\Cut\\(\%)}&\thead{Kinematic\\Fit $\chi^{2}$(\%)}&\thead{$MM^{2}$\\(\%)}\\
+        \hline
+        6.50 - 7.01 & 0.14 & 0.89 & 0.28 & 0.29 & 1.44 & 1.76 & 0.26 \\ 
+        7.01 - 7.52 & 0.14 & 1.22 & 0.07 & 0.40 & 1.19 & 2.27 & 0.21 \\ 
+        7.52 - 8.03 & 0.16 & 1.23 & 0.17 & 0.12 & 1.30 & 1.20 & 0.34 \\ 
+        8.03 - 8.54 & 0.13 & 1.06 & 0.06 & 0.50 & 1.24 & 1.46 & 0.52 \\ 
+        8.54 - 9.05 & 0.12 & 1.08 & 0.14 & 0.40 & 1.07 & 1.58 & 0.29 \\ 
+        9.05 - 9.56 & 0.23 & 1.08 & 0.10 & 0.35 & 0.75 & 1.07 & 0.61 \\ 
+        9.56 - 10.07 & 0.16 & 1.50 & 0.05 & 0.27 & 0.93 & 1.68 & 0.83 \\ 
+        10.07 - 10.58 & 0.13 & 1.47 & 0.15 & 0.15 & 0.90 & 0.73 & 0.87 \\ 
+        10.58 - 11.09 & 0.14 & 1.87 & 0.02 & 0.24 & 0.91 & 2.55 & 1.05 \\ 
+        11.09 - 11.60 & 0.16 & 2.28 & 0.33 & 0.20 & 1.57 & 2.50 & 0.66 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\begin{table}[!htbp]
+    \small
+    \centering
+    \caption{Summary of systematic uncertainties for the $\gamma p \rightarrow \phi \pi^{+} \pi^{-} p$ cross section measurements for the 2017 dataset in -$t$.}
+    \label{tab.syserr.phi2pi.2.2}
+    \begin{tabular}{|c|c|c|c|c|c|c|c|}
+        \hline
+        -$t$ $(GeV/c)^{2}$&\thead{Bkg deg\\(\%)}&\thead{Fit range\\(\%)}&\thead{binning\\(\%)}&\thead{Accidental\\Subtraction\\(\%)}&\thead{Timing\\Cut\\(\%)}&\thead{Kinematic\\Fit $\chi^{2}$(\%)}&\thead{$MM^{2}$\\(\%)}\\
+        \hline
+        0.00 - 0.40 & 0.20 & 1.99 & 0.12 & 0.24 & 0.20 & 2.81 & 0.79 \\ 
+        0.40 - 0.80 & 0.14 & 1.14 & 0.04 & 0.28 & 0.97 & 1.70 & 0.24 \\ 
+        0.80 - 1.20 & 0.10 & 0.49 & 0.15 & 0.20 & 1.28 & 1.38 & 0.35 \\ 
+        1.20 - 1.60 & 0.08 & 0.72 & 0.08 & 0.29 & 1.25 & 1.05 & 0.30 \\ 
+        1.60 - 2.00 & 0.27 & 1.04 & 0.00 & 0.27 & 1.41 & 0.71 & 0.27 \\ 
+        2.00 - 2.40 & 0.35 & 0.93 & 0.00 & 0.53 & 2.38 & 0.61 & 0.73 \\ 
+        2.40 - 2.80 & 0.88 & 0.78 & 0.51 & 0.00 & 2.70 & 1.84 & 0.51 \\ 
+        2.80 - 3.20 & 1.48 & 1.88 & 0.41 & 0.41 & 2.13 & 0.41 & 0.71 \\ 
+        3.20 - 3.60 & 1.53 & 0.00 & 0.58 & 0.58 & 4.58 & 0.58 & 0.58 \\ 
+        3.60 - 4.00 & 1.96 & 1.28 & 0.00 & 0.74 & 3.23 & 2.67 & 0.74 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\begin{table}[!htbp]
+    \small
+    \centering
+    \caption{Summary of systematic uncertainties for the $\gamma p \rightarrow \phi \pi^{+} \pi^{-} p$ cross section measurements for the Spring 2018 dataset in $E_{\gamma}$.}
+    \label{tab.syserr.phi2pi.3.1}
+    \begin{tabular}{|c|c|c|c|c|c|c|c|}
+        \hline
+        $E_{\gamma}$ (GeV)&\thead{Bkg deg\\(\%)}&\thead{Fit range\\(\%)}&\thead{binning\\(\%)}&\thead{Accidental\\Subtraction\\(\%)}&\thead{Timing\\Cut\\(\%)}&\thead{Kinematic\\Fit $\chi^{2}$(\%)}&\thead{$MM^{2}$\\(\%)}\\
+        \hline
+        6.50 - 7.01 & 0.19 & 0.48 & 0.24 & 0.08 & 0.89 & 3.70 & 0.09 \\ 
+        7.01 - 7.52 & 0.29 & 0.74 & 0.29 & 0.38 & 0.73 & 3.20 & 0.20 \\ 
+        7.52 - 8.03 & 0.19 & 0.62 & 0.12 & 0.25 & 0.88 & 3.13 & 0.13 \\ 
+        8.03 - 8.54 & 0.21 & 0.92 & 0.13 & 0.43 & 0.78 & 3.97 & 0.09 \\ 
+        8.54 - 9.05 & 0.19 & 0.49 & 0.13 & 0.59 & 0.76 & 4.24 & 0.05 \\ 
+        9.05 - 9.56 & 0.19 & 0.76 & 0.12 & 0.15 & 0.78 & 4.20 & 0.31 \\ 
+        9.56 - 10.07 & 0.24 & 1.32 & 0.11 & 0.17 & 0.65 & 4.40 & 0.29 \\ 
+        10.07 - 10.58 & 0.25 & 1.28 & 0.09 & 0.35 & 0.58 & 5.28 & 0.25 \\ 
+        10.58 - 11.09 & 0.23 & 1.40 & 0.11 & 0.17 & 0.60 & 5.87 & 0.43 \\ 
+        11.09 - 11.60 & 0.42 & 2.18 & 0.12 & 0.14 & 0.52 & 4.67 & 0.24 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\begin{table}[!htbp]
+    \small
+    \centering
+    \caption{Summary of systematic uncertainties for the $\gamma p \rightarrow \phi \pi^{+} \pi^{-} p$ cross section measurements for the Spring 2018 dataset in -$t$.}
+    \label{tab.syserr.phi2pi.3.2}
+    \begin{tabular}{|c|c|c|c|c|c|c|c|}
+        \hline
+        -$t$ $(GeV/c)^{2}$&\thead{Bkg deg\\(\%)}&\thead{Fit range\\(\%)}&\thead{binning\\(\%)}&\thead{Accidental\\Subtraction\\(\%)}&\thead{Timing\\Cut\\(\%)}&\thead{Kinematic\\Fit $\chi^{2}$(\%)}&\thead{$MM^{2}$\\(\%)}\\
+        \hline
+        0.00 - 0.40 & 0.36 & 1.52 & 0.04 & 0.36 & 0.11 & 4.35 & 0.11 \\ 
+        0.40 - 0.80 & 0.17 & 0.80 & 0.07 & 0.12 & 0.49 & 4.39 & 0.04 \\ 
+        0.80 - 1.20 & 0.22 & 0.76 & 0.00 & 0.22 & 0.68 & 3.89 & 0.16 \\ 
+        1.20 - 1.60 & 0.16 & 1.14 & 0.00 & 0.42 & 0.88 & 4.12 & 0.09 \\ 
+        1.60 - 2.00 & 0.14 & 0.98 & 0.14 & 0.28 & 1.11 & 4.36 & 0.28 \\ 
+        2.00 - 2.40 & 0.21 & 0.42 & 0.00 & 0.21 & 1.38 & 4.86 & 0.42 \\ 
+        2.40 - 2.80 & 0.33 & 1.45 & 0.00 & 1.20 & 1.53 & 4.41 & 0.33 \\ 
+        2.80 - 3.20 & 0.45 & 1.98 & 0.00 & 0.91 & 2.41 & 3.28 & 0.91 \\ 
+        3.20 - 3.60 & 0.00 & 2.35 & 0.00 & 0.68 & 1.80 & 2.45 & 1.18 \\ 
+        3.60 - 4.00 & 0.00 & 4.42 & 1.01 & 1.01 & 2.68 & 6.33 & 1.01 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\begin{table}[!htbp]
+    \small
+    \centering
+    \caption{Summary of systematic uncertainties for the $\gamma p \rightarrow \phi \pi^{+} \pi^{-} p$ cross section measurements for the Fall 2018 dataset in $E_{\gamma}$.}
+    \label{tab.syserr.phi2pi.4.1}
+    \begin{tabular}{|c|c|c|c|c|c|c|c|}
+        \hline
+        $E_{\gamma}$ (GeV)&\thead{Bkg deg\\(\%)}&\thead{Fit range\\(\%)}&\thead{binning\\(\%)}&\thead{Accidental\\Subtraction\\(\%)}&\thead{Timing\\Cut\\(\%)}&\thead{Kinematic\\Fit $\chi^{2}$(\%)}&\thead{$MM^{2}$\\(\%)}\\
+        \hline
+        6.50 - 7.01 & 0.14 & 0.67 & 0.19 & 0.35 & 1.36 & 0.67 & 0.05 \\ 
+        7.01 - 7.52 & 0.16 & 0.55 & 0.09 & 0.07 & 1.05 & 0.45 & 0.07 \\ 
+        7.52 - 8.03 & 0.13 & 0.37 & 0.09 & 0.29 & 1.00 & 0.68 & 0.21 \\ 
+        8.03 - 8.54 & 0.15 & 0.45 & 0.10 & 0.68 & 0.99 & 1.31 & 0.32 \\ 
+        8.54 - 9.05 & 0.13 & 0.62 & 0.04 & 0.57 & 0.81 & 1.31 & 0.29 \\ 
+        9.05 - 9.56 & 0.14 & 1.32 & 0.15 & 0.26 & 0.83 & 1.42 & 0.37 \\ 
+        9.56 - 10.07 & 0.15 & 1.46 & 0.07 & 0.27 & 0.94 & 1.88 & 0.32 \\ 
+        10.07 - 10.58 & 0.35 & 1.60 & 0.06 & 0.14 & 0.81 & 1.53 & 0.65 \\ 
+        10.58 - 11.09 & 0.16 & 1.65 & 0.07 & 0.06 & 0.80 & 2.08 & 0.62 \\ 
+        11.09 - 11.60 & 0.19 & 2.28 & 0.21 & 0.32 & 0.73 & 1.88 & 0.91 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\begin{table}[!htbp]
+    \small
+    \centering
+    \caption{Summary of systematic uncertainties for the $\gamma p \rightarrow \phi \pi^{+} \pi^{-} p$ cross section measurements for the Fall 2018 dataset in -$t$.}
+    \label{tab.syserr.phi2pi.4.2}
+    \begin{tabular}{|c|c|c|c|c|c|c|c|}
+        \hline
+        -$t$ $(GeV/c)^{2}$&\thead{Bkg deg\\(\%)}&\thead{Fit range\\(\%)}&\thead{binning\\(\%)}&\thead{Accidental\\Subtraction\\(\%)}&\thead{Timing\\Cut\\(\%)}&\thead{Kinematic\\Fit $\chi^{2}$(\%)}&\thead{$MM^{2}$\\(\%)}\\
+        \hline
+        0.00 - 0.40 & 0.17 & 1.91 & 0.07 & 0.38 & 0.21 & 2.44 & 0.47 \\ 
+        0.40 - 0.80 & 0.13 & 0.45 & 0.04 & 0.35 & 0.63 & 1.52 & 0.22 \\ 
+        0.80 - 1.20 & 0.14 & 0.44 & 0.05 & 0.33 & 0.80 & 0.84 & 0.23 \\ 
+        1.20 - 1.60 & 0.29 & 0.57 & 0.00 & 0.21 & 1.01 & 1.05 & 0.16 \\ 
+        1.60 - 2.00 & 0.13 & 0.58 & 0.13 & 0.25 & 1.16 & 1.13 & 0.25 \\ 
+        2.00 - 2.40 & 0.00 & 0.73 & 0.20 & 0.20 & 1.41 & 0.73 & 0.20 \\ 
+        2.40 - 2.80 & 0.00 & 0.53 & 0.00 & 0.30 & 1.32 & 1.10 & 0.53 \\ 
+        2.80 - 3.20 & 0.00 & 1.52 & 0.44 & 0.00 & 2.00 & 0.76 & 0.00 \\ 
+        3.20 - 3.60 & 0.64 & 1.70 & 0.64 & 1.11 & 2.57 & 0.64 & 0.00 \\ 
+        3.60 - 4.00 & 0.00 & 2.25 & 0.00 & 1.47 & 3.40 & 1.70 & 0.85 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+    \small
+    \centering
+    \caption{Summary of systematic uncertainties for the $\gamma p \rightarrow Y(2175) p \rightarrow \phi \pi^{+} \pi^{-} p$ cross section measurements.}
+    \label{tab.syserr.yphi2pi.1.1}
+    \begin{tabular}{|c|c|c|c|c|c|c|c|}
+        \hline
+        Dataset&\thead{Bkg deg\\(\%)}&\thead{Fit range\\(\%)}&\thead{binning\\(\%)}&\thead{Accidental\\Subtraction\\(\%)}&\thead{Timing\\Cut\\(\%)}&\thead{Kinematic\\Fit $\chi^{2}$(\%)}&\thead{$MM^{2}$\\(\%)}\\
+        \hline
+        2017 & 16.97 & 12.83 & 14.97 & 8.55 & 3.50 & 5.25 & 9.26 \\ 
+        2018 Spring & 151.41 & 50.17 & 105.30 & 21.82 & 12.73 & 20.97 & 22.05 \\ 
+        2018 Fall & 129.95 & 132.47 & 9.09 & 31.93 & 12.50 & 50.52 & 12.50 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+    \small
+    \centering
+    \caption{Summary of systematic uncertainties for the $\gamma p \rightarrow \phi f_{0} p$ cross section measurements.}
+    \label{tab.syserr.phifo.1.1}
+    \begin{tabular}{|c|c|c|c|c|c|c|c|}
+        \hline
+        Dataset&\thead{Bkg deg\\(\%)}&\thead{Fit range\\(\%)}&\thead{binning\\(\%)}&\thead{Accidental\\Subtraction\\(\%)}&\thead{Timing\\Cut\\(\%)}&\thead{Kinematic\\Fit $\chi^{2}$(\%)}&\thead{$MM^{2}$\\(\%)}\\
+        \hline
+        2017 & 9.14 & 11.36 & 18.77 & 8.70 & 28.62 & 2.63 & 14.88 \\ 
+        2018 Spring & 7.12 & 3.28 & 13.10 & 10.76 & 16.20 & 29.09 & 15.06 \\ 
+        2018 Fall & 7.93 & 13.11 & 8.24 & 8.05 & 3.69 & 8.22 & 0.29 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+    \small
+    \centering
+    \caption{Summary of systematic uncertainties for the $\gamma p \rightarrow Y(2175) p \rightarrow \phi f_{0} p$ cross section measurements.}
+    \label{tab.syserr.yphifo.1.1}
+    \begin{tabular}{|c|c|c|c|c|c|c|c|}
+        \hline
+        Dataset&\thead{Bkg deg\\(\%)}&\thead{Fit range\\(\%)}&\thead{binning\\(\%)}&\thead{Accidental\\Subtraction\\(\%)}&\thead{Timing\\Cut\\(\%)}&\thead{Kinematic\\Fit $\chi^{2}$(\%)}&\thead{$MM^{2}$\\(\%)}\\
+        \hline
+        2017 & 278.39 & 43.30 & 14.43 & 14.43 & 14.43 & 43.30 & 28.87 \\ 
+        2018 Spring & 123.80 & 13.32 & 4.44 & 13.32 & 11.75 & 115.47 & 4.44 \\ 
+        2018 Fall & 163.14 & 14.43 & 7.22 & 7.22 & 12.50 & 12.50 & 12.50 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+    \small
+    \centering
+    \caption{Summary of systematic uncertainties on the cross section measurements due to resonance parameter variations.}
+    \label{tab.syserr.y}
+    \begin{tabular}{|c|c|c|c|c|}
+        \hline
+        \multirow{2}{*}{Dataset} & \multicolumn{2}{c|}{$Y(2175)\rightarrow \phi \pi^{+} \pi^{-}$} & \multicolumn{2}{c|}{$Y(2175)\rightarrow \phi f_0$} \\
+        \cline{2-5}
+        & \thead{$Y(2175)$ Mean\\($\%$)} & \thead{$Y(2175)$ Width\\($\%$)} & \thead{$Y(2175)$ Mean\\($\%$)} & \thead{$Y(2175)$ Width\\($\%$)} \\
+        \hline
+        2017 & 14.97 & 11.11 & 14.43 & 14.43 \\ 
+        2018 Spring & 114.29 & 28.57 & 0.001 & 15.38 \\ 
+        2018 Fall & 36.74 & 9.09 & 25.00 & 19.09 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+    \small
+    \centering
+    \caption{Summary of systematic uncertainties for the simultaneous fit of $\gamma p \rightarrow Y(2175) p$ cross section.}
+    \label{tab.syserr.simpdf}
+    \begin{tabular}{|c|c|c|c|c|}
+        \hline
+        Channel & \thead{$Y(2175)$ Mean\\($\%$)} & \thead{$Y(2175)$ Width\\($\%$)} & \thead{Bkg deg\\(\%)} & \thead{Fit range\\(\%)} \\
+        \hline
+        $Y(2175)\rightarrow \phi \pi^{+} \pi^{-}$ & 441.90 & 75.15 & 260.34 & 311.95 \\ 
+        $Y(2175)\rightarrow \phi f_0$ & 19.09 & 25.00 & 284.04 & 28.87 \\
+        \hline
+    \end{tabular}
+\end{table}
